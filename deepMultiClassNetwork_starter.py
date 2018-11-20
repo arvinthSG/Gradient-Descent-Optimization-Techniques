@@ -21,6 +21,7 @@ def relu(Z):
         A is activation. numpy.ndarray (n, m)
         cache is a dictionary with {"Z", Z}
     '''
+    
     A = np.maximum(0,Z)
     cache = {}
     cache["Z"] = Z
@@ -91,7 +92,6 @@ def softmax_cross_entropy_loss(Z, Y=np.array([])):
         cache -  a dictionary to store the activations later used to estimate derivatives
         loss - cost of prediction
     '''
-   ### CODE HERE - done 
     exps = np.exp(Z - np.max(Z,axis = 0))
     A = exps / np.sum(exps, axis =0, keepdims = True)
     cache = {}
@@ -113,7 +113,6 @@ def softmax_cross_entropy_loss_der(Y, cache):
     Returns:
         dZ - numpy.ndarray (n, m) derivative for the previous layer
     '''
-    ### CODE HER -done cp
     A = cache["A"]
     dZ = A - Y
     return dZ
@@ -151,7 +150,6 @@ def linear_forward(A, W, b):
         Z = WA + b, where Z is the numpy.ndarray (n_out, m) dimensions
         cache - a dictionary containing the inputs A
     '''
-    ### CODE HERE - done
     Z = np.dot(W,A) + b
     cache = {}
     cache["A"] = A
@@ -225,7 +223,6 @@ def linear_backward(dZ, cache, W, b):
         db - numpy.ndarray (n, 1) the gradient of b
     '''
 
-    ## CODE HERE - done
     A_prev = cache["A"]
     dW = np.dot(dZ, A_prev.T) / A_prev.shape[1]
     db = np.sum(dZ, axis = 1 , keepdims = True) / A_prev.shape[1]
@@ -299,7 +296,6 @@ def classify(X, Y, parameters):
     Returns:
         YPred - numpy.ndarray (1,m) of predictions
     '''
-    ### CODE HERE 
     # Forward propagate X using multi_layer_forward
     # Get predictions using softmax_cross_entropy_loss
     # Estimate the class labels using predictions
@@ -323,7 +319,6 @@ def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.
     '''
     alpha = learning_rate*(1/(1+decay_rate*epoch))
     L = len(parameters)//2
-    ### CODE HERE -done
     for l in range(L-1):
         parameters["W"+str(l+1)] = parameters["W"+str(l+1)] - alpha*gradients["dW"+str(l+1)]
         parameters["b"+str(l+1)] = parameters["b"+str(l+1)] - alpha*gradients["db"+str(l+1)]
@@ -360,10 +355,9 @@ def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rat
     Y_one_hot = one_hot(Y,10)
     vY_one_hot = one_hot(vY, 10)
     for ii in range(num_iterations):
-        ### CODE HERE
         # Forward Prop
-        ## call to multi_layer_forward to get activations - done
-        ## call to softmax cross entropy loss - done
+        ## call to multi_layer_forward to get activations
+        ## call to softmax cross entropy loss 
         Zl, caches = multi_layer_forward(A0, parameters)
         Al,cachel,cost = softmax_cross_entropy_loss(Zl,Y_one_hot) 
         
@@ -371,9 +365,9 @@ def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rat
         vA1,vCache1,vCost = softmax_cross_entropy_loss(vZ1,vY_one_hot)
         
         # Backward Prop
-        ## call to softmax cross entropy loss der - done
-        ## call to multi_layer_backward to get gradients - done
-        ## call to update the parameters - done
+        ## call to softmax cross entropy loss der
+        ## call to multi_layer_backward to get gradients
+        ## call to update the parameters
         dZ = softmax_cross_entropy_loss_der(Y_one_hot,cachel)
         grads = multi_layer_backward(dZ, caches, parameters)        
         parameters,alpha = update_parameters(parameters,grads,ii,learning_rate,decay_rate)
@@ -402,7 +396,7 @@ def main():
     10 is the number of digits
     '''
 # =============================================================================
-#     net_dims = ast.literal_eval( sys.argv[1] )
+#     net_dims = ast.literal_eval( sys.argv[1] ) #Get input from command line
 # =============================================================================
     net_dims = [784,500,100]
     net_dims.append(10) # Adding the digits layer with dimensionality = 10
@@ -437,7 +431,6 @@ def main():
     print("Accuracy for testing set is {0:0.3f} %".format(teAcc))
 
     
-    ### CODE HERE to plot costs
     itr = range(len(costs))
     plt.plot(itr,costs, label = "Training Error")
     plt.plot(itr,vCosts, label = "Validation Error")
