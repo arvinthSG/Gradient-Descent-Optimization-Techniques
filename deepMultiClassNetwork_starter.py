@@ -5,10 +5,11 @@ Hemanth Venkateswara
 hkdv1@asu.edu
 Oct 2018
 '''
-#python 3
-import numpy as np
-from load_mnist import mnist
 import matplotlib.pyplot as plt
+# python 3
+import numpy as np
+
+from load_mnist import mnist
 
 NO_MOMENTUM = "no_momentum"
 MOMENTUM = "momentum"
@@ -16,6 +17,8 @@ NAG = "NAG"
 RMSPROP = "RMSPROP"
 ADAM = "ADAM"
 GRADIENT_TECHNIQUE = "gradient_technique"
+
+
 def relu(Z):
     '''
     computes relu activation of Z
@@ -27,11 +30,12 @@ def relu(Z):
         A is activation. numpy.ndarray (n, m)
         cache is a dictionary with {"Z", Z}
     '''
-    
-    A = np.maximum(0,Z)
+
+    A = np.maximum(0, Z)
     cache = {}
     cache["Z"] = Z
     return A, cache
+
 
 def relu_der(dA, cache):
     '''
@@ -47,8 +51,9 @@ def relu_der(dA, cache):
     '''
     dZ = np.array(dA, copy=True)
     Z = cache["Z"]
-    dZ[Z<0] = 0
+    dZ[Z < 0] = 0
     return dZ
+
 
 def linear(Z):
     '''
@@ -67,6 +72,7 @@ def linear(Z):
     cache["Z"] = Z
     return A, cache
 
+
 def linear_der(dA, cache):
     '''
     computes derivative of linear activation
@@ -83,6 +89,7 @@ def linear_der(dA, cache):
     dZ = np.array(dA, copy=True)
     return dZ
 
+
 def softmax_cross_entropy_loss(Z, Y=np.array([])):
     '''
     Computes the softmax activation of the inputs Z
@@ -98,15 +105,16 @@ def softmax_cross_entropy_loss(Z, Y=np.array([])):
         cache -  a dictionary to store the activations later used to estimate derivatives
         loss - cost of prediction
     '''
-    exps = np.exp(Z - np.max(Z,axis = 0))
-    A = exps / np.sum(exps, axis =0, keepdims = True)
+    exps = np.exp(Z - np.max(Z, axis=0))
+    A = exps / np.sum(exps, axis=0, keepdims=True)
     cache = {}
     cache["A"] = A
     m = Y.shape[1]
-    loss = np.sum(Y * np.log(A+1e-8)) #- Gives div by 0 error
-    
-    loss = (-1/m)*loss
+    loss = np.sum(Y * np.log(A + 1e-8))  # - Gives div by 0 error
+
+    loss = (-1 / m) * loss
     return A, cache, loss
+
 
 def softmax_cross_entropy_loss_der(Y, cache):
     '''
@@ -123,6 +131,7 @@ def softmax_cross_entropy_loss_der(Y, cache):
     dZ = A - Y
     return dZ
 
+
 def initialize_multilayer_weights(net_dims):
     '''
     Initializes the weights of the multilayer network
@@ -133,14 +142,15 @@ def initialize_multilayer_weights(net_dims):
     Returns:
         dictionary of parameters
     '''
-    
+
     np.random.seed(0)
     numLayers = len(net_dims)
     parameters = {}
-    for l in range(numLayers-1):
-        parameters["W"+str(l+1)] = np.random.randn(net_dims[l+1],net_dims[l])* np.sqrt(2/net_dims[l+1])
-        parameters["b"+str(l+1)] = np.random.randn(net_dims[l+1],1) * np.sqrt(2/net_dims[l+1])
+    for l in range(numLayers - 1):
+        parameters["W" + str(l + 1)] = np.random.randn(net_dims[l + 1], net_dims[l]) * np.sqrt(2 / net_dims[l + 1])
+        parameters["b" + str(l + 1)] = np.random.randn(net_dims[l + 1], 1) * np.sqrt(2 / net_dims[l + 1])
     return parameters
+
 
 def linear_forward(A, W, b):
     '''
@@ -156,10 +166,11 @@ def linear_forward(A, W, b):
         Z = WA + b, where Z is the numpy.ndarray (n_out, m) dimensions
         cache - a dictionary containing the inputs A
     '''
-    Z = np.dot(W,A) + b
+    Z = np.dot(W, A) + b
     cache = {}
     cache["A"] = A
     return Z, cache
+
 
 def layer_forward(A_prev, W, b, activation):
     '''
@@ -178,15 +189,18 @@ def layer_forward(A_prev, W, b, activation):
         to be used for derivative
     '''
     Z, lin_cache = linear_forward(A_prev, W, b)
+    act_cache = None
+    A = None
     if activation == "relu":
         A, act_cache = relu(Z)
     elif activation == "linear":
         A, act_cache = linear(Z)
-    
+
     cache = {}
     cache["lin_cache"] = lin_cache
     cache["act_cache"] = act_cache
     return A, cache
+
 
 def multi_layer_forward(X, parameters):
     '''
@@ -200,16 +214,17 @@ def multi_layer_forward(X, parameters):
             where c is number of categories and m is number of samples in the batch
         caches - a dictionary of associated caches of parameters and network inputs
     '''
-    L = len(parameters)//2  
+    L = len(parameters) // 2
     A = X
     caches = []
-    for l in range(1,L):  # since there is no W0 and b0
-        A, cache = layer_forward(A, parameters["W"+str(l)], parameters["b"+str(l)], "relu")
+    for l in range(1, L):  # since there is no W0 and b0
+        A, cache = layer_forward(A, parameters["W" + str(l)], parameters["b" + str(l)], "relu")
         caches.append(cache)
 
-    AL, cache = layer_forward(A, parameters["W"+str(L)], parameters["b"+str(L)], "linear")
+    AL, cache = layer_forward(A, parameters["W" + str(L)], parameters["b" + str(L)], "linear")
     caches.append(cache)
     return AL, caches
+
 
 def linear_backward(dZ, cache, W, b):
     '''
@@ -231,9 +246,10 @@ def linear_backward(dZ, cache, W, b):
 
     A_prev = cache["A"]
     dW = np.dot(dZ, A_prev.T) / A_prev.shape[1]
-    db = np.sum(dZ, axis = 1 , keepdims = True) / A_prev.shape[1]
+    db = np.sum(dZ, axis=1, keepdims=True) / A_prev.shape[1]
     dA_prev = np.dot(W.T, dZ)
     return dA_prev, dW, db
+
 
 def layer_backward(dA, cache, W, b, activation):
     '''
@@ -254,16 +270,13 @@ def layer_backward(dA, cache, W, b, activation):
     lin_cache = cache["lin_cache"]
     act_cache = cache["act_cache"]
 
-    if activation == "sigmoid":
-        dZ = sigmoid_der(dA, act_cache)
-    elif activation == "tanh":
-        dZ = tanh_der(dA, act_cache)
-    elif activation == "relu":
+    if activation == "relu":
         dZ = relu_der(dA, act_cache)
     elif activation == "linear":
         dZ = linear_der(dA, act_cache)
     dA_prev, dW, db = linear_backward(dZ, lin_cache, W, b)
     return dA_prev, dW, db
+
 
 def multi_layer_backward(dAL, caches, parameters):
     '''
@@ -283,13 +296,14 @@ def multi_layer_backward(dAL, caches, parameters):
     gradients = {}
     dA = dAL
     activation = "linear"
-    for l in reversed(range(1,L+1)):
-        dA, gradients["dW"+str(l)], gradients["db"+str(l)] = \
-                    layer_backward(dA, caches[l-1], \
-                    parameters["W"+str(l)],parameters["b"+str(l)],\
-                    activation)
+    for l in reversed(range(1, L + 1)):
+        dA, gradients["dW" + str(l)], gradients["db" + str(l)] = \
+            layer_backward(dA, caches[l - 1],
+                           parameters["W" + str(l)], parameters["b" + str(l)],
+                           activation)
         activation = "relu"
     return gradients
+
 
 def classify(X, Y, parameters):
     '''
@@ -306,19 +320,20 @@ def classify(X, Y, parameters):
     # Get predictions using softmax_cross_entropy_loss
     # Estimate the class labels using predictions
     Zl, caches = multi_layer_forward(X, parameters)
-    A,cachel,cost = softmax_cross_entropy_loss(Zl,Y) 
-    YPred = np.argmax(A,axis = 0)
-    return np.reshape(YPred,(1,YPred.shape[0]))
+    A, cachel, cost = softmax_cross_entropy_loss(Zl, Y)
+    YPred = np.argmax(A, axis=0)
+    return np.reshape(YPred, (1, YPred.shape[0]))
 
-def gradient_descend_wo_momentum(parameters, gradients, epoch, learning_rate, decay_rate= 0.01):
 
-    alpha = learning_rate*(1/(1+decay_rate*epoch))
-    L = len(parameters)//2
-    for l in range(L-1):
-        parameters["W"+str(l+1)] = parameters["W"+str(l+1)] - alpha*gradients["dW"+str(l+1)]
-        parameters["b"+str(l+1)] = parameters["b"+str(l+1)] - alpha*gradients["db"+str(l+1)]
+def simple_gradient_descent(parameters, gradients, epoch, learning_rate, decay_rate=0.01):
+    alpha = learning_rate * (1 / (1 + decay_rate * epoch))
+    L = len(parameters) // 2
+    for l in range(L - 1):
+        parameters["W" + str(l + 1)] = parameters["W" + str(l + 1)] - alpha * gradients["dW" + str(l + 1)]
+        parameters["b" + str(l + 1)] = parameters["b" + str(l + 1)] - alpha * gradients["db" + str(l + 1)]
 
     return parameters, alpha
+
 
 def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.01):
     '''
@@ -337,29 +352,32 @@ def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.
 
     gradient_method = parameters[GRADIENT_TECHNIQUE]
     if gradient_method == NO_MOMENTUM:
-        return gradient_descend_wo_momentum(parameters, gradients, epoch, learning_rate, decay_rate)
-    
-# =============================================================================
-#    Remove your condition - create a new function and implement
-#     elif gradient_method == MOMENTUM:
-#         g =2
-#     elif gradient_method == NAG:
-#         g=3
-#     elif gradient_method == RMSPROP:
-#         g =4
-#     elif gradient_method == ADAM:
-#         g=5
-# 
-# =============================================================================
-    return parameters,0
+        return simple_gradient_descent(parameters, gradients, epoch, learning_rate, decay_rate)
 
-def one_hot(Y,num_classes):
-    Y_one_hot = np.zeros((num_classes,Y.shape[1]))
+    # =============================================================================
+    #    Remove your condition - create a new function and implement
+    #     elif gradient_method == MOMENTUM:
+    #         g =2
+    #     elif gradient_method == NAG:
+    #         g=3
+    #     elif gradient_method == RMSPROP:
+    #         g =4
+    #     elif gradient_method == ADAM:
+    #         g=5
+    #
+    # =============================================================================
+    return parameters, 0
+
+
+def one_hot(Y, num_classes):
+    Y_one_hot = np.zeros((num_classes, Y.shape[1]))
     for i in range(Y.shape[1]):
-        Y_one_hot[int(Y[0,i]),i] = 1
+        Y_one_hot[int(Y[0, i]), i] = 1
     return Y_one_hot
 
-def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rate=0.2, decay_rate=0.01, gradient_method = NO_MOMENTUM):
+
+def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rate=0.2, decay_rate=0.01,
+                        gradient_method=NO_MOMENTUM):
     '''
     Creates the multilayer network and trains the network
 
@@ -374,38 +392,39 @@ def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rat
         costs - list of costs over training
         parameters - dictionary of trained network parameters
     '''
-    
+
     parameters = initialize_multilayer_weights(net_dims)
     parameters[GRADIENT_TECHNIQUE] = gradient_method
     A0 = X
 
     costs = []
-    vCosts = [] 
-    Y_one_hot = one_hot(Y,10)
+    vCosts = []
+    Y_one_hot = one_hot(Y, 10)
     vY_one_hot = one_hot(vY, 10)
     for ii in range(num_iterations):
         # Forward Prop
         ## call to multi_layer_forward to get activations
         ## call to softmax cross entropy loss 
         Zl, caches = multi_layer_forward(A0, parameters)
-        Al,cachel,cost = softmax_cross_entropy_loss(Zl,Y_one_hot) 
-        
+        Al, cachel, cost = softmax_cross_entropy_loss(Zl, Y_one_hot)
+
         vZ1, vCaches = multi_layer_forward(vX, parameters)
-        vA1,vCache1,vCost = softmax_cross_entropy_loss(vZ1,vY_one_hot)
-        
+        vA1, vCache1, vCost = softmax_cross_entropy_loss(vZ1, vY_one_hot)
+
         # Backward Prop
         ## call to softmax cross entropy loss der
         ## call to multi_layer_backward to get gradients
         ## call to update the parameters
-        dZ = softmax_cross_entropy_loss_der(Y_one_hot,cachel)
-        grads = multi_layer_backward(dZ, caches, parameters)        
-        parameters,alpha = update_parameters(parameters,grads,ii,learning_rate,decay_rate)
+        dZ = softmax_cross_entropy_loss_der(Y_one_hot, cachel)
+        grads = multi_layer_backward(dZ, caches, parameters)
+        parameters, alpha = update_parameters(parameters, grads, ii, learning_rate, decay_rate)
         if ii % 10 == 0:
             costs.append(cost)
             vCosts.append(vCost)
         if ii % 10 == 0:
-            print("Cost at iteration %i is: %.05f, learning rate: %.05f, valid cost : %.05f" %(ii, cost, alpha, vCost))
+            print("Cost at iteration %i is: %.05f, learning rate: %.05f, valid cost : %.05f" % (ii, cost, alpha, vCost))
     return costs, vCosts, parameters
+
 
 def main():
     '''
@@ -424,48 +443,45 @@ def main():
     784 is the input size of digit images (28pix x 28pix = 784)
     10 is the number of digits
     '''
-# =============================================================================
-#     net_dims = ast.literal_eval( sys.argv[1] ) #Get input from command line
-# =============================================================================
-    net_dims = [784,500,100]
-    net_dims.append(10) # Adding the digits layer with dimensionality = 10
+    # =============================================================================
+    #     net_dims = ast.literal_eval( sys.argv[1] ) #Get input from command line
+    # =============================================================================
+    net_dims = [784, 500, 100]
+    net_dims.append(10)  # Adding the digits layer with dimensionality = 10
     print("Network dimensions are:" + str(net_dims))
 
     # getting the subset dataset from MNIST
     train_data, train_label, test_data, test_label, valid_data, valid_label = \
-            mnist(noTrSamples=5000,noTsSamples=1000,\
-            digit_range=[0,1,2,3,4,5,6,7,8,9],\
-            noTrPerClass=500, noTsPerClass=100,  noVdSamples = 1000, noVdPerClass = 100)
+        mnist(noTrSamples=5000, noTsSamples=1000,
+              digit_range=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+              noTrPerClass=500, noTsPerClass=100, noVdSamples=1000, noVdPerClass=100)
     # initialize learning rate and num_iterations
     learning_rate = 1
     num_iterations = 2000
     gradient_method = NO_MOMENTUM
 
-    costs, vCosts, parameters = multi_layer_network(train_data, train_label, valid_data, valid_label,net_dims, \
-                                                    num_iterations=num_iterations, learning_rate=learning_rate, gradient_method = gradient_method)
-   
-  
- # compute the accuracy for training set and testing set
-    Y_one_hot = one_hot(train_label,10)
+    costs, vCosts, parameters = multi_layer_network(train_data, train_label, valid_data, valid_label, net_dims,
+                                                    num_iterations=num_iterations, learning_rate=learning_rate,
+                                                    gradient_method=gradient_method)
+
+    # compute the accuracy for training set and testing set
+    Y_one_hot = one_hot(train_label, 10)
     t_one_hot = one_hot(test_label, 10)
-    
+
     train_Pred = classify(train_data, Y_one_hot, parameters)
     test_Pred = classify(test_data, t_one_hot, parameters)
-        
-    
- 
-    trAcc = np.count_nonzero(train_Pred == train_label) / train_label.shape[1] *100
+
+    trAcc = np.count_nonzero(train_Pred == train_label) / train_label.shape[1] * 100
     teAcc = np.count_nonzero(test_Pred == test_label) / test_label.shape[1] * 100
     print("Accuracy for training set is {0:0.3f} %".format(trAcc))
     print("Accuracy for testing set is {0:0.3f} %".format(teAcc))
 
-    
     itr = range(len(costs))
-    plt.plot(itr,costs, label = "Training Error")
-    plt.plot(itr,vCosts, label = "Validation Error")
+    plt.plot(itr, costs, label="Training Error")
+    plt.plot(itr, vCosts, label="Validation Error")
     plt.xlabel("Iterations")
     plt.ylabel("Costs")
-    plt.legend(loc = "upper right")
+    plt.legend(loc="upper right")
 
 
 if __name__ == "__main__":
