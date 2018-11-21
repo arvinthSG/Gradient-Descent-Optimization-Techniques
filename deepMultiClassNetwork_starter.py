@@ -1,12 +1,5 @@
-'''
-This file implements a multi layer neural network for a multiclass classifier
-
-Hemanth Venkateswara
-hkdv1@asu.edu
-Oct 2018
-'''
+#!/usr/bin/env python3
 import matplotlib.pyplot as plt
-# python 3
 import numpy as np
 
 from load_mnist import mnist
@@ -335,6 +328,25 @@ def simple_gradient_descent(parameters, gradients, epoch, learning_rate, decay_r
     return parameters, alpha
 
 
+'''
+    Decay rate for RMS prop is going to be 0.9
+'''
+
+
+def rmsprop(parameters, gradients, epoch, learning_rate, beta=0.9, epsilon=1e-8):
+    alpha = learning_rate * (1 / (1 + beta * epoch))
+    L = len(parameters) // 2
+    for l in range(L - 1):
+        rms_W = np.sqrt(np.mean(parameters["W" + str(l + 1)] ** 2))
+        rms_b = np.sqrt(np.mean(parameters["b" + str(l + 1)] ** 2))
+        parameters["W" + str(l + 1)] = (beta * rms_W) + (0.1 * np.square(gradients["dW" + str(l + 1)]))
+        parameters["b" + str(l + 1)] = (beta * rms_b) + (0.1 * np.square(gradients["db" + str(l + 1)]))
+        # print(parameters["W" + str(l + 1)])
+        # print(parameters["b" + str(l + 1)])
+
+    return parameters, alpha
+
+
 def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.01):
     '''
     @TODO - Change the comments
@@ -353,6 +365,8 @@ def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.
     gradient_method = parameters[GRADIENT_TECHNIQUE]
     if gradient_method == NO_MOMENTUM:
         return simple_gradient_descent(parameters, gradients, epoch, learning_rate, decay_rate)
+    elif gradient_method == RMSPROP:
+        return rmsprop(parameters, gradients, epoch, learning_rate)
 
     # =============================================================================
     #    Remove your condition - create a new function and implement
@@ -360,8 +374,6 @@ def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.
     #         g =2
     #     elif gradient_method == NAG:
     #         g=3
-    #     elif gradient_method == RMSPROP:
-    #         g =4
     #     elif gradient_method == ADAM:
     #         g=5
     #
