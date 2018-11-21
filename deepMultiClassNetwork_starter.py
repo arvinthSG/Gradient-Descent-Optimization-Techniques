@@ -10,6 +10,12 @@ import numpy as np
 from load_mnist import mnist
 import matplotlib.pyplot as plt
 
+NO_MOMENTUM = "no_momentum"
+MOMENTUM = "momentum"
+NAG = "NAG"
+RMSPROP = "RMSPROP"
+ADAM = "ADAM"
+GRADIENT_TECHNIQUE = "gradient_technique"
 def relu(Z):
     '''
     computes relu activation of Z
@@ -304,8 +310,19 @@ def classify(X, Y, parameters):
     YPred = np.argmax(A,axis = 0)
     return np.reshape(YPred,(1,YPred.shape[0]))
 
+def gradient_descend_wo_momentum(parameters, gradients, epoch, learning_rate, decay_rate= 0.01):
+
+    alpha = learning_rate*(1/(1+decay_rate*epoch))
+    L = len(parameters)//2
+    for l in range(L-1):
+        parameters["W"+str(l+1)] = parameters["W"+str(l+1)] - alpha*gradients["dW"+str(l+1)]
+        parameters["b"+str(l+1)] = parameters["b"+str(l+1)] - alpha*gradients["db"+str(l+1)]
+
+    return parameters, alpha
+
 def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.01):
     '''
+    @TODO - Change the comments
     Updates the network parameters with gradient descent
 
     Inputs:
@@ -317,14 +334,24 @@ def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.
         learning_rate - step size for learning
         decay_rate - rate of decay of step size - not necessary - in case you want to use
     '''
-    alpha = learning_rate*(1/(1+decay_rate*epoch))
-    L = len(parameters)//2
-    for l in range(L-1):
-        parameters["W"+str(l+1)] = parameters["W"+str(l+1)] - alpha*gradients["dW"+str(l+1)]
-        parameters["b"+str(l+1)] = parameters["b"+str(l+1)] - alpha*gradients["db"+str(l+1)]
 
-    return parameters, alpha
-
+    gradient_method = parameters[GRADIENT_TECHNIQUE]
+    if gradient_method == NO_MOMENTUM:
+        return gradient_descend_wo_momentum(parameters, gradients, epoch, learning_rate, decay_rate)
+    
+# =============================================================================
+#    Remove your condition - create a new function and implement
+#     elif gradient_method == MOMENTUM:
+#         g =2
+#     elif gradient_method == NAG:
+#         g=3
+#     elif gradient_method == RMSPROP:
+#         g =4
+#     elif gradient_method == ADAM:
+#         g=5
+# 
+# =============================================================================
+    return parameters,0
 
 def one_hot(Y,num_classes):
     Y_one_hot = np.zeros((num_classes,Y.shape[1]))
@@ -332,7 +359,7 @@ def one_hot(Y,num_classes):
         Y_one_hot[int(Y[0,i]),i] = 1
     return Y_one_hot
 
-def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rate=0.2, decay_rate=0.01):
+def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rate=0.2, decay_rate=0.01, gradient_method = NO_MOMENTUM):
     '''
     Creates the multilayer network and trains the network
 
@@ -347,7 +374,9 @@ def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rat
         costs - list of costs over training
         parameters - dictionary of trained network parameters
     '''
+    
     parameters = initialize_multilayer_weights(net_dims)
+    parameters[GRADIENT_TECHNIQUE] = gradient_method
     A0 = X
 
     costs = []
@@ -408,12 +437,12 @@ def main():
             digit_range=[0,1,2,3,4,5,6,7,8,9],\
             noTrPerClass=500, noTsPerClass=100,  noVdSamples = 1000, noVdPerClass = 100)
     # initialize learning rate and num_iterations
-    learning_rate = 10
+    learning_rate = 1
     num_iterations = 2000
+    gradient_method = NO_MOMENTUM
 
-
-    costs, vCosts, parameters = multi_layer_network(train_data, train_label, valid_data, valid_label, net_dims, \
-            num_iterations=num_iterations, learning_rate=learning_rate,)
+    costs, vCosts, parameters = multi_layer_network(train_data, train_label, valid_data, valid_label,net_dims, \
+                                                    num_iterations=num_iterations, learning_rate=learning_rate, gradient_method = gradient_method)
    
   
  # compute the accuracy for training set and testing set
