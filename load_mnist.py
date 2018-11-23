@@ -1,9 +1,9 @@
-import numpy as np
 import os
-import pdb
-import matplotlib.pyplot as plt
 
-datasets_dir = '/Users/arvin/OneDrive/Desktop/Notes/FSL/HW3/'
+import matplotlib.pyplot as plt
+import numpy as np
+
+datasets_dir = 'data/'
 
 
 def one_hot(x, n):
@@ -15,9 +15,9 @@ def one_hot(x, n):
     return o_h
 
 
-def mnist(noTrSamples=1000, noTsSamples=100, \
-                        digit_range=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], \
-                        noTrPerClass=100, noTsPerClass=10, noVdSamples = 200, noVdPerClass = 100):
+def mnist(noTrSamples=1000, noTsSamples=100,
+          digit_range=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+          noTrPerClass=100, noTsPerClass=10, noVdSamples = 200, noVdPerClass = 100):
     assert noTrSamples==noTrPerClass*len(digit_range), 'noTrSamples and noTrPerClass mismatch'
     assert noTsSamples==noTsPerClass*len(digit_range), 'noTrSamples and noTrPerClass mismatch'
     
@@ -91,7 +91,7 @@ def main():
 
     
     plt.imshow(trX[:,5].reshape(28, -1))
-    trY[0,5]
-    
+
+
 if __name__ == "__main__":
     main()

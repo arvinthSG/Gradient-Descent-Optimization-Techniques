@@ -1,12 +1,5 @@
-'''
-This file implements a multi layer neural network for a multiclass classifier
-
-Hemanth Venkateswara
-hkdv1@asu.edu
-Oct 2018
-'''
+#!/usr/bin/env python3
 import matplotlib.pyplot as plt
-# python 3
 import numpy as np
 
 from load_mnist import mnist
@@ -68,12 +61,11 @@ def linear(Z):
         cache is a dictionary with {"Z", Z}
     '''
     A = Z
-    cache = {}
-    cache["Z"] = Z
+    cache = {"Z": Z}
     return A, cache
 
 
-def linear_der(dA, cache):
+def linear_der(dA):
     '''
     computes derivative of linear activation
     This function is implemented for completeness
@@ -132,7 +124,7 @@ def softmax_cross_entropy_loss_der(Y, cache):
     return dZ
 
 
-def initialize_multilayer_weights(net_dims):
+def initialize_multilayer_weights(net_dims, gradient_method):
     '''
     Initializes the weights of the multilayer network
 
@@ -149,6 +141,12 @@ def initialize_multilayer_weights(net_dims):
     for l in range(numLayers - 1):
         parameters["W" + str(l + 1)] = np.random.randn(net_dims[l + 1], net_dims[l]) * np.sqrt(2 / net_dims[l + 1])
         parameters["b" + str(l + 1)] = np.random.randn(net_dims[l + 1], 1) * np.sqrt(2 / net_dims[l + 1])
+    parameters["layers"] = numLayers - 1
+    parameters[GRADIENT_TECHNIQUE] = gradient_method
+    if parameters[GRADIENT_TECHNIQUE] == RMSPROP:
+        parameters["RMSprop_3"] = 0
+        parameters["RMSprop_2"] = 0
+        parameters["RMSprop_1"] = 0
     return parameters
 
 
@@ -214,7 +212,7 @@ def multi_layer_forward(X, parameters):
             where c is number of categories and m is number of samples in the batch
         caches - a dictionary of associated caches of parameters and network inputs
     '''
-    L = len(parameters) // 2
+    L = parameters["layers"]
     A = X
     caches = []
     for l in range(1, L):  # since there is no W0 and b0
@@ -273,7 +271,7 @@ def layer_backward(dA, cache, W, b, activation):
     if activation == "relu":
         dZ = relu_der(dA, act_cache)
     elif activation == "linear":
-        dZ = linear_der(dA, act_cache)
+        dZ = linear_der(dA)
     dA_prev, dW, db = linear_backward(dZ, lin_cache, W, b)
     return dA_prev, dW, db
 
@@ -327,12 +325,30 @@ def classify(X, Y, parameters):
 
 def simple_gradient_descent(parameters, gradients, epoch, learning_rate, decay_rate=0.01):
     alpha = learning_rate * (1 / (1 + decay_rate * epoch))
-    L = len(parameters) // 2
+    L = parameters["layers"]
     for l in range(L - 1):
         parameters["W" + str(l + 1)] = parameters["W" + str(l + 1)] - alpha * gradients["dW" + str(l + 1)]
         parameters["b" + str(l + 1)] = parameters["b" + str(l + 1)] - alpha * gradients["db" + str(l + 1)]
 
     return parameters, alpha
+
+
+'''
+    Decay rate for RMS prop is going to be 0.9
+'''
+
+
+def rmsprop(parameters, gradients, epoch, learning_rate, beta=0.9, epsilon=1e-8):
+    L = parameters["layers"]
+    for l in reversed(range(1, L + 1)):
+        parameters["RMSprop_" + str(l)] = beta * parameters["RMSprop_" + str(l)] + (1 - beta) * gradients[
+            "dW" + str(l)] ** 2
+        parameters["W" + str(l)] = parameters["W" + str(l)] - (
+                    learning_rate / np.sqrt(parameters["RMSprop_" + str(l)] + epsilon)) * gradients[
+                                       "dW" + str(l)]
+    return parameters, learning_rate
+
+
 
 
 def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.01):
@@ -353,6 +369,8 @@ def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.
     gradient_method = parameters[GRADIENT_TECHNIQUE]
     if gradient_method == NO_MOMENTUM:
         return simple_gradient_descent(parameters, gradients, epoch, learning_rate, decay_rate)
+    elif gradient_method == RMSPROP:
+        return rmsprop(parameters, gradients, epoch, learning_rate)
 
     # =============================================================================
     #    Remove your condition - create a new function and implement
@@ -360,8 +378,6 @@ def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.
     #         g =2
     #     elif gradient_method == NAG:
     #         g=3
-    #     elif gradient_method == RMSPROP:
-    #         g =4
     #     elif gradient_method == ADAM:
     #         g=5
     #
@@ -393,8 +409,8 @@ def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rat
         parameters - dictionary of trained network parameters
     '''
 
-    parameters = initialize_multilayer_weights(net_dims)
-    parameters[GRADIENT_TECHNIQUE] = gradient_method
+    parameters = initialize_multilayer_weights(net_dims, gradient_method)
+    print(f"Training {parameters['layers']} neural network with {gradient_method} at an initial learning rate of {learning_rate}")
     A0 = X
 
     costs = []
@@ -455,33 +471,40 @@ def main():
         mnist(noTrSamples=5000, noTsSamples=1000,
               digit_range=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
               noTrPerClass=500, noTsPerClass=100, noVdSamples=1000, noVdPerClass=100)
-    # initialize learning rate and num_iterations
-    learning_rate = 1
-    num_iterations = 2000
-    gradient_method = NO_MOMENTUM
 
-    costs, vCosts, parameters = multi_layer_network(train_data, train_label, valid_data, valid_label, net_dims,
-                                                    num_iterations=num_iterations, learning_rate=learning_rate,
-                                                    gradient_method=gradient_method)
+    num_iterations = 100
+    all_costs = []
+    all_vcosts = []
 
-    # compute the accuracy for training set and testing set
-    Y_one_hot = one_hot(train_label, 10)
-    t_one_hot = one_hot(test_label, 10)
+    # Add gradient method and its corresponding learning rate to the array.
+    gradient_methods = [NO_MOMENTUM, RMSPROP]
+    learning_rates = [0.01, 0.001]
 
-    train_Pred = classify(train_data, Y_one_hot, parameters)
-    test_Pred = classify(test_data, t_one_hot, parameters)
+    for learning_rate, gradient_method in zip(learning_rates, gradient_methods):
+        costs, vCosts, parameters = multi_layer_network(train_data, train_label, valid_data, valid_label, net_dims,
+                                                        num_iterations=num_iterations, learning_rate=learning_rate,
+                                                        gradient_method=gradient_method)
+        all_costs.append(costs)
+        all_vcosts.append(costs)
+        # compute the accuracy for training set and testing set
+        Y_one_hot = one_hot(train_label, 10)
+        t_one_hot = one_hot(test_label, 10)
 
-    trAcc = np.count_nonzero(train_Pred == train_label) / train_label.shape[1] * 100
-    teAcc = np.count_nonzero(test_Pred == test_label) / test_label.shape[1] * 100
-    print("Accuracy for training set is {0:0.3f} %".format(trAcc))
-    print("Accuracy for testing set is {0:0.3f} %".format(teAcc))
+        train_Pred = classify(train_data, Y_one_hot, parameters)
+        test_Pred = classify(test_data, t_one_hot, parameters)
 
-    itr = range(len(costs))
-    plt.plot(itr, costs, label="Training Error")
-    plt.plot(itr, vCosts, label="Validation Error")
-    plt.xlabel("Iterations")
-    plt.ylabel("Costs")
-    plt.legend(loc="upper right")
+        trAcc = np.count_nonzero(train_Pred == train_label) / train_label.shape[1] * 100
+        teAcc = np.count_nonzero(test_Pred == test_label) / test_label.shape[1] * 100
+        print("Accuracy for training set is {0:0.3f} %".format(trAcc))
+        print("Accuracy for testing set is {0:0.3f} %".format(teAcc))
+        print("------------------------------------------------------")
+        itr = range(len(costs))
+        plt.plot(itr, costs, label="Training Error")
+        plt.plot(itr, vCosts, label="Validation Error")
+        plt.xlabel("Iterations")
+        plt.ylabel("Costs")
+        plt.legend(loc="upper right")
+        plt.show()
 
 
 if __name__ == "__main__":
