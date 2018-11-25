@@ -480,62 +480,63 @@ def main():
               digit_range=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
               noTrPerClass=500, noTsPerClass=100, noVdSamples=1000, noVdPerClass=100)
 
-    num_iterations = 100
+    num_iterations_list = [100, 500, 1000]
 
     # Add gradient method and its corresponding learning rate to the array.
     gradient_methods = [NO_MOMENTUM, MOMENTUM, NAG, RMSPROP, ADAM]
     learning_rates = [0.1, 0.05, 0.01, 0.001]
-    for learning_rate in learning_rates:
-        all_costs = []
-        all_vcosts = []
-        time_per_algo = []
-        training_accuracy_per_algo = []
-        testing_accuracy_per_algo = []
-        for gradient_method in gradient_methods:
-            start_time = datetime.datetime.now()
-            mm = MultiLayerNeuralNetwork(net_dims, learning_rate, num_iterations, gradient_method)
-            mm.fit(train_data, train_label, valid_data, valid_label)
-            end_time = datetime.datetime.now()
+    for num_iterations in num_iterations_list:
+        print(f"Running {num_iterations} Iterations")
+        for learning_rate in learning_rates:
+            all_costs = []
+            all_vcosts = []
+            time_per_algo = []
+            training_accuracy_per_algo = []
+            testing_accuracy_per_algo = []
+            for gradient_method in gradient_methods:
+                start_time = datetime.datetime.now()
+                mm = MultiLayerNeuralNetwork(net_dims, learning_rate, num_iterations, gradient_method)
+                mm.fit(train_data, train_label, valid_data, valid_label)
+                end_time = datetime.datetime.now()
 
-            # compute the accuracy for training set and testing set
-            Y_one_hot = one_hot(train_label, 10)
-            t_one_hot = one_hot(test_label, 10)
-            train_Pred = mm.predict(train_data, Y_one_hot)
-            test_Pred = mm.predict(test_data, t_one_hot)
+                # compute the accuracy for training set and testing set
+                Y_one_hot = one_hot(train_label, 10)
+                t_one_hot = one_hot(test_label, 10)
+                train_Pred = mm.predict(train_data, Y_one_hot)
+                test_Pred = mm.predict(test_data, t_one_hot)
 
-            trAcc = np.count_nonzero(train_Pred == train_label) / train_label.shape[1] * 100
-            teAcc = np.count_nonzero(test_Pred == test_label) / test_label.shape[1] * 100
-            print(f"Accuracy for training set is {trAcc:0.03f} %")
-            print(f"Accuracy for testing set is {teAcc:0.03f} %")
-            print(
-                f"Time for the algo - {gradient_method} for {num_iterations} iterations was {(end_time - start_time).total_seconds()}")
-            print("------------------------------------------------------")
-            time_per_algo.append((end_time - start_time).total_seconds())
-            testing_accuracy_per_algo.append(teAcc)
-            training_accuracy_per_algo.append(trAcc)
-            all_vcosts.append(mm.validation_costs)
-            all_costs.append(mm.costs)
+                trAcc = np.count_nonzero(train_Pred == train_label) / train_label.shape[1] * 100
+                teAcc = np.count_nonzero(test_Pred == test_label) / test_label.shape[1] * 100
+                print(f"Accuracy for training set is {trAcc:0.03f} %")
+                print(f"Accuracy for testing set is {teAcc:0.03f} %")
+                print(f"Time for the algo - {gradient_method} for {num_iterations} iterations was {(end_time - start_time).total_seconds()}")
+                print("------------------------------------------------------")
+                time_per_algo.append((end_time - start_time).total_seconds())
+                testing_accuracy_per_algo.append(teAcc)
+                training_accuracy_per_algo.append(trAcc)
+                all_vcosts.append(mm.validation_costs)
+                all_costs.append(mm.costs)
 
-        plot_costs_graph(all_costs, gradient_methods, f"outputs/allcosts-{num_iterations}-{learning_rate}.png", learning_rate, False)
-        plot_costs_graph(all_vcosts, gradient_methods, f"outputs/allValidcosts-{num_iterations}-{learning_rate}.png", learning_rate, True)
-        print(time_per_algo)
-        print(testing_accuracy_per_algo)
-        print(training_accuracy_per_algo)
+            plot_costs_graph(all_costs, gradient_methods, f"outputs/allcosts-{num_iterations}-{learning_rate}.png", learning_rate, False)
+            plot_costs_graph(all_vcosts, gradient_methods, f"outputs/allValidcosts-{num_iterations}-{learning_rate}.png", learning_rate, True)
+            print(time_per_algo)
+            print(testing_accuracy_per_algo)
+            print(training_accuracy_per_algo)
 
-        plot_bar_graph(time_per_algo, gradient_methods,
-                       f"outputs/time-{num_iterations}-{learning_rate}.png",
-                       f"Plot of Time taken when using various algorithms for learning rate {learning_rate}",
-                       "Time")
+            plot_bar_graph(time_per_algo, gradient_methods,
+                        f"outputs/time-{num_iterations}-{learning_rate}.png",
+                        f"Plot of Time taken when using various algorithms for learning rate {learning_rate}",
+                        "Time")
 
-        plot_bar_graph(testing_accuracy_per_algo, gradient_methods,
-                       f"outputs/testing-accuracy-{num_iterations}-{learning_rate}.png",
-                       f"Plot of Testing Accuracy at LR: {learning_rate}",
-                       "Testing Accuracy")
+            plot_bar_graph(testing_accuracy_per_algo, gradient_methods,
+                        f"outputs/testing-accuracy-{num_iterations}-{learning_rate}.png",
+                        f"Plot of Testing Accuracy at LR: {learning_rate}",
+                        "Testing Accuracy")
 
-        plot_bar_graph(training_accuracy_per_algo, gradient_methods,
-                       f"outputs/training-accuracy-{num_iterations}-{learning_rate}.png",
-                       f"Plot of Training Accuracy at LR: {learning_rate}",
-                       "Training Accuracy")
+            plot_bar_graph(training_accuracy_per_algo, gradient_methods,
+                        f"outputs/training-accuracy-{num_iterations}-{learning_rate}.png",
+                        f"Plot of Training Accuracy at LR: {learning_rate}",
+                        "Training Accuracy")
 
 
 if __name__ == "__main__":
