@@ -141,12 +141,13 @@ def initialize_multilayer_weights(net_dims, gradient_method):
     for l in range(numLayers - 1):
         parameters["W" + str(l + 1)] = np.random.randn(net_dims[l + 1], net_dims[l]) * np.sqrt(2 / net_dims[l + 1])
         parameters["b" + str(l + 1)] = np.random.randn(net_dims[l + 1], 1) * np.sqrt(2 / net_dims[l + 1])
+        # V is used by momentum, Adam and RMS Prop
+        parameters["v" + str(l + 1)] = 0
+        # M is used by Adam
+        parameters["m" + str(l + 1)] = 0
+
     parameters["layers"] = numLayers - 1
     parameters[GRADIENT_TECHNIQUE] = gradient_method
-    if parameters[GRADIENT_TECHNIQUE] == RMSPROP:
-        parameters["RMSprop_3"] = 0
-        parameters["RMSprop_2"] = 0
-        parameters["RMSprop_1"] = 0
     return parameters
 
 
@@ -333,22 +334,40 @@ def simple_gradient_descent(parameters, gradients, epoch, learning_rate, decay_r
     return parameters, alpha
 
 
+def polyackmomentum(parameters, gradients, learning_rate, alpha=1e-3):
+    L = parameters["layers"]
+    for l in reversed(range(1, L + 1)):
+        parameters["v" + str(l)] = parameters["v" + str(l)] * alpha + learning_rate * gradients["dW" + str(l)]
+        parameters["W" + str(l)] = parameters["W" + str(l)] - parameters["v" + str(l)]
+    return parameters, learning_rate
+
+
 '''
     Decay rate for RMS prop is going to be 0.9
 '''
 
 
-def rmsprop(parameters, gradients, epoch, learning_rate, beta=0.9, epsilon=1e-8):
+def rmsprop(parameters, gradients, learning_rate, beta=0.9, epsilon=1e-8):
     L = parameters["layers"]
     for l in reversed(range(1, L + 1)):
-        parameters["RMSprop_" + str(l)] = beta * parameters["RMSprop_" + str(l)] + (1 - beta) * gradients[
+        parameters["v" + str(l)] = beta * parameters["v" + str(l)] + (1 - beta) * gradients[
             "dW" + str(l)] ** 2
         parameters["W" + str(l)] = parameters["W" + str(l)] - (
-                    learning_rate / np.sqrt(parameters["RMSprop_" + str(l)] + epsilon)) * gradients[
+                    learning_rate / np.sqrt(parameters["v" + str(l)] + epsilon)) * gradients[
                                        "dW" + str(l)]
     return parameters, learning_rate
 
 
+def adam(parameters, gradients, learning_rate, beta1=0.9, beta2=0.999, epsilon=1e-7):
+    L = parameters["layers"]
+    for l in reversed(range(1, L + 1)):
+        parameters["m"+str(l)] = beta1 * parameters["m"+str(l)] + (1 - beta1) * gradients["dW" + str(l)]
+        parameters["v"+str(l)] = beta2 * parameters["v"+str(l)] + (1 - beta2) * gradients["dW" + str(l)] ** 2
+        v_hat = parameters["v"+str(l)] / (1 - beta2)
+        m_hat = parameters["m"+str(l)] / (1 - beta1)
+        parameters["W"+str(l)] = parameters["W"+str(l)] - (learning_rate / (np.sqrt(v_hat) + epsilon)) * m_hat
+
+    return parameters, learning_rate
 
 
 def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.01):
@@ -370,8 +389,11 @@ def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.
     if gradient_method == NO_MOMENTUM:
         return simple_gradient_descent(parameters, gradients, epoch, learning_rate, decay_rate)
     elif gradient_method == RMSPROP:
-        return rmsprop(parameters, gradients, epoch, learning_rate)
-
+        return rmsprop(parameters, gradients,learning_rate)
+    elif gradient_method == MOMENTUM:
+        return polyackmomentum(parameters, gradients, learning_rate)
+    elif gradient_method == ADAM:
+        return adam(parameters, gradients, learning_rate)
     # =============================================================================
     #    Remove your condition - create a new function and implement
     #     elif gradient_method == MOMENTUM:
@@ -410,7 +432,7 @@ def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rat
     '''
 
     parameters = initialize_multilayer_weights(net_dims, gradient_method)
-    print(f"Training {parameters['layers']} neural network with {gradient_method} at an initial learning rate of {learning_rate}")
+    print(f"Training {parameters['layers']} layer neural network with {gradient_method} at an initial learning rate of {learning_rate}")
     A0 = X
 
     costs = []
@@ -472,13 +494,13 @@ def main():
               digit_range=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
               noTrPerClass=500, noTsPerClass=100, noVdSamples=1000, noVdPerClass=100)
 
-    num_iterations = 100
+    num_iterations = 1000
     all_costs = []
     all_vcosts = []
 
     # Add gradient method and its corresponding learning rate to the array.
-    gradient_methods = [NO_MOMENTUM, RMSPROP]
-    learning_rates = [0.01, 0.001]
+    gradient_methods = [NO_MOMENTUM, MOMENTUM, RMSPROP, ADAM]
+    learning_rates = [0.01, 0.01, 0.001, 0.001]
 
     for learning_rate, gradient_method in zip(learning_rates, gradient_methods):
         costs, vCosts, parameters = multi_layer_network(train_data, train_label, valid_data, valid_label, net_dims,
