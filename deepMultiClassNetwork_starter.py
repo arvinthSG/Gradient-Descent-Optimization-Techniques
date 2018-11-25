@@ -18,10 +18,10 @@ def relu(Z):
     '''
     computes relu activation of Z
 
-    Inputs: 
+    Inputs:
         Z is a numpy.ndarray (n, m)
 
-    Returns: 
+    Returns:
         A is activation. numpy.ndarray (n, m)
         cache is a dictionary with {"Z", Z}
     '''
@@ -36,12 +36,12 @@ def relu_der(dA, cache):
     '''
     computes derivative of relu activation
 
-    Inputs: 
+    Inputs:
         dA is the derivative from subsequent layer. numpy.ndarray (n, m)
-        cache is a dictionary with {"Z", Z}, where Z was the input 
+        cache is a dictionary with {"Z", Z}, where Z was the input
         to the activation layer during forward propagation
 
-    Returns: 
+    Returns:
         dZ is the derivative. numpy.ndarray (n,m)
     '''
     dZ = np.array(dA, copy=True)
@@ -55,10 +55,10 @@ def linear(Z):
     computes linear activation of Z
     This function is implemented for completeness
 
-    Inputs: 
+    Inputs:
         Z is a numpy.ndarray (n, m)
 
-    Returns: 
+    Returns:
         A is activation. numpy.ndarray (n, m)
         cache is a dictionary with {"Z", Z}
     '''
@@ -72,12 +72,12 @@ def linear_der(dA):
     computes derivative of linear activation
     This function is implemented for completeness
 
-    Inputs: 
+    Inputs:
         dA is the derivative from subsequent layer. numpy.ndarray (n, m)
-        cache is a dictionary with {"Z", Z}, where Z was the input 
+        cache is a dictionary with {"Z", Z}, where Z was the input
         to the activation layer during forward propagation
 
-    Returns: 
+    Returns:
         dZ is the derivative. numpy.ndarray (n,m)
     '''
     dZ = np.array(dA, copy=True)
@@ -89,11 +89,11 @@ def softmax_cross_entropy_loss(Z, Y=np.array([])):
     Computes the softmax activation of the inputs Z
     Estimates the cross entropy loss
 
-    Inputs: 
+    Inputs:
         Z - numpy.ndarray (n, m)
         Y - numpy.ndarray (1, m) of labels
             when y=[] loss is set to []
-    
+
     Returns:
         A - numpy.ndarray (n, m) of softmax activations
         cache -  a dictionary to store the activations later used to estimate derivatives
@@ -114,7 +114,7 @@ def softmax_cross_entropy_loss_der(Y, cache):
     '''
     Computes the derivative of softmax activation and cross entropy loss
 
-    Inputs: 
+    Inputs:
         Y - numpy.ndarray (1, m) of labels
         cache -  a dictionary with cached activations A of size (n,m)
 
@@ -130,7 +130,7 @@ def initialize_multilayer_weights(net_dims, gradient_method):
     '''
     Initializes the weights of the multilayer network
 
-    Inputs: 
+    Inputs:
         net_dims - tuple of network dimensions
 
     Returns:
@@ -143,6 +143,7 @@ def initialize_multilayer_weights(net_dims, gradient_method):
     for l in range(numLayers - 1):
         parameters["W" + str(l + 1)] = np.random.randn(net_dims[l + 1], net_dims[l]) * np.sqrt(2 / net_dims[l + 1])
         parameters["b" + str(l + 1)] = np.random.randn(net_dims[l + 1], 1) * np.sqrt(2 / net_dims[l + 1])
+
         # V is used by momentum, Adam and RMS Prop
         parameters["v" + str(l + 1)] = 0
         # M is used by Adam
@@ -156,10 +157,10 @@ def initialize_multilayer_weights(net_dims, gradient_method):
 
 def linear_forward(A, W, b):
     '''
-    Input A propagates through the layer 
-    Z = WA + b is the output of this layer. 
+    Input A propagates through the layer
+    Z = WA + b is the output of this layer.
 
-    Inputs: 
+    Inputs:
         A - numpy.ndarray (n,m) the input to the layer
         W - numpy.ndarray (n_out, n) the weights of the layer
         b - numpy.ndarray (n_out, 1) the bias of the layer
@@ -178,7 +179,7 @@ def layer_forward(A_prev, W, b, activation):
     '''
     Input A_prev propagates through the layer and the activation
 
-    Inputs: 
+    Inputs:
         A_prev - numpy.ndarray (n,m) the input to the layer
         W - numpy.ndarray (n_out, n) the weights of the layer
         b - numpy.ndarray (n_out, 1) the bias of the layer
@@ -236,16 +237,16 @@ def linear_backward(dZ, cache, W, b):
     Backward prpagation through the linear layer
 
     Inputs:
-        dZ - numpy.ndarray (n,m) derivative dL/dz 
+        dZ - numpy.ndarray (n,m) derivative dL/dz
         cache - a dictionary containing the inputs A, for the linear layer
-            where Z = WA + b,    
+            where Z = WA + b,
             Z is (n,m); W is (n,p); A is (p,m); b is (n,1)
         W - numpy.ndarray (n,p)
         b - numpy.ndarray (n, 1)
 
     Returns:
         dA_prev - numpy.ndarray (p,m) the derivative to the previous layer
-        dW - numpy.ndarray (n,p) the gradient of W 
+        dW - numpy.ndarray (n,p) the gradient of W
         db - numpy.ndarray (n, 1) the gradient of b
     '''
 
@@ -266,10 +267,10 @@ def layer_backward(dA, cache, W, b, activation):
         activation - activation of the layer
         W - numpy.ndarray (n,p)
         b - numpy.ndarray (n, 1)
-    
+
     Returns:
         dA_prev - numpy.ndarray (p,m) the derivative to the previous layer
-        dW - numpy.ndarray (n,p) the gradient of W 
+        dW - numpy.ndarray (n,p) the gradient of W
         db - numpy.ndarray (n, 1) the gradient of b
     '''
     lin_cache = cache["lin_cache"]
@@ -288,13 +289,13 @@ def multi_layer_backward(dAL, caches, parameters):
     Back propgation through the layers of the network (except softmax cross entropy)
     softmax_cross_entropy can be handled separately
 
-    Inputs: 
+    Inputs:
         dAL - numpy.ndarray (n,m) derivatives from the softmax_cross_entropy layer
         caches - a dictionary of associated caches of parameters and network inputs
         parameters - dictionary of network parameters {"W1":[..],"b1":[..],"W2":[..],"b2":[..]...}
 
     Returns:
-        gradients - dictionary of gradient of network parameters 
+        gradients - dictionary of gradient of network parameters
             {"dW1":[..],"db1":[..],"dW2":[..],"db2":[..],...}
     '''
     L = len(caches)  # with one hidden layer, L = 2
@@ -314,9 +315,9 @@ def classify(X, Y, parameters):
     '''
     Network prediction for inputs X
 
-    Inputs: 
+    Inputs:
         X - numpy.ndarray (n,m) with n features and m samples
-        parameters - dictionary of network parameters 
+        parameters - dictionary of network parameters
             {"W1":[..],"b1":[..],"W2":[..],"b2":[..],...}
     Returns:
         YPred - numpy.ndarray (1,m) of predictions
@@ -381,9 +382,9 @@ def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.
     Updates the network parameters with gradient descent
 
     Inputs:
-        parameters - dictionary of network parameters 
+        parameters - dictionary of network parameters
             {"W1":[..],"b1":[..],"W2":[..],"b2":[..],...}
-        gradients - dictionary of gradient of network parameters 
+        gradients - dictionary of gradient of network parameters
             {"dW1":[..],"db1":[..],"dW2":[..],"db2":[..],...}
         epoch - epoch number
         learning_rate - step size for learning
@@ -430,7 +431,7 @@ def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rat
         net_dims - tuple of layer dimensions
         num_iterations - num of epochs to train
         learning_rate - step size for gradient descent
-    
+
     Returns:
         costs - list of costs over training
         parameters - dictionary of trained network parameters
@@ -447,10 +448,9 @@ def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rat
     vY_one_hot = one_hot(vY, 10)
 
     for ii in range(num_iterations):
-        start_time = datetime.datetime.now()
         # Forward Prop
         ## call to multi_layer_forward to get activations
-        ## call to softmax cross entropy loss 
+        ## call to softmax cross entropy loss
         Zl, caches = multi_layer_forward(A0, parameters)
         Al, cachel, cost = softmax_cross_entropy_loss(Zl, Y_one_hot)
 
@@ -480,7 +480,7 @@ def main():
     The network will have the dimensions [784,800,10]
     784 is the input size of digit images (28pix x 28pix = 784)
     10 is the number of digits
- 
+
     To create a network with 2 hidden layers of dimensions 800 and 500
     Run the progam as:
         python deepMultiClassNetwork_starter.py "[784,800,500]"
@@ -533,7 +533,7 @@ def main():
 
         print(f"Accuracy for training set is {trAcc:0.03f} %")
         print(f"Accuracy for testing set is {teAcc:0.03f} %")
-        print(f"Time for the algo - {gradient_method} was {end_time - start_time}")
+        print(f"Time for the algo - {gradient_method} for {num_iterations} iterations was {end_time - start_time}")
         print("------------------------------------------------------")
         time_per_algo[gradient_method] = end_time - start_time
 
@@ -548,7 +548,6 @@ def main():
     print(time_per_algo)
     print(testing_accuracy_per_algo)
     print(training_accuracy_per_algo)
-    print()
 
 
 if __name__ == "__main__":

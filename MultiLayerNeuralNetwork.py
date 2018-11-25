@@ -1,10 +1,12 @@
+import datetime
+
 import numpy as np
 
 from load_mnist import mnist
-from matplotlib.pyplot import plt
+import matplotlib.pyplot as plt
 
-NO_MOMENTUM = "no_momentum"
-MOMENTUM = "momentum"
+NO_MOMENTUM = "No Momentum"
+MOMENTUM = "Polyack's Momentum"
 NAG = "Nestrov's Accelerated Gradient"
 RMSPROP = "RMSProp"
 ADAM = "ADAM"
@@ -179,7 +181,7 @@ class MultiLayerNeuralNetwork:
         self.gradients = {"dW": [], "db": []}
         self.parameters = {}
         self.dimensions = dimensions
-        self.numLayers = len(self.dimensions)
+        self.numLayers = len(self.dimensions) - 1
         self.learning_rate = learning_rate
         self.num_iterations = num_iterations
         self.decay_rate = decay_rate
@@ -194,16 +196,17 @@ class MultiLayerNeuralNetwork:
 
     def initialize_params(self):
         np.random.seed(0)
-        for l in range(self.numLayers - 1):
-            self.W_values[l] = np.random.randn(self.dimensions[l + 1], self.dimensions[l]) * np.sqrt(
-                2 / self.dimensions[l + 1])
-            self.b_values[l] = np.random.randn(self.dimensions[l + 1], 1) * np.sqrt(2 / self.dimensions[l + 1])
+        for l in range(self.numLayers):
+            self.W_values.append(
+                np.random.randn(self.dimensions[l + 1], self.dimensions[l]) * np.sqrt(2 / self.dimensions[l + 1]))
+            self.b_values.append(np.random.randn(self.dimensions[l + 1], 1) * np.sqrt(2 / self.dimensions[l + 1]))
+
             # V is used by momentum, Adam and RMS Prop
-            self.v_values[l] = 0
+            self.v_values.append(0)
             # M is used by Adam
-            self.m_values[l] = 0
+            self.m_values.append(0)
             # Fakevalues used by NAG
-            self.fake_W_values[l] = self.W_values[l] - (1e-3 * self.v_values[l])
+            self.fake_W_values.append(self.W_values[l] - (1e-3 * self.v_values[l]))
 
     def layer_forward(self, A_prev, W, b, activation):
         '''
@@ -248,10 +251,9 @@ class MultiLayerNeuralNetwork:
         A = X
         caches = []
         L = self.numLayers - 1
-        for l in range(L - 1):  # since there is no W0 and b0
+        for l in range(L):  # since there is no W0 and b0
             A, cache = self.layer_forward(A, self.W_values[l], self.b_values[l], "relu")
             caches.append(cache)
-
         AL, cache = self.layer_forward(A, self.W_values[L], self.b_values[L], "linear")
         caches.append(cache)
         return AL, caches
@@ -279,7 +281,7 @@ class MultiLayerNeuralNetwork:
             dZ = relu_der(dA, act_cache)
         elif activation == "linear":
             dZ = linear_der(dA)
-        dA_prev, dW, db = linear_backward(dZ, lin_cache, W, b)
+        dA_prev, dW, db = linear_backward(dZ, lin_cache, W)
         return dA_prev, dW, db
 
     def multi_layer_backward(self, dAL, caches):
@@ -310,62 +312,46 @@ class MultiLayerNeuralNetwork:
 
     def simple_gradient_descent(self, epoch):
         alpha = self.learning_rate * (1 / (1 + self.decay_rate * epoch))
-        L = self.numLayers
+        L = self.numLayers - 1
         dw_values = self.gradients["dW"]
         db_values = self.gradients["db"]
         for l in range(L):
             self.W_values[l] = self.W_values[l] - alpha * dw_values[l]
             self.b_values[l] = self.b_values[l] - alpha * db_values[l]
-
         return alpha
 
     def polyackmomentum(self, alpha=1e-3):
-        # L = parameters["layers"]
-        # for l in reversed(range(1, L + 1)):
-        #     parameters["v" + str(l)] = parameters["v" + str(l)] * alpha + learning_rate * gradients["dW" + str(l)]
-        #     parameters["W" + str(l)] = parameters["W" + str(l)] - parameters["v" + str(l)]
-        # return parameters, learning_rate
+        L = self.numLayers - 1
+        dw_values = self.gradients["dW"]
+        for l in reversed(range(L)):
+            self.v_values[l] = (self.v_values[l] * alpha) + (self.learning_rate * dw_values[l])
+            self.W_values[l] = self.W_values[l] - self.v_values[l]
         return self.learning_rate
 
     def rmsprop(self, beta=0.9, epsilon=1e-8):
-        # L = parameters["layers"]
-        # for l in reversed(range(1, L + 1)):
-        #     parameters["v" + str(l)] = beta * parameters["v" + str(l)] + (1 - beta) * gradients[
-        #         "dW" + str(l)] ** 2
-        #     parameters["W" + str(l)] = parameters["W" + str(l)] - (
-        #             learning_rate / np.sqrt(parameters["v" + str(l)] + epsilon)) * gradients[
-        #                                    "dW" + str(l)]
+        L = self.numLayers - 1
+        dw_values = self.gradients["dW"]
+        for l in reversed(range(L)):
+            self.v_values[l] = (beta * self.v_values[l]) + (1 - beta) * dw_values[l] ** 2
+            self.W_values[l] = self.W_values[l] - (self.learning_rate / np.sqrt(self.v_values[l] + epsilon)) * \
+                               dw_values[l]
         return self.learning_rate
 
     def adam(self, beta1=0.9, beta2=0.999, epsilon=1e-7):
-        # L = parameters["layers"]
-        # for l in reversed(range(1, L + 1)):
-        #     parameters["m" + str(l)] = beta1 * parameters["m" + str(l)] + (1 - beta1) * gradients["dW" + str(l)]
-        #     parameters["v" + str(l)] = beta2 * parameters["v" + str(l)] + (1 - beta2) * gradients["dW" + str(l)] ** 2
-        #     v_hat = parameters["v" + str(l)] / (1 - beta2)
-        #     m_hat = parameters["m" + str(l)] / (1 - beta1)
-        #     parameters["W" + str(l)] = parameters["W" + str(l)] - (learning_rate / (np.sqrt(v_hat) + epsilon)) * m_hat
-
+        L = self.numLayers - 1
+        dw_values = self.gradients["dW"]
+        for l in reversed(range(L)):
+            self.m_values[l] = (beta1 * self.m_values[l]) + (1 - beta1) * dw_values[l]
+            self.v_values[l] = (beta2 * self.v_values[l]) + (1 - beta2) * dw_values[l] ** 2
+            v_hat = self.v_values[l] / (1 - beta2)
+            m_hat = self.m_values[l] / (1 - beta1)
+            self.W_values[l] = self.W_values[l] - (self.learning_rate / (np.sqrt(v_hat) + epsilon)) * m_hat
         return self.learning_rate
 
     def nag(self, beta1=0.9, beta2=0.999, epsilon=1e-7):
         return self.learning_rate
 
     def update_parameters(self, epoch):
-        '''
-        @TODO - Change the comments
-        Updates the network parameters with gradient descent
-
-        Inputs:
-            parameters - dictionary of network parameters
-                {"W1":[..],"b1":[..],"W2":[..],"b2":[..],...}
-            gradients - dictionary of gradient of network parameters
-                {"dW1":[..],"db1":[..],"dW2":[..],"db2":[..],...}
-            epoch - epoch number
-            learning_rate - step size for learning
-            decay_rate - rate of decay of step size - not necessary - in case you want to use
-        '''
-
         gradient_method = self.gradient_method
         if gradient_method == NO_MOMENTUM:
             return self.simple_gradient_descent(epoch)
@@ -386,25 +372,17 @@ class MultiLayerNeuralNetwork:
         vY_one_hot = one_hot(vY, 10)
 
         for ii in range(self.num_iterations):
-            # Forward Prop
-            ## call to multi_layer_forward to get activations
-            ## call to softmax cross entropy loss
             Zl, caches = self.multi_layer_forward(A0)
             Al, cachel, cost = softmax_cross_entropy_loss(Zl, Y_one_hot)
 
             vZ1, vCaches = self.multi_layer_forward(vX)
             vA1, vCache1, vCost = softmax_cross_entropy_loss(vZ1, vY_one_hot)
 
-            # Backward Prop
-            ## call to softmax cross entropy loss der
-            ## call to multi_layer_backward to get gradients
-            ## call to update the parameters
             dZ = softmax_cross_entropy_loss_der(Y_one_hot, cachel)
             self.multi_layer_backward(dZ, caches)
             alpha = self.update_parameters(ii)
-            if ii % 10 == 0:
-                self.costs.append(cost)
-                self.validation_costs.append(vCost)
+            self.costs.append(cost)
+            self.validation_costs.append(vCost)
             if ii % 10 == 0:
                 print("Cost at iteration %i is: %.05f, learning rate: %.05f, valid cost : %.05f" % (
                     ii, cost, alpha, vCost))
@@ -429,6 +407,34 @@ class MultiLayerNeuralNetwork:
         return np.reshape(YPred, (1, YPred.shape[0]))
 
 
+def plot_costs_graph(costs, gradient_methods, filename, validation=False):
+    plt.clf()
+    for i, cost in enumerate(costs):
+        itr = len(cost)
+        plt.plot(np.arange(itr), cost, label=gradient_methods[i])
+
+    plt.xlabel("Iterations")
+    plt.legend(loc="upper right")
+    if validation:
+        plt.title("Validation Cost vs Iterations for various gradient descent algorithms")
+        plt.ylabel("Validation Costs")
+    else:
+        plt.title("Cost vs Iterations for various gradient descent algorithms")
+        plt.ylabel("Training Costs")
+    plt.savefig(filename)
+
+
+def plot_bar_graph(values, lables, filename, title, xlabel, ylabel):
+    plt.clf()
+    y_pos = np.arange(len(lables))
+    plt.bar(y_pos, values, align='center', alpha=0.5)
+    plt.xticks(y_pos, lables)
+    plt.ylabel(ylabel)
+    plt.xlabel(xlabel)
+    plt.title(title)
+    plt.savefig(filename)
+
+
 def main():
     net_dims = [784, 500, 100, 10]
     train_data, train_label, test_data, test_label, valid_data, valid_label = \
@@ -436,22 +442,53 @@ def main():
               digit_range=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
               noTrPerClass=500, noTsPerClass=100, noVdSamples=1000, noVdPerClass=100)
 
-    mm = MultiLayerNeuralNetwork(net_dims, 0.01, 100, RMSPROP)
-    mm.fit(train_data, train_label, valid_data, valid_label)
-    print(mm.costs)
-    print(mm.validation_costs)
-    # compute the accuracy for training set and testing set
-    Y_one_hot = one_hot(train_label, 10)
-    t_one_hot = one_hot(test_label, 10)
-    plt.plot(np.arange(len(mm.costs)), mm.costs, label="RMSPROP")
-    plt.show()
-    train_Pred = mm.predict(train_data, Y_one_hot)
-    test_Pred = mm.predict(test_data, t_one_hot)
+    num_iterations = 100
+    all_costs = []
+    all_vcosts = []
+    time_per_algo = []
+    training_accuracy_per_algo = []
+    testing_accuracy_per_algo = []
 
-    trAcc = np.count_nonzero(train_Pred == train_label) / train_label.shape[1] * 100
-    teAcc = np.count_nonzero(test_Pred == test_label) / test_label.shape[1] * 100
-    print(f"Accuracy for training set is {trAcc:0.03f} %")
-    print(f"Accuracy for testing set is {teAcc:0.03f} %")
+    # Add gradient method and its corresponding learning rate to the array.
+    gradient_methods = [NO_MOMENTUM, MOMENTUM, RMSPROP, ADAM]
+    learning_rates = [0.01, 0.01, 0.001, 0.001]
+
+    for learning_rate, gradient_method in zip(learning_rates, gradient_methods):
+        start_time = datetime.datetime.now()
+        mm = MultiLayerNeuralNetwork(net_dims, learning_rate, num_iterations, gradient_method)
+        mm.fit(train_data, train_label, valid_data, valid_label)
+        end_time = datetime.datetime.now()
+
+        # compute the accuracy for training set and testing set
+        Y_one_hot = one_hot(train_label, 10)
+        t_one_hot = one_hot(test_label, 10)
+        train_Pred = mm.predict(train_data, Y_one_hot)
+        test_Pred = mm.predict(test_data, t_one_hot)
+
+        trAcc = np.count_nonzero(train_Pred == train_label) / train_label.shape[1] * 100
+        teAcc = np.count_nonzero(test_Pred == test_label) / test_label.shape[1] * 100
+        print(f"Accuracy for training set is {trAcc:0.03f} %")
+        print(f"Accuracy for testing set is {teAcc:0.03f} %")
+        print(f"Time for the algo - {gradient_method} for {num_iterations} iterations was {(end_time - start_time).total_seconds()}")
+        print("------------------------------------------------------")
+        time_per_algo.append((end_time - start_time).total_seconds())
+        testing_accuracy_per_algo.append(teAcc)
+        training_accuracy_per_algo.append(trAcc)
+        all_vcosts.append(mm.validation_costs)
+        all_costs.append(mm.costs)
+
+    plot_costs_graph(all_costs, gradient_methods, f"allcosts-{num_iterations}.png", False)
+    plot_costs_graph(all_vcosts, gradient_methods, f"allValidcosts-{num_iterations}.png", True)
+    print(time_per_algo)
+    print(testing_accuracy_per_algo)
+    print(training_accuracy_per_algo)
+    plot_bar_graph(time_per_algo, gradient_methods, f"time-{num_iterations}.png",
+                   "Plot of Time taken when using various algorithms", "Algorithms", "Time")
+    plot_bar_graph(testing_accuracy_per_algo, gradient_methods, f"testing-accuracy-{num_iterations}.png",
+                   "Plot of Testing Accuracy when using various algorithms", "Algorithms", "Testing Accuracy")
+    plot_bar_graph(training_accuracy_per_algo, gradient_methods, f"training-accuracy-{num_iterations}.png",
+                   "Plot of Training Accuracy when using various algorithms", "Algorithms", "Training Accuracy")
 
 
-main()
+if __name__ == "__main__":
+    main()
