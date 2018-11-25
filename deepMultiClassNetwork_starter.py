@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
+import datetime
+
 import matplotlib.pyplot as plt
 import numpy as np
 
 from load_mnist import mnist
 
-NO_MOMENTUM = "no_momentum"
-MOMENTUM = "momentum"
-NAG = "NAG"
-RMSPROP = "RMSPROP"
+NO_MOMENTUM = "No Momentum"
+MOMENTUM = "Polyack's Momentum"
+NAG = "Nestrov's Accelerated Gradient"
+RMSPROP = "RMSProp"
 ADAM = "ADAM"
 GRADIENT_TECHNIQUE = "gradient_technique"
 
@@ -16,10 +18,10 @@ def relu(Z):
     '''
     computes relu activation of Z
 
-    Inputs: 
+    Inputs:
         Z is a numpy.ndarray (n, m)
 
-    Returns: 
+    Returns:
         A is activation. numpy.ndarray (n, m)
         cache is a dictionary with {"Z", Z}
     '''
@@ -34,12 +36,12 @@ def relu_der(dA, cache):
     '''
     computes derivative of relu activation
 
-    Inputs: 
+    Inputs:
         dA is the derivative from subsequent layer. numpy.ndarray (n, m)
-        cache is a dictionary with {"Z", Z}, where Z was the input 
+        cache is a dictionary with {"Z", Z}, where Z was the input
         to the activation layer during forward propagation
 
-    Returns: 
+    Returns:
         dZ is the derivative. numpy.ndarray (n,m)
     '''
     dZ = np.array(dA, copy=True)
@@ -53,10 +55,10 @@ def linear(Z):
     computes linear activation of Z
     This function is implemented for completeness
 
-    Inputs: 
+    Inputs:
         Z is a numpy.ndarray (n, m)
 
-    Returns: 
+    Returns:
         A is activation. numpy.ndarray (n, m)
         cache is a dictionary with {"Z", Z}
     '''
@@ -70,12 +72,12 @@ def linear_der(dA):
     computes derivative of linear activation
     This function is implemented for completeness
 
-    Inputs: 
+    Inputs:
         dA is the derivative from subsequent layer. numpy.ndarray (n, m)
-        cache is a dictionary with {"Z", Z}, where Z was the input 
+        cache is a dictionary with {"Z", Z}, where Z was the input
         to the activation layer during forward propagation
 
-    Returns: 
+    Returns:
         dZ is the derivative. numpy.ndarray (n,m)
     '''
     dZ = np.array(dA, copy=True)
@@ -87,11 +89,11 @@ def softmax_cross_entropy_loss(Z, Y=np.array([])):
     Computes the softmax activation of the inputs Z
     Estimates the cross entropy loss
 
-    Inputs: 
+    Inputs:
         Z - numpy.ndarray (n, m)
         Y - numpy.ndarray (1, m) of labels
             when y=[] loss is set to []
-    
+
     Returns:
         A - numpy.ndarray (n, m) of softmax activations
         cache -  a dictionary to store the activations later used to estimate derivatives
@@ -112,7 +114,7 @@ def softmax_cross_entropy_loss_der(Y, cache):
     '''
     Computes the derivative of softmax activation and cross entropy loss
 
-    Inputs: 
+    Inputs:
         Y - numpy.ndarray (1, m) of labels
         cache -  a dictionary with cached activations A of size (n,m)
 
@@ -128,7 +130,7 @@ def initialize_multilayer_weights(net_dims, gradient_method):
     '''
     Initializes the weights of the multilayer network
 
-    Inputs: 
+    Inputs:
         net_dims - tuple of network dimensions
 
     Returns:
@@ -141,11 +143,13 @@ def initialize_multilayer_weights(net_dims, gradient_method):
     for l in range(numLayers - 1):
         parameters["W" + str(l + 1)] = np.random.randn(net_dims[l + 1], net_dims[l]) * np.sqrt(2 / net_dims[l + 1])
         parameters["b" + str(l + 1)] = np.random.randn(net_dims[l + 1], 1) * np.sqrt(2 / net_dims[l + 1])
+
         # V is used by momentum, Adam and RMS Prop
         parameters["v" + str(l + 1)] = 0
         # M is used by Adam
         parameters["m" + str(l + 1)] = 0
-
+        # Fakevalues used by NAG
+        parameters["fakeW" + str(l+1)] = parameters["W" + str(l+1)] - (1e-3 *  parameters["v" + str(l + 1)]) # the second part will be 0
     parameters["layers"] = numLayers - 1
     parameters[GRADIENT_TECHNIQUE] = gradient_method
     return parameters
@@ -153,10 +157,10 @@ def initialize_multilayer_weights(net_dims, gradient_method):
 
 def linear_forward(A, W, b):
     '''
-    Input A propagates through the layer 
-    Z = WA + b is the output of this layer. 
+    Input A propagates through the layer
+    Z = WA + b is the output of this layer.
 
-    Inputs: 
+    Inputs:
         A - numpy.ndarray (n,m) the input to the layer
         W - numpy.ndarray (n_out, n) the weights of the layer
         b - numpy.ndarray (n_out, 1) the bias of the layer
@@ -175,7 +179,7 @@ def layer_forward(A_prev, W, b, activation):
     '''
     Input A_prev propagates through the layer and the activation
 
-    Inputs: 
+    Inputs:
         A_prev - numpy.ndarray (n,m) the input to the layer
         W - numpy.ndarray (n_out, n) the weights of the layer
         b - numpy.ndarray (n_out, 1) the bias of the layer
@@ -205,7 +209,7 @@ def multi_layer_forward(X, parameters):
     '''
     Forward propgation through the layers of the network
 
-    Inputs: 
+    Inputs:
         X - numpy.ndarray (n,m) with n features and m samples
         parameters - dictionary of network parameters {"W1":[..],"b1":[..],"W2":[..],"b2":[..]...}
     Returns:
@@ -215,12 +219,15 @@ def multi_layer_forward(X, parameters):
     '''
     L = parameters["layers"]
     A = X
+    fakeA = X
     caches = []
     for l in range(1, L):  # since there is no W0 and b0
         A, cache = layer_forward(A, parameters["W" + str(l)], parameters["b" + str(l)], "relu")
+        fakeA, fakeCache = layer_forward(fakeA, parameters["fakeW" + str(l)], parameters["b" + str(l)], "relu")
         caches.append(cache)
 
     AL, cache = layer_forward(A, parameters["W" + str(L)], parameters["b" + str(L)], "linear")
+    fakeAL, fakeCache = layer_forward(fakeA, parameters["fakeW" + str(L)], parameters["b" + str(L)], "linear")
     caches.append(cache)
     return AL, caches
 
@@ -230,16 +237,16 @@ def linear_backward(dZ, cache, W, b):
     Backward prpagation through the linear layer
 
     Inputs:
-        dZ - numpy.ndarray (n,m) derivative dL/dz 
+        dZ - numpy.ndarray (n,m) derivative dL/dz
         cache - a dictionary containing the inputs A, for the linear layer
-            where Z = WA + b,    
+            where Z = WA + b,
             Z is (n,m); W is (n,p); A is (p,m); b is (n,1)
         W - numpy.ndarray (n,p)
         b - numpy.ndarray (n, 1)
 
     Returns:
         dA_prev - numpy.ndarray (p,m) the derivative to the previous layer
-        dW - numpy.ndarray (n,p) the gradient of W 
+        dW - numpy.ndarray (n,p) the gradient of W
         db - numpy.ndarray (n, 1) the gradient of b
     '''
 
@@ -260,10 +267,10 @@ def layer_backward(dA, cache, W, b, activation):
         activation - activation of the layer
         W - numpy.ndarray (n,p)
         b - numpy.ndarray (n, 1)
-    
+
     Returns:
         dA_prev - numpy.ndarray (p,m) the derivative to the previous layer
-        dW - numpy.ndarray (n,p) the gradient of W 
+        dW - numpy.ndarray (n,p) the gradient of W
         db - numpy.ndarray (n, 1) the gradient of b
     '''
     lin_cache = cache["lin_cache"]
@@ -282,13 +289,13 @@ def multi_layer_backward(dAL, caches, parameters):
     Back propgation through the layers of the network (except softmax cross entropy)
     softmax_cross_entropy can be handled separately
 
-    Inputs: 
+    Inputs:
         dAL - numpy.ndarray (n,m) derivatives from the softmax_cross_entropy layer
         caches - a dictionary of associated caches of parameters and network inputs
         parameters - dictionary of network parameters {"W1":[..],"b1":[..],"W2":[..],"b2":[..]...}
 
     Returns:
-        gradients - dictionary of gradient of network parameters 
+        gradients - dictionary of gradient of network parameters
             {"dW1":[..],"db1":[..],"dW2":[..],"db2":[..],...}
     '''
     L = len(caches)  # with one hidden layer, L = 2
@@ -308,9 +315,9 @@ def classify(X, Y, parameters):
     '''
     Network prediction for inputs X
 
-    Inputs: 
+    Inputs:
         X - numpy.ndarray (n,m) with n features and m samples
-        parameters - dictionary of network parameters 
+        parameters - dictionary of network parameters
             {"W1":[..],"b1":[..],"W2":[..],"b2":[..],...}
     Returns:
         YPred - numpy.ndarray (1,m) of predictions
@@ -342,11 +349,6 @@ def polyackmomentum(parameters, gradients, learning_rate, alpha=1e-3):
     return parameters, learning_rate
 
 
-'''
-    Decay rate for RMS prop is going to be 0.9
-'''
-
-
 def rmsprop(parameters, gradients, learning_rate, beta=0.9, epsilon=1e-8):
     L = parameters["layers"]
     for l in reversed(range(1, L + 1)):
@@ -370,15 +372,19 @@ def adam(parameters, gradients, learning_rate, beta1=0.9, beta2=0.999, epsilon=1
     return parameters, learning_rate
 
 
+def nag(parameters, gradients, learning_rate, beta1=0.9, beta2=0.999, epsilon=1e-7):
+    return parameters, learning_rate
+
+
 def update_parameters(parameters, gradients, epoch, learning_rate, decay_rate=0.01):
     '''
     @TODO - Change the comments
     Updates the network parameters with gradient descent
 
     Inputs:
-        parameters - dictionary of network parameters 
+        parameters - dictionary of network parameters
             {"W1":[..],"b1":[..],"W2":[..],"b2":[..],...}
-        gradients - dictionary of gradient of network parameters 
+        gradients - dictionary of gradient of network parameters
             {"dW1":[..],"db1":[..],"dW2":[..],"db2":[..],...}
         epoch - epoch number
         learning_rate - step size for learning
@@ -425,24 +431,26 @@ def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rat
         net_dims - tuple of layer dimensions
         num_iterations - num of epochs to train
         learning_rate - step size for gradient descent
-    
+
     Returns:
         costs - list of costs over training
         parameters - dictionary of trained network parameters
     '''
 
     parameters = initialize_multilayer_weights(net_dims, gradient_method)
-    print(f"Training {parameters['layers']} layer neural network with {gradient_method} at an initial learning rate of {learning_rate}")
+    print(f"Training {parameters['layers']} layer neural network with {gradient_method} at an initial learning rate "
+          f"of {learning_rate}")
     A0 = X
 
     costs = []
     vCosts = []
     Y_one_hot = one_hot(Y, 10)
     vY_one_hot = one_hot(vY, 10)
+
     for ii in range(num_iterations):
         # Forward Prop
         ## call to multi_layer_forward to get activations
-        ## call to softmax cross entropy loss 
+        ## call to softmax cross entropy loss
         Zl, caches = multi_layer_forward(A0, parameters)
         Al, cachel, cost = softmax_cross_entropy_loss(Zl, Y_one_hot)
 
@@ -456,9 +464,8 @@ def multi_layer_network(X, Y, vX, vY, net_dims, num_iterations=500, learning_rat
         dZ = softmax_cross_entropy_loss_der(Y_one_hot, cachel)
         grads = multi_layer_backward(dZ, caches, parameters)
         parameters, alpha = update_parameters(parameters, grads, ii, learning_rate, decay_rate)
-        if ii % 10 == 0:
-            costs.append(cost)
-            vCosts.append(vCost)
+        costs.append(cost)
+        vCosts.append(vCost)
         if ii % 10 == 0:
             print("Cost at iteration %i is: %.05f, learning rate: %.05f, valid cost : %.05f" % (ii, cost, alpha, vCost))
     return costs, vCosts, parameters
@@ -473,7 +480,7 @@ def main():
     The network will have the dimensions [784,800,10]
     784 is the input size of digit images (28pix x 28pix = 784)
     10 is the number of digits
- 
+
     To create a network with 2 hidden layers of dimensions 800 and 500
     Run the progam as:
         python deepMultiClassNetwork_starter.py "[784,800,500]"
@@ -484,8 +491,7 @@ def main():
     # =============================================================================
     #     net_dims = ast.literal_eval( sys.argv[1] ) #Get input from command line
     # =============================================================================
-    net_dims = [784, 500, 100]
-    net_dims.append(10)  # Adding the digits layer with dimensionality = 10
+    net_dims = [784, 500, 100, 10]
     print("Network dimensions are:" + str(net_dims))
 
     # getting the subset dataset from MNIST
@@ -497,15 +503,20 @@ def main():
     num_iterations = 1000
     all_costs = []
     all_vcosts = []
-
+    time_per_algo = {}
+    training_accuracy_per_algo = {}
+    testing_accuracy_per_algo = {}
     # Add gradient method and its corresponding learning rate to the array.
     gradient_methods = [NO_MOMENTUM, MOMENTUM, RMSPROP, ADAM]
     learning_rates = [0.01, 0.01, 0.001, 0.001]
 
     for learning_rate, gradient_method in zip(learning_rates, gradient_methods):
+        start_time = datetime.datetime.now()
         costs, vCosts, parameters = multi_layer_network(train_data, train_label, valid_data, valid_label, net_dims,
                                                         num_iterations=num_iterations, learning_rate=learning_rate,
                                                         gradient_method=gradient_method)
+        end_time = datetime.datetime.now()
+
         all_costs.append(costs)
         all_vcosts.append(costs)
         # compute the accuracy for training set and testing set
@@ -517,16 +528,26 @@ def main():
 
         trAcc = np.count_nonzero(train_Pred == train_label) / train_label.shape[1] * 100
         teAcc = np.count_nonzero(test_Pred == test_label) / test_label.shape[1] * 100
-        print("Accuracy for training set is {0:0.3f} %".format(trAcc))
-        print("Accuracy for testing set is {0:0.3f} %".format(teAcc))
+        training_accuracy_per_algo[gradient_method] = trAcc
+        testing_accuracy_per_algo[gradient_method] = teAcc
+
+        print(f"Accuracy for training set is {trAcc:0.03f} %")
+        print(f"Accuracy for testing set is {teAcc:0.03f} %")
+        print(f"Time for the algo - {gradient_method} for {num_iterations} iterations was {end_time - start_time}")
         print("------------------------------------------------------")
-        itr = range(len(costs))
-        plt.plot(itr, costs, label="Training Error")
-        plt.plot(itr, vCosts, label="Validation Error")
-        plt.xlabel("Iterations")
-        plt.ylabel("Costs")
-        plt.legend(loc="upper right")
-        plt.show()
+        time_per_algo[gradient_method] = end_time - start_time
+
+    for i, cost in enumerate(all_costs):
+        itr = len(cost)
+        plt.plot(np.arange(itr), cost, label=gradient_methods[i])
+
+    plt.xlabel("Iterations")
+    plt.ylabel("Training Costs")
+    plt.legend(loc="upper right")
+    plt.show()
+    print(time_per_algo)
+    print(testing_accuracy_per_algo)
+    print(training_accuracy_per_algo)
 
 
 if __name__ == "__main__":
