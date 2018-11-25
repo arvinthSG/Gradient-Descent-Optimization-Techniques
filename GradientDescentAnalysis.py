@@ -365,7 +365,7 @@ def main():
    # testing_lables = test_label.T
 
     # 2. SAME AMOUNT OF TRAINING
-    num_epoch = 10
+    num_epoch = 100
     learn_rate = 0.0003
     # 1. Declare Weights
     w1 = np.random.randn(784, 500) * 0.2
