@@ -363,7 +363,9 @@ class MultiLayerNeuralNetwork:
         for l in reversed(range(L)):
             self.m_values[l] = (beta1 * self.m_values[l]) + (1 - beta1) * dw_values[l]
             self.v_values[l] = (beta2 * self.v_values[l]) + (1 - beta2) * dw_values[l] ** 2
-            self.W_values[l] = self.W_values[l] - (self.learning_rate / (np.sqrt(self.v_values[l]) + epsilon)) * self.m_values[l]
+            v_hat = self.v_values[l] / (1 - beta2)
+            m_hat = self.m_values[l] / (1 - beta1)
+            self.W_values[l] = self.W_values[l] - (self.learning_rate / (np.sqrt(v_hat) + epsilon)) * m_hat
         return self.learning_rate
 
     def nag(self, alpha=0.001):
