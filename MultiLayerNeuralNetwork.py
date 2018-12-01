@@ -477,9 +477,9 @@ def plot_bar_graph(values, lables, filename, title, ylabel):
 def main():
     net_dims = [784, 500, 100, 10]
     train_data, train_label, test_data, test_label, valid_data, valid_label = \
-        mnist(noTrSamples=5000, noTsSamples=1000,
+        mnist(noTrSamples=5000, noTsSamples=500,
               digit_range=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-              noTrPerClass=500, noTsPerClass=100, noVdSamples=1000, noVdPerClass=100)
+              noTrPerClass=500, noTsPerClass=50, noVdSamples=1000, noVdPerClass=100)
 
     num_iterations_list = [100, 500, 1000]
 
