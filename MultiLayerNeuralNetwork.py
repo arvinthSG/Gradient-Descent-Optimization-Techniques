@@ -477,9 +477,9 @@ def plot_bar_graph(values, lables, filename, title, ylabel):
 def main():
     net_dims = [784, 500, 100, 10]
     train_data, train_label, test_data, test_label, valid_data, valid_label = \
-        mnist(noTrSamples=5000, noTsSamples=500,
+        mnist(noTrSamples=5000, noTsSamples=1000,
               digit_range=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-              noTrPerClass=500, noTsPerClass=50, noVdSamples=1000, noVdPerClass=100)
+              noTrPerClass=500, noTsPerClass=100, noVdSamples=1000, noVdPerClass=100)
 
     num_iterations_list = [100, 500, 1000]
 
@@ -519,26 +519,26 @@ def main():
                 all_vcosts.append(mm.validation_costs)
                 all_costs.append(mm.costs)
 
-            plot_costs_graph(all_costs, gradient_methods, f"outputs/allcosts-{num_iterations}-{learning_rate}.png",
+            plot_costs_graph(all_costs, gradient_methods, f"outputs/brand/allcosts-{num_iterations}-{learning_rate}.png",
                              learning_rate, False)
             plot_costs_graph(all_vcosts, gradient_methods,
-                             f"outputs/allValidcosts-{num_iterations}-{learning_rate}.png", learning_rate, True)
+                             f"outputs/brand/allValidcosts-{num_iterations}-{learning_rate}.png", learning_rate, True)
             print(time_per_algo)
             print(testing_accuracy_per_algo)
             print(training_accuracy_per_algo)
 
             plot_bar_graph(time_per_algo, gradient_methods,
-                           f"outputs/time-{num_iterations}-{learning_rate}.png",
+                           f"outputs/brand/time-{num_iterations}-{learning_rate}.png",
                            f"Plot of Time taken when using various algorithms for learning rate {learning_rate}",
                            "Time")
 
             plot_bar_graph(testing_accuracy_per_algo, gradient_methods,
-                           f"outputs/testing-accuracy-{num_iterations}-{learning_rate}.png",
+                           f"outputs/brand/testing-accuracy-{num_iterations}-{learning_rate}.png",
                            f"Plot of Testing Accuracy at LR: {learning_rate}",
                            "Testing Accuracy")
 
             plot_bar_graph(training_accuracy_per_algo, gradient_methods,
-                           f"outputs/training-accuracy-{num_iterations}-{learning_rate}.png",
+                           f"outputs/brand/training-accuracy-{num_iterations}-{learning_rate}.png",
                            f"Plot of Training Accuracy at LR: {learning_rate}",
                            "Training Accuracy")
 
