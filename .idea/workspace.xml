@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="94ee7ace-353e-459d-8e93-4ce4d2c6aae2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/outputs/allValidcosts-100-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/allValidcosts-100-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/allcosts-100-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/allcosts-100-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allValidcosts-100-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allValidcosts-100-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allValidcosts-100-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allValidcosts-100-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allValidcosts-1000-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allValidcosts-1000-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allValidcosts-1000-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allValidcosts-1000-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allValidcosts-500-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allValidcosts-500-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allValidcosts-500-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allValidcosts-500-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allcosts-100-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allcosts-100-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allcosts-100-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allcosts-100-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allcosts-1000-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allcosts-1000-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allcosts-1000-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allcosts-1000-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allcosts-500-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allcosts-500-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allcosts-500-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/allcosts-500-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/testing-accuracy-100-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/testing-accuracy-100-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/testing-accuracy-100-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/testing-accuracy-100-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/testing-accuracy-1000-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/testing-accuracy-1000-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/testing-accuracy-1000-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/testing-accuracy-1000-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/testing-accuracy-500-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/testing-accuracy-500-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/testing-accuracy-500-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/testing-accuracy-500-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/time-100-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/time-100-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/time-100-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/time-100-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/time-1000-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/time-1000-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/time-1000-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/time-1000-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/time-500-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/time-500-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/time-500-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/time-500-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/training-accuracy-100-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/training-accuracy-100-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/training-accuracy-100-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/training-accuracy-100-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/training-accuracy-1000-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/training-accuracy-1000-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/training-accuracy-1000-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/training-accuracy-1000-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/training-accuracy-500-0.001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/training-accuracy-500-0.01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/training-accuracy-500-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/old/training-accuracy-500-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/testing-accuracy-100-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/testing-accuracy-100-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/time-100-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/time-100-0.1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/training-accuracy-100-0.05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/training-accuracy-100-0.1.png" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1976547536">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="png" value="89" />
+          <entry key="py" value="18" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="89" />
+          <entry key="Python" value="18" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="32" />
+          <entry key="py" value="10241" />
+          <entry key="txt" value="231" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="263" />
+          <entry key="Python" value="10241" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MultiLayerNeuralNetwork.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="17" />
+              <folding>
+                <marker date="1543727047385" expanded="true" signature="10409:10418" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>u</find>
+      <find>rmspr</find>
+      <find>w1_sgd</find>
+      <find>noise</find>
+      <find>learn_rate</find>
+      <find>RMS</find>
+      <find>activation</find>
+      <find>elu</find>
+      <find>R</find>
+      <find>alpha</find>
+      <find>len(p</find>
+      <find>initial</find>
+      <find>rmsprop</find>
+      <find>initialize</find>
+      <find>adam</find>
+      <find>gradient</find>
+      <find>multilayer</find>
+      <find>multi_layer_</find>
+      <find>simple_gradient</find>
+      <find>initiali</find>
+      <find>update_</find>
+      <find>learning_rate</find>
+      <find>print</find>
+      <find>NAG</find>
+      <find>fake_</find>
+      <find>fake_gradients</find>
+      <find>decay_rate</find>
+      <find>batch_gradient_descent</find>
+      <find>fake</find>
+      <find>nag</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Tarun Chinmai &lt;tchinmai7@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/load_mnist.py" />
+        <option value="$PROJECT_DIR$/Suttacode.py" />
+        <option value="$PROJECT_DIR$/deepMultiClassNetwork_starter.py" />
+        <option value="$PROJECT_DIR$/GradientDescentAnalysis.py" />
+        <option value="$PROJECT_DIR$/MultiLayerNeuralNetwork.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="811" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Gradient-Descent-Optimization-Techniques" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gradient-Descent-Optimization-Techniques" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Gradient-Descent-Optimization-Techniques" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gradient-Descent-Optimization-Techniques" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Gradient-Descent-Optimization-Techniques" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gradient-Descent-Optimization-Techniques" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="mnist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Gradient-Descent-Optimization-Techniques" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.OONN">
+    <configuration name="DeepMultiLayer" type="PythonConfigurationType" factoryName="Python">
+      <module name="Gradient-Descent-Optimization-Techniques" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deepMultiClassNetwork_starter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OONN" type="PythonConfigurationType" factoryName="Python">
+      <module name="Gradient-Descent-Optimization-Techniques" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MultiLayerNeuralNetwork.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="stolen" type="PythonConfigurationType" factoryName="Python">
+      <module name="Gradient-Descent-Optimization-Techniques" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GradientDescentAnalysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.DeepMultiLayer" />
+      <item itemvalue="Python.OONN" />
+      <item itemvalue="Python.stolen" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94ee7ace-353e-459d-8e93-4ce4d2c6aae2" name="Default Changelist" comment="" />
+      <created>1542824628282</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542824628282</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Rename to simple gradient descent&#10;Bunch of PyLint cleanups&#10;Remove tanh_der and sigmoid_der which are not used.">
+      <created>1542825059796</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542825059796</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial implementation of RMS Prop. Does not work properly, LOL.&#10;Fix path in load_mnist.py">
+      <created>1542834416855</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1542834416855</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28554216" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3987952" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32962447" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="ToolsProjectConfig">
+    <afterCommitToolId>Tool_External Tools_pylint</afterCommitToolId>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Rename to simple gradient descent" />
+    <MESSAGE value="Rename to simple gradient descent&#10;Bunch of PyLint cleanups&#10;Remove tanh_der and sigmoid_der which are not used." />
+    <MESSAGE value="Initial implementation of RMS Prop. Does not work properly, LOL.&#10;Fix path in load_mnist.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial implementation of RMS Prop. Does not work properly, LOL.&#10;Fix path in load_mnist.py" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/100iters-all.png" />
+    <entry file="file://$PROJECT_DIR$/allValidcosts-1000.png" />
+    <entry file="file://$PROJECT_DIR$/allcosts-1000.png" />
+    <entry file="file://$PROJECT_DIR$/allcosts-100.png" />
+    <entry file="file://$PROJECT_DIR$/allValidcosts-100.png" />
+    <entry file="file://$PROJECT_DIR$/time-100.png" />
+    <entry file="file://$PROJECT_DIR$/testing-accuracy-1000.png" />
+    <entry file="file://$PROJECT_DIR$/testing-accuracy-100.png" />
+    <entry file="file://$PROJECT_DIR$/training-accuracy-100.png" />
+    <entry file="file://$PROJECT_DIR$/time-1000.png" />
+    <entry file="file://$PROJECT_DIR$/training-accuracy-1000.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/allcosts-100--1.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/allValidcosts-100--1.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/testing-accuracy-100-1.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/time-100.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/training-accuracy-100--1.png" />
+    <entry file="file://$PROJECT_DIR$/deepMultiClassNetwork_starter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="527" lean-forward="true" selection-start-line="527" selection-end-line="527" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GradientDescentAnalysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="191" column="43" lean-forward="true" selection-start-line="189" selection-start-column="11" selection-end-line="191" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/testing-accuracy-100-0.5.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/allValidcosts-100-0.1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/load_mnist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/training-accuracy-100-0.05.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/training-accuracy-100-0.5.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/training-accuracy-100-0.01.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/training-accuracy-100-0.1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/time-100-0.5.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/time-100-0.05.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/time-100-0.01.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/time-100-0.1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/testing-accuracy-100-0.05.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/testing-accuracy-100-0.01.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/testing-accuracy-100-0.1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/allValidcosts-100-0.05.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/allValidcosts-100-0.5.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/allValidcosts-100-0.01.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/allcosts-100-0.05.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/allcosts-100-0.5.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/allcosts-100-0.01.png" />
+    <entry file="file://$PROJECT_DIR$/outputs/allcosts-100-0.1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/time-100-0.001.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/training-accuracy-100-0.001.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/testing-accuracy-100-0.001.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/allValidcosts-100-0.001.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/allcosts-100-0.001.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/allcosts-500-0.5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MultiLayerNeuralNetwork.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <marker date="1543727047385" expanded="true" signature="10409:10418" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
