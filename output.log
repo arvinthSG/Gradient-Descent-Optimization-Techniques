@@ -1,0 +1,1687 @@
+Running 100 Iterations
+Training 3 layer neural network with No Momentum at an initial learning rate of 0.1
+Cost at iteration 0 is: 9.93151, learning rate: 0.10000, valid cost : 10.03417
+Cost at iteration 10 is: 1.48689, learning rate: 0.09091, valid cost : 1.49512
+Cost at iteration 20 is: 0.88553, learning rate: 0.08333, valid cost : 0.86373
+Cost at iteration 30 is: 0.77014, learning rate: 0.07692, valid cost : 0.75653
+Cost at iteration 40 is: 0.71430, learning rate: 0.07143, valid cost : 0.69947
+Cost at iteration 50 is: 0.67318, learning rate: 0.06667, valid cost : 0.65662
+Cost at iteration 60 is: 0.64381, learning rate: 0.06250, valid cost : 0.62446
+Cost at iteration 70 is: 0.62098, learning rate: 0.05882, valid cost : 0.59879
+Cost at iteration 80 is: 0.59976, learning rate: 0.05556, valid cost : 0.57712
+Cost at iteration 90 is: 0.58350, learning rate: 0.05263, valid cost : 0.56088
+Accuracy for training set is 80.582 %
+Accuracy for testing set is 79.500 %
+Time for the algo - No Momentum for 100 iterations was 612.089065
+------------------------------------------------------
+Training 3 layer neural network with Polyack's Momentum at an initial learning rate of 0.1
+Cost at iteration 0 is: 9.93151, learning rate: 0.10000, valid cost : 10.03417
+Cost at iteration 10 is: 1.57219, learning rate: 0.10000, valid cost : 1.56185
+Cost at iteration 20 is: 0.92750, learning rate: 0.10000, valid cost : 0.90891
+Cost at iteration 30 is: 0.78394, learning rate: 0.10000, valid cost : 0.76322
+Cost at iteration 40 is: 0.72537, learning rate: 0.10000, valid cost : 0.71039
+Cost at iteration 50 is: 0.69457, learning rate: 0.10000, valid cost : 0.67386
+Cost at iteration 60 is: 0.66402, learning rate: 0.10000, valid cost : 0.65556
+Cost at iteration 70 is: 0.63075, learning rate: 0.10000, valid cost : 0.62017
+Cost at iteration 80 is: 0.61093, learning rate: 0.10000, valid cost : 0.59988
+Cost at iteration 90 is: 0.59344, learning rate: 0.10000, valid cost : 0.58087
+Accuracy for training set is 79.126 %
+Accuracy for testing set is 78.560 %
+Time for the algo - Polyack's Momentum for 100 iterations was 610.420081
+------------------------------------------------------
+Training 3 layer neural network with Accelerated Gradient at an initial learning rate of 0.1
+Cost at iteration 0 is: 9.93151, learning rate: 0.10000, valid cost : 10.03417
+Cost at iteration 10 is: 1.60615, learning rate: 0.10000, valid cost : 1.59171
+Cost at iteration 20 is: 0.90640, learning rate: 0.10000, valid cost : 0.88492
+Cost at iteration 30 is: 0.81255, learning rate: 0.10000, valid cost : 0.79584
+Cost at iteration 40 is: 0.73034, learning rate: 0.10000, valid cost : 0.71979
+Cost at iteration 50 is: 0.68863, learning rate: 0.10000, valid cost : 0.67708
+Cost at iteration 60 is: 0.65099, learning rate: 0.10000, valid cost : 0.64092
+Cost at iteration 70 is: 0.62772, learning rate: 0.10000, valid cost : 0.61440
+Cost at iteration 80 is: 0.60294, learning rate: 0.10000, valid cost : 0.59029
+Cost at iteration 90 is: 0.65145, learning rate: 0.10000, valid cost : 0.63597
+Accuracy for training set is 79.210 %
+Accuracy for testing set is 78.260 %
+Time for the algo - Accelerated Gradient for 100 iterations was 1209.527828
+------------------------------------------------------
+Training 3 layer neural network with RMSProp at an initial learning rate of 0.1
+Cost at iteration 0 is: 9.93151, learning rate: 0.10000, valid cost : 10.03417
+Cost at iteration 10 is: 2.52999, learning rate: 0.10000, valid cost : 2.52866
+Cost at iteration 20 is: 1.34094, learning rate: 0.10000, valid cost : 1.29859
+Cost at iteration 30 is: 1.12911, learning rate: 0.10000, valid cost : 1.07572
+Cost at iteration 40 is: 2.85323, learning rate: 0.10000, valid cost : 2.95657
+Cost at iteration 50 is: 9.67526, learning rate: 0.10000, valid cost : 9.83891
+Cost at iteration 60 is: 3.30916, learning rate: 0.10000, valid cost : 3.31273
+Cost at iteration 70 is: 2.09751, learning rate: 0.10000, valid cost : 2.12480
+Cost at iteration 80 is: 1.79558, learning rate: 0.10000, valid cost : 1.75264
+Cost at iteration 90 is: 1.82297, learning rate: 0.10000, valid cost : 1.76201
+Accuracy for training set is 26.652 %
+Accuracy for testing set is 26.520 %
+Time for the algo - RMSProp for 100 iterations was 614.544938
+------------------------------------------------------
+Training 3 layer neural network with ADAM at an initial learning rate of 0.1
+Cost at iteration 0 is: 9.93151, learning rate: 0.10000, valid cost : 10.03417
+Cost at iteration 10 is: 2.56739, learning rate: 0.10000, valid cost : 2.56470
+Cost at iteration 20 is: 2.39420, learning rate: 0.10000, valid cost : 2.39367
+Cost at iteration 30 is: 2.32911, learning rate: 0.10000, valid cost : 2.32918
+Cost at iteration 40 is: 2.30847, learning rate: 0.10000, valid cost : 2.30881
+Cost at iteration 50 is: 2.30410, learning rate: 0.10000, valid cost : 2.30457
+Cost at iteration 60 is: 2.30278, learning rate: 0.10000, valid cost : 2.30325
+Cost at iteration 70 is: 2.30243, learning rate: 0.10000, valid cost : 2.30292
+Cost at iteration 80 is: 2.30222, learning rate: 0.10000, valid cost : 2.30271
+Cost at iteration 90 is: 2.30174, learning rate: 0.10000, valid cost : 2.30263
+Accuracy for training set is 10.074 %
+Accuracy for testing set is 10.080 %
+Time for the algo - ADAM for 100 iterations was 607.276826
+------------------------------------------------------
+[612.089065, 610.420081, 1209.527828, 614.544938, 607.276826]
+[79.5, 78.56, 78.25999999999999, 26.52, 10.08]
+[80.582, 79.12599999999999, 79.21000000000001, 26.651999999999997, 10.074]
+Training 3 layer neural network with No Momentum at an initial learning rate of 0.05
+Cost at iteration 0 is: 9.93151, learning rate: 0.05000, valid cost : 10.03417
+Cost at iteration 10 is: 2.59087, learning rate: 0.04545, valid cost : 2.63185
+Cost at iteration 20 is: 0.88319, learning rate: 0.04167, valid cost : 0.90340
+Cost at iteration 30 is: 0.80237, learning rate: 0.03846, valid cost : 0.82581
+Cost at iteration 40 is: 0.72729, learning rate: 0.03571, valid cost : 0.74797
+Cost at iteration 50 is: 0.68412, learning rate: 0.03333, valid cost : 0.70132
+Cost at iteration 60 is: 0.65295, learning rate: 0.03125, valid cost : 0.66640
+Cost at iteration 70 is: 0.62997, learning rate: 0.02941, valid cost : 0.64097
+Cost at iteration 80 is: 0.61284, learning rate: 0.02778, valid cost : 0.62217
+Cost at iteration 90 is: 0.59925, learning rate: 0.02632, valid cost : 0.60716
+Accuracy for training set is 79.614 %
+Accuracy for testing set is 78.580 %
+Time for the algo - No Momentum for 100 iterations was 612.956372
+------------------------------------------------------
+Training 3 layer neural network with Polyack's Momentum at an initial learning rate of 0.05
+Cost at iteration 0 is: 9.93151, learning rate: 0.05000, valid cost : 10.03417
+Cost at iteration 10 is: 2.56226, learning rate: 0.05000, valid cost : 2.60814
+Cost at iteration 20 is: 0.92421, learning rate: 0.05000, valid cost : 0.94552
+Cost at iteration 30 is: 0.78594, learning rate: 0.05000, valid cost : 0.80634
+Cost at iteration 40 is: 0.72325, learning rate: 0.05000, valid cost : 0.74023
+Cost at iteration 50 is: 0.67902, learning rate: 0.05000, valid cost : 0.69151
+Cost at iteration 60 is: 0.64790, learning rate: 0.05000, valid cost : 0.65583
+Cost at iteration 70 is: 0.62147, learning rate: 0.05000, valid cost : 0.62502
+Cost at iteration 80 is: 0.60013, learning rate: 0.05000, valid cost : 0.60014
+Cost at iteration 90 is: 0.58277, learning rate: 0.05000, valid cost : 0.58049
+Accuracy for training set is 79.920 %
+Accuracy for testing set is 78.740 %
+Time for the algo - Polyack's Momentum for 100 iterations was 612.089829
+------------------------------------------------------
+Training 3 layer neural network with Accelerated Gradient at an initial learning rate of 0.05
+Cost at iteration 0 is: 9.93151, learning rate: 0.05000, valid cost : 10.03417
+Cost at iteration 10 is: 2.45604, learning rate: 0.05000, valid cost : 2.49666
+Cost at iteration 20 is: 0.93351, learning rate: 0.05000, valid cost : 0.95680
+Cost at iteration 30 is: 0.79061, learning rate: 0.05000, valid cost : 0.81116
+Cost at iteration 40 is: 0.72738, learning rate: 0.05000, valid cost : 0.74506
+Cost at iteration 50 is: 0.68147, learning rate: 0.05000, valid cost : 0.69494
+Cost at iteration 60 is: 0.64800, learning rate: 0.05000, valid cost : 0.65723
+Cost at iteration 70 is: 0.62213, learning rate: 0.05000, valid cost : 0.62730
+Cost at iteration 80 is: 0.60231, learning rate: 0.05000, valid cost : 0.60411
+Cost at iteration 90 is: 0.58501, learning rate: 0.05000, valid cost : 0.58403
+Accuracy for training set is 79.854 %
+Accuracy for testing set is 78.520 %
+Time for the algo - Accelerated Gradient for 100 iterations was 1216.246626
+------------------------------------------------------
+Training 3 layer neural network with RMSProp at an initial learning rate of 0.05
+Cost at iteration 0 is: 9.93151, learning rate: 0.05000, valid cost : 10.03417
+Cost at iteration 10 is: 1.40944, learning rate: 0.05000, valid cost : 1.45355
+Cost at iteration 20 is: 1.31707, learning rate: 0.05000, valid cost : 1.31208
+Cost at iteration 30 is: 1.73838, learning rate: 0.05000, valid cost : 1.84272
+Cost at iteration 40 is: 1.63666, learning rate: 0.05000, valid cost : 1.65548
+Cost at iteration 50 is: 5.38052, learning rate: 0.05000, valid cost : 5.44479
+Cost at iteration 60 is: 11.90468, learning rate: 0.05000, valid cost : 11.88893
+Cost at iteration 70 is: 1.58495, learning rate: 0.05000, valid cost : 1.58896
+Cost at iteration 80 is: 12.55506, learning rate: 0.05000, valid cost : 12.52377
+Cost at iteration 90 is: 5.22479, learning rate: 0.05000, valid cost : 5.26694
+Accuracy for training set is 41.000 %
+Accuracy for testing set is 40.460 %
+Time for the algo - RMSProp for 100 iterations was 605.956241
+------------------------------------------------------
+Training 3 layer neural network with ADAM at an initial learning rate of 0.05
+Cost at iteration 0 is: 9.93151, learning rate: 0.05000, valid cost : 10.03417
+Cost at iteration 10 is: 2.79936, learning rate: 0.05000, valid cost : 2.77597
+Cost at iteration 20 is: 1.84250, learning rate: 0.05000, valid cost : 1.81524
+Cost at iteration 30 is: 1.62259, learning rate: 0.05000, valid cost : 1.56978
+Cost at iteration 40 is: 1.36967, learning rate: 0.05000, valid cost : 1.31816
+Cost at iteration 50 is: 1.20373, learning rate: 0.05000, valid cost : 1.19185
+Cost at iteration 60 is: 1.14149, learning rate: 0.05000, valid cost : 1.13208
+Cost at iteration 70 is: 1.08370, learning rate: 0.05000, valid cost : 1.06912
+Cost at iteration 80 is: 1.46115, learning rate: 0.05000, valid cost : 1.43333
+Cost at iteration 90 is: 1.07160, learning rate: 0.05000, valid cost : 1.07382
+Accuracy for training set is 53.874 %
+Accuracy for testing set is 53.720 %
+Time for the algo - ADAM for 100 iterations was 606.415321
+------------------------------------------------------
+[612.956372, 612.089829, 1216.246626, 605.956241, 606.415321]
+[78.58000000000001, 78.74, 78.52, 40.46, 53.72]
+[79.61399999999999, 79.92, 79.854, 41.0, 53.874]
+Training 3 layer neural network with No Momentum at an initial learning rate of 0.01
+Cost at iteration 0 is: 9.93151, learning rate: 0.01000, valid cost : 10.03417
+Cost at iteration 10 is: 1.62987, learning rate: 0.00909, valid cost : 1.67412
+Cost at iteration 20 is: 1.16186, learning rate: 0.00833, valid cost : 1.19194
+Cost at iteration 30 is: 1.00310, learning rate: 0.00769, valid cost : 1.02004
+Cost at iteration 40 is: 0.92437, learning rate: 0.00714, valid cost : 0.93178
+Cost at iteration 50 is: 0.87375, learning rate: 0.00667, valid cost : 0.87294
+Cost at iteration 60 is: 0.83672, learning rate: 0.00625, valid cost : 0.82943
+Cost at iteration 70 is: 0.80800, learning rate: 0.00588, valid cost : 0.79578
+Cost at iteration 80 is: 0.78491, learning rate: 0.00556, valid cost : 0.76914
+Cost at iteration 90 is: 0.76564, learning rate: 0.00526, valid cost : 0.74754
+Accuracy for training set is 74.818 %
+Accuracy for testing set is 74.620 %
+Time for the algo - No Momentum for 100 iterations was 616.402841
+------------------------------------------------------
+Training 3 layer neural network with Polyack's Momentum at an initial learning rate of 0.01
+Cost at iteration 0 is: 9.93151, learning rate: 0.01000, valid cost : 10.03417
+Cost at iteration 10 is: 1.69483, learning rate: 0.01000, valid cost : 1.73911
+Cost at iteration 20 is: 1.18816, learning rate: 0.01000, valid cost : 1.21483
+Cost at iteration 30 is: 1.01179, learning rate: 0.01000, valid cost : 1.02113
+Cost at iteration 40 is: 0.91310, learning rate: 0.01000, valid cost : 0.91035
+Cost at iteration 50 is: 0.84661, learning rate: 0.01000, valid cost : 0.83509
+Cost at iteration 60 is: 0.79702, learning rate: 0.01000, valid cost : 0.78061
+Cost at iteration 70 is: 0.75828, learning rate: 0.01000, valid cost : 0.73921
+Cost at iteration 80 is: 0.72848, learning rate: 0.01000, valid cost : 0.70734
+Cost at iteration 90 is: 0.70522, learning rate: 0.01000, valid cost : 0.68218
+Accuracy for training set is 76.588 %
+Accuracy for testing set is 76.000 %
+Time for the algo - Polyack's Momentum for 100 iterations was 616.448755
+------------------------------------------------------
+Training 3 layer neural network with Accelerated Gradient at an initial learning rate of 0.01
+Cost at iteration 0 is: 9.93151, learning rate: 0.01000, valid cost : 10.03417
+Cost at iteration 10 is: 1.69469, learning rate: 0.01000, valid cost : 1.73891
+Cost at iteration 20 is: 1.18780, learning rate: 0.01000, valid cost : 1.21443
+Cost at iteration 30 is: 1.01154, learning rate: 0.01000, valid cost : 1.02079
+Cost at iteration 40 is: 0.91296, learning rate: 0.01000, valid cost : 0.91013
+Cost at iteration 50 is: 0.84652, learning rate: 0.01000, valid cost : 0.83498
+Cost at iteration 60 is: 0.79704, learning rate: 0.01000, valid cost : 0.78066
+Cost at iteration 70 is: 0.75828, learning rate: 0.01000, valid cost : 0.73922
+Cost at iteration 80 is: 0.72843, learning rate: 0.01000, valid cost : 0.70731
+Cost at iteration 90 is: 0.70509, learning rate: 0.01000, valid cost : 0.68210
+Accuracy for training set is 76.602 %
+Accuracy for testing set is 76.000 %
+Time for the algo - Accelerated Gradient for 100 iterations was 1229.289436
+------------------------------------------------------
+Training 3 layer neural network with RMSProp at an initial learning rate of 0.01
+Cost at iteration 0 is: 9.93151, learning rate: 0.01000, valid cost : 10.03417
+Cost at iteration 10 is: 3.97814, learning rate: 0.01000, valid cost : 3.94158
+Cost at iteration 20 is: 1.17943, learning rate: 0.01000, valid cost : 1.17678
+Cost at iteration 30 is: 0.77143, learning rate: 0.01000, valid cost : 0.76011
+Cost at iteration 40 is: 1.83155, learning rate: 0.01000, valid cost : 1.78996
+Cost at iteration 50 is: 0.97964, learning rate: 0.01000, valid cost : 0.96586
+Cost at iteration 60 is: 0.87459, learning rate: 0.01000, valid cost : 0.85893
+Cost at iteration 70 is: 0.71283, learning rate: 0.01000, valid cost : 0.71355
+Cost at iteration 80 is: 6.19365, learning rate: 0.01000, valid cost : 6.10336
+Cost at iteration 90 is: 0.69393, learning rate: 0.01000, valid cost : 0.67021
+Accuracy for training set is 76.324 %
+Accuracy for testing set is 75.240 %
+Time for the algo - RMSProp for 100 iterations was 606.751042
+------------------------------------------------------
+Training 3 layer neural network with ADAM at an initial learning rate of 0.01
+Cost at iteration 0 is: 9.93151, learning rate: 0.01000, valid cost : 10.03417
+Cost at iteration 10 is: 9.51891, learning rate: 0.01000, valid cost : 9.61583
+Cost at iteration 20 is: 1.75744, learning rate: 0.01000, valid cost : 1.79477
+Cost at iteration 30 is: 0.80103, learning rate: 0.01000, valid cost : 0.80978
+Cost at iteration 40 is: 0.68559, learning rate: 0.01000, valid cost : 0.69483
+Cost at iteration 50 is: 0.61161, learning rate: 0.01000, valid cost : 0.60939
+Cost at iteration 60 is: 0.57525, learning rate: 0.01000, valid cost : 0.56438
+Cost at iteration 70 is: 0.55015, learning rate: 0.01000, valid cost : 0.53814
+Cost at iteration 80 is: 0.52897, learning rate: 0.01000, valid cost : 0.51887
+Cost at iteration 90 is: 0.51267, learning rate: 0.01000, valid cost : 0.49812
+Accuracy for training set is 82.486 %
+Accuracy for testing set is 81.020 %
+Time for the algo - ADAM for 100 iterations was 604.377348
+------------------------------------------------------
+[616.402841, 616.448755, 1229.289436, 606.751042, 604.377348]
+[74.62, 76.0, 76.0, 75.24, 81.02000000000001]
+[74.818, 76.588, 76.602, 76.324, 82.486]
+Training 3 layer neural network with No Momentum at an initial learning rate of 0.001
+Cost at iteration 0 is: 9.93151, learning rate: 0.00100, valid cost : 10.03417
+Cost at iteration 10 is: 3.59274, learning rate: 0.00091, valid cost : 3.64477
+Cost at iteration 20 is: 2.96622, learning rate: 0.00083, valid cost : 3.02080
+Cost at iteration 30 is: 2.61340, learning rate: 0.00077, valid cost : 2.67300
+Cost at iteration 40 is: 2.36082, learning rate: 0.00071, valid cost : 2.42432
+Cost at iteration 50 is: 2.17001, learning rate: 0.00067, valid cost : 2.23681
+Cost at iteration 60 is: 2.02164, learning rate: 0.00063, valid cost : 2.09173
+Cost at iteration 70 is: 1.90357, learning rate: 0.00059, valid cost : 1.97631
+Cost at iteration 80 is: 1.80786, learning rate: 0.00056, valid cost : 1.88266
+Cost at iteration 90 is: 1.72935, learning rate: 0.00053, valid cost : 1.80600
+Accuracy for training set is 52.220 %
+Accuracy for testing set is 52.920 %
+Time for the algo - No Momentum for 100 iterations was 614.498425
+------------------------------------------------------
+Training 3 layer neural network with Polyack's Momentum at an initial learning rate of 0.001
+Cost at iteration 0 is: 9.93151, learning rate: 0.00100, valid cost : 10.03417
+Cost at iteration 10 is: 3.55549, learning rate: 0.00100, valid cost : 3.60717
+Cost at iteration 20 is: 2.89445, learning rate: 0.00100, valid cost : 2.94948
+Cost at iteration 30 is: 2.49613, learning rate: 0.00100, valid cost : 2.55722
+Cost at iteration 40 is: 2.20326, learning rate: 0.00100, valid cost : 2.26925
+Cost at iteration 50 is: 1.98098, learning rate: 0.00100, valid cost : 2.05191
+Cost at iteration 60 is: 1.80907, learning rate: 0.00100, valid cost : 1.88374
+Cost at iteration 70 is: 1.67549, learning rate: 0.00100, valid cost : 1.75337
+Cost at iteration 80 is: 1.57178, learning rate: 0.00100, valid cost : 1.65142
+Cost at iteration 90 is: 1.49013, learning rate: 0.00100, valid cost : 1.57021
+Accuracy for training set is 56.570 %
+Accuracy for testing set is 57.060 %
+Time for the algo - Polyack's Momentum for 100 iterations was 616.135762
+------------------------------------------------------
+Training 3 layer neural network with Accelerated Gradient at an initial learning rate of 0.001
+Cost at iteration 0 is: 9.93151, learning rate: 0.00100, valid cost : 10.03417
+Cost at iteration 10 is: 3.55446, learning rate: 0.00100, valid cost : 3.60614
+Cost at iteration 20 is: 2.89352, learning rate: 0.00100, valid cost : 2.94855
+Cost at iteration 30 is: 2.49513, learning rate: 0.00100, valid cost : 2.55624
+Cost at iteration 40 is: 2.20226, learning rate: 0.00100, valid cost : 2.26827
+Cost at iteration 50 is: 1.98002, learning rate: 0.00100, valid cost : 2.05097
+Cost at iteration 60 is: 1.80818, learning rate: 0.00100, valid cost : 1.88287
+Cost at iteration 70 is: 1.67468, learning rate: 0.00100, valid cost : 1.75258
+Cost at iteration 80 is: 1.57106, learning rate: 0.00100, valid cost : 1.65072
+Cost at iteration 90 is: 1.48948, learning rate: 0.00100, valid cost : 1.56956
+Accuracy for training set is 56.578 %
+Accuracy for testing set is 57.060 %
+Time for the algo - Accelerated Gradient for 100 iterations was 1228.332493
+------------------------------------------------------
+Training 3 layer neural network with RMSProp at an initial learning rate of 0.001
+Cost at iteration 0 is: 9.93151, learning rate: 0.00100, valid cost : 10.03417
+Cost at iteration 10 is: 2.38930, learning rate: 0.00100, valid cost : 2.42871
+Cost at iteration 20 is: 0.90115, learning rate: 0.00100, valid cost : 0.90798
+Cost at iteration 30 is: 1.14378, learning rate: 0.00100, valid cost : 1.16634
+Cost at iteration 40 is: 1.32153, learning rate: 0.00100, valid cost : 1.29365
+Cost at iteration 50 is: 0.97050, learning rate: 0.00100, valid cost : 0.95396
+Cost at iteration 60 is: 0.91100, learning rate: 0.00100, valid cost : 0.85370
+Cost at iteration 70 is: 0.62004, learning rate: 0.00100, valid cost : 0.60862
+Cost at iteration 80 is: 0.58337, learning rate: 0.00100, valid cost : 0.56732
+Cost at iteration 90 is: 0.58293, learning rate: 0.00100, valid cost : 0.56240
+Accuracy for training set is 78.260 %
+Accuracy for testing set is 77.340 %
+Time for the algo - RMSProp for 100 iterations was 613.22146
+------------------------------------------------------
+Training 3 layer neural network with ADAM at an initial learning rate of 0.001
+Cost at iteration 0 is: 9.93151, learning rate: 0.00100, valid cost : 10.03417
+Cost at iteration 10 is: 0.95654, learning rate: 0.00100, valid cost : 0.95298
+Cost at iteration 20 is: 0.69540, learning rate: 0.00100, valid cost : 0.70389
+Cost at iteration 30 is: 0.55941, learning rate: 0.00100, valid cost : 0.55907
+Cost at iteration 40 is: 0.50123, learning rate: 0.00100, valid cost : 0.48953
+Cost at iteration 50 is: 0.46713, learning rate: 0.00100, valid cost : 0.45281
+Cost at iteration 60 is: 0.44428, learning rate: 0.00100, valid cost : 0.43069
+Cost at iteration 70 is: 0.42698, learning rate: 0.00100, valid cost : 0.41313
+Cost at iteration 80 is: 0.41303, learning rate: 0.00100, valid cost : 0.39833
+Cost at iteration 90 is: 0.40117, learning rate: 0.00100, valid cost : 0.38455
+Accuracy for training set is 86.142 %
+Accuracy for testing set is 84.540 %
+Time for the algo - ADAM for 100 iterations was 610.092628
+------------------------------------------------------
+[614.498425, 616.135762, 1228.332493, 613.22146, 610.092628]
+[52.92, 57.06, 57.06, 77.34, 84.54]
+[52.22, 56.57, 56.577999999999996, 78.25999999999999, 86.142]
+Running 500 Iterations
+Training 3 layer neural network with No Momentum at an initial learning rate of 0.1
+Cost at iteration 0 is: 9.93151, learning rate: 0.10000, valid cost : 10.03417
+Cost at iteration 10 is: 1.48689, learning rate: 0.09091, valid cost : 1.49512
+Cost at iteration 20 is: 0.88553, learning rate: 0.08333, valid cost : 0.86373
+Cost at iteration 30 is: 0.77014, learning rate: 0.07692, valid cost : 0.75653
+Cost at iteration 40 is: 0.71430, learning rate: 0.07143, valid cost : 0.69947
+Cost at iteration 50 is: 0.67318, learning rate: 0.06667, valid cost : 0.65662
+Cost at iteration 60 is: 0.64381, learning rate: 0.06250, valid cost : 0.62446
+Cost at iteration 70 is: 0.62098, learning rate: 0.05882, valid cost : 0.59879
+Cost at iteration 80 is: 0.59976, learning rate: 0.05556, valid cost : 0.57712
+Cost at iteration 90 is: 0.58350, learning rate: 0.05263, valid cost : 0.56088
+Cost at iteration 100 is: 0.56838, learning rate: 0.05000, valid cost : 0.54619
+Cost at iteration 110 is: 0.55558, learning rate: 0.04762, valid cost : 0.53356
+Cost at iteration 120 is: 0.54554, learning rate: 0.04545, valid cost : 0.52327
+Cost at iteration 130 is: 0.53615, learning rate: 0.04348, valid cost : 0.51352
+Cost at iteration 140 is: 0.52739, learning rate: 0.04167, valid cost : 0.50477
+Cost at iteration 150 is: 0.52039, learning rate: 0.04000, valid cost : 0.49766
+Cost at iteration 160 is: 0.51468, learning rate: 0.03846, valid cost : 0.49166
+Cost at iteration 170 is: 0.50959, learning rate: 0.03704, valid cost : 0.48643
+Cost at iteration 180 is: 0.50439, learning rate: 0.03571, valid cost : 0.48124
+Cost at iteration 190 is: 0.49964, learning rate: 0.03448, valid cost : 0.47656
+Cost at iteration 200 is: 0.49536, learning rate: 0.03333, valid cost : 0.47239
+Cost at iteration 210 is: 0.49163, learning rate: 0.03226, valid cost : 0.46888
+Cost at iteration 220 is: 0.48826, learning rate: 0.03125, valid cost : 0.46577
+Cost at iteration 230 is: 0.48513, learning rate: 0.03030, valid cost : 0.46285
+Cost at iteration 240 is: 0.48217, learning rate: 0.02941, valid cost : 0.46008
+Cost at iteration 250 is: 0.47937, learning rate: 0.02857, valid cost : 0.45763
+Cost at iteration 260 is: 0.47674, learning rate: 0.02778, valid cost : 0.45527
+Cost at iteration 270 is: 0.47428, learning rate: 0.02703, valid cost : 0.45301
+Cost at iteration 280 is: 0.47193, learning rate: 0.02632, valid cost : 0.45084
+Cost at iteration 290 is: 0.46971, learning rate: 0.02564, valid cost : 0.44878
+Cost at iteration 300 is: 0.46760, learning rate: 0.02500, valid cost : 0.44684
+Cost at iteration 310 is: 0.46560, learning rate: 0.02439, valid cost : 0.44499
+Cost at iteration 320 is: 0.46368, learning rate: 0.02381, valid cost : 0.44323
+Cost at iteration 330 is: 0.46186, learning rate: 0.02326, valid cost : 0.44157
+Cost at iteration 340 is: 0.46012, learning rate: 0.02273, valid cost : 0.43998
+Cost at iteration 350 is: 0.45844, learning rate: 0.02222, valid cost : 0.43850
+Cost at iteration 360 is: 0.45684, learning rate: 0.02174, valid cost : 0.43714
+Cost at iteration 370 is: 0.45530, learning rate: 0.02128, valid cost : 0.43582
+Cost at iteration 380 is: 0.45381, learning rate: 0.02083, valid cost : 0.43456
+Cost at iteration 390 is: 0.45239, learning rate: 0.02041, valid cost : 0.43336
+Cost at iteration 400 is: 0.45102, learning rate: 0.02000, valid cost : 0.43220
+Cost at iteration 410 is: 0.44970, learning rate: 0.01961, valid cost : 0.43106
+Cost at iteration 420 is: 0.44843, learning rate: 0.01923, valid cost : 0.42999
+Cost at iteration 430 is: 0.44721, learning rate: 0.01887, valid cost : 0.42898
+Cost at iteration 440 is: 0.44602, learning rate: 0.01852, valid cost : 0.42802
+Cost at iteration 450 is: 0.44487, learning rate: 0.01818, valid cost : 0.42712
+Cost at iteration 460 is: 0.44376, learning rate: 0.01786, valid cost : 0.42623
+Cost at iteration 470 is: 0.44268, learning rate: 0.01754, valid cost : 0.42531
+Cost at iteration 480 is: 0.44163, learning rate: 0.01724, valid cost : 0.42442
+Cost at iteration 490 is: 0.44062, learning rate: 0.01695, valid cost : 0.42355
+Accuracy for training set is 84.746 %
+Accuracy for testing set is 83.280 %
+Time for the algo - No Momentum for 500 iterations was 3041.997082
+------------------------------------------------------
+Training 3 layer neural network with Polyack's Momentum at an initial learning rate of 0.1
+Cost at iteration 0 is: 9.93151, learning rate: 0.10000, valid cost : 10.03417
+Cost at iteration 10 is: 1.57219, learning rate: 0.10000, valid cost : 1.56185
+Cost at iteration 20 is: 0.92750, learning rate: 0.10000, valid cost : 0.90891
+Cost at iteration 30 is: 0.78394, learning rate: 0.10000, valid cost : 0.76322
+Cost at iteration 40 is: 0.72537, learning rate: 0.10000, valid cost : 0.71039
+Cost at iteration 50 is: 0.69457, learning rate: 0.10000, valid cost : 0.67386
+Cost at iteration 60 is: 0.66402, learning rate: 0.10000, valid cost : 0.65556
+Cost at iteration 70 is: 0.63075, learning rate: 0.10000, valid cost : 0.62017
+Cost at iteration 80 is: 0.61093, learning rate: 0.10000, valid cost : 0.59988
+Cost at iteration 90 is: 0.59344, learning rate: 0.10000, valid cost : 0.58087
+Cost at iteration 100 is: 0.56403, learning rate: 0.10000, valid cost : 0.55517
+Cost at iteration 110 is: 0.56136, learning rate: 0.10000, valid cost : 0.55052
+Cost at iteration 120 is: 0.54154, learning rate: 0.10000, valid cost : 0.52908
+Cost at iteration 130 is: 0.51955, learning rate: 0.10000, valid cost : 0.50523
+Cost at iteration 140 is: 0.54172, learning rate: 0.10000, valid cost : 0.52784
+Cost at iteration 150 is: 0.51922, learning rate: 0.10000, valid cost : 0.50488
+Cost at iteration 160 is: 0.50454, learning rate: 0.10000, valid cost : 0.49103
+Cost at iteration 170 is: 0.49123, learning rate: 0.10000, valid cost : 0.48054
+Cost at iteration 180 is: 0.47962, learning rate: 0.10000, valid cost : 0.47098
+Cost at iteration 190 is: 0.47470, learning rate: 0.10000, valid cost : 0.45859
+Cost at iteration 200 is: 0.46948, learning rate: 0.10000, valid cost : 0.45824
+Cost at iteration 210 is: 0.46450, learning rate: 0.10000, valid cost : 0.44883
+Cost at iteration 220 is: 0.45374, learning rate: 0.10000, valid cost : 0.43935
+Cost at iteration 230 is: 0.47777, learning rate: 0.10000, valid cost : 0.46391
+Cost at iteration 240 is: 0.44494, learning rate: 0.10000, valid cost : 0.43046
+Cost at iteration 250 is: 0.44580, learning rate: 0.10000, valid cost : 0.43124
+Cost at iteration 260 is: 0.45130, learning rate: 0.10000, valid cost : 0.43847
+Cost at iteration 270 is: 0.43874, learning rate: 0.10000, valid cost : 0.42942
+Cost at iteration 280 is: 0.43475, learning rate: 0.10000, valid cost : 0.42504
+Cost at iteration 290 is: 0.42537, learning rate: 0.10000, valid cost : 0.40947
+Cost at iteration 300 is: 0.43896, learning rate: 0.10000, valid cost : 0.42381
+Cost at iteration 310 is: 0.42066, learning rate: 0.10000, valid cost : 0.40737
+Cost at iteration 320 is: 0.41798, learning rate: 0.10000, valid cost : 0.40631
+Cost at iteration 330 is: 0.41964, learning rate: 0.10000, valid cost : 0.41019
+Cost at iteration 340 is: 0.42061, learning rate: 0.10000, valid cost : 0.41260
+Cost at iteration 350 is: 0.40808, learning rate: 0.10000, valid cost : 0.39534
+Cost at iteration 360 is: 0.40621, learning rate: 0.10000, valid cost : 0.39182
+Cost at iteration 370 is: 0.40493, learning rate: 0.10000, valid cost : 0.38827
+Cost at iteration 380 is: 0.39812, learning rate: 0.10000, valid cost : 0.38240
+Cost at iteration 390 is: 0.39463, learning rate: 0.10000, valid cost : 0.37997
+Cost at iteration 400 is: 0.41195, learning rate: 0.10000, valid cost : 0.39895
+Cost at iteration 410 is: 0.38733, learning rate: 0.10000, valid cost : 0.37431
+Cost at iteration 420 is: 0.40107, learning rate: 0.10000, valid cost : 0.38968
+Cost at iteration 430 is: 0.38794, learning rate: 0.10000, valid cost : 0.37793
+Cost at iteration 440 is: 0.38695, learning rate: 0.10000, valid cost : 0.37706
+Cost at iteration 450 is: 0.38725, learning rate: 0.10000, valid cost : 0.37699
+Cost at iteration 460 is: 0.38337, learning rate: 0.10000, valid cost : 0.37174
+Cost at iteration 470 is: 0.38173, learning rate: 0.10000, valid cost : 0.36749
+Cost at iteration 480 is: 0.38853, learning rate: 0.10000, valid cost : 0.37578
+Cost at iteration 490 is: 0.37111, learning rate: 0.10000, valid cost : 0.35937
+Accuracy for training set is 86.244 %
+Accuracy for testing set is 84.160 %
+Time for the algo - Polyack's Momentum for 500 iterations was 3042.908225
+------------------------------------------------------
+Training 3 layer neural network with Accelerated Gradient at an initial learning rate of 0.1
+Cost at iteration 0 is: 9.93151, learning rate: 0.10000, valid cost : 10.03417
+Cost at iteration 10 is: 1.60615, learning rate: 0.10000, valid cost : 1.59171
+Cost at iteration 20 is: 0.90640, learning rate: 0.10000, valid cost : 0.88492
+Cost at iteration 30 is: 0.81255, learning rate: 0.10000, valid cost : 0.79584
+Cost at iteration 40 is: 0.73034, learning rate: 0.10000, valid cost : 0.71979
+Cost at iteration 50 is: 0.68863, learning rate: 0.10000, valid cost : 0.67708
+Cost at iteration 60 is: 0.65099, learning rate: 0.10000, valid cost : 0.64092
+Cost at iteration 70 is: 0.62772, learning rate: 0.10000, valid cost : 0.61440
+Cost at iteration 80 is: 0.60294, learning rate: 0.10000, valid cost : 0.59029
+Cost at iteration 90 is: 0.65145, learning rate: 0.10000, valid cost : 0.63597
+Cost at iteration 100 is: 0.57204, learning rate: 0.10000, valid cost : 0.56086
+Cost at iteration 110 is: 0.54678, learning rate: 0.10000, valid cost : 0.53413
+Cost at iteration 120 is: 0.60412, learning rate: 0.10000, valid cost : 0.58603
+Cost at iteration 130 is: 0.53996, learning rate: 0.10000, valid cost : 0.52829
+Cost at iteration 140 is: 0.51964, learning rate: 0.10000, valid cost : 0.50594
+Cost at iteration 150 is: 0.51021, learning rate: 0.10000, valid cost : 0.49577
+Cost at iteration 160 is: 0.51453, learning rate: 0.10000, valid cost : 0.50247
+Cost at iteration 170 is: 0.49568, learning rate: 0.10000, valid cost : 0.48155
+Cost at iteration 180 is: 0.48585, learning rate: 0.10000, valid cost : 0.47291
+Cost at iteration 190 is: 0.48468, learning rate: 0.10000, valid cost : 0.46946
+Cost at iteration 200 is: 0.47794, learning rate: 0.10000, valid cost : 0.46510
+Cost at iteration 210 is: 0.47944, learning rate: 0.10000, valid cost : 0.46589
+Cost at iteration 220 is: 0.47186, learning rate: 0.10000, valid cost : 0.46068
+Cost at iteration 230 is: 0.46170, learning rate: 0.10000, valid cost : 0.44990
+Cost at iteration 240 is: 0.45090, learning rate: 0.10000, valid cost : 0.44092
+Cost at iteration 250 is: 0.45137, learning rate: 0.10000, valid cost : 0.43749
+Cost at iteration 260 is: 0.43743, learning rate: 0.10000, valid cost : 0.42436
+Cost at iteration 270 is: 0.44655, learning rate: 0.10000, valid cost : 0.43419
+Cost at iteration 280 is: 0.43825, learning rate: 0.10000, valid cost : 0.42753
+Cost at iteration 290 is: 0.44388, learning rate: 0.10000, valid cost : 0.43382
+Cost at iteration 300 is: 0.42728, learning rate: 0.10000, valid cost : 0.41511
+Cost at iteration 310 is: 0.42546, learning rate: 0.10000, valid cost : 0.40992
+Cost at iteration 320 is: 0.41832, learning rate: 0.10000, valid cost : 0.40185
+Cost at iteration 330 is: 0.41225, learning rate: 0.10000, valid cost : 0.39911
+Cost at iteration 340 is: 0.42121, learning rate: 0.10000, valid cost : 0.40890
+Cost at iteration 350 is: 0.42103, learning rate: 0.10000, valid cost : 0.40793
+Cost at iteration 360 is: 0.40952, learning rate: 0.10000, valid cost : 0.39848
+Cost at iteration 370 is: 0.40387, learning rate: 0.10000, valid cost : 0.39411
+Cost at iteration 380 is: 0.40422, learning rate: 0.10000, valid cost : 0.39473
+Cost at iteration 390 is: 0.40053, learning rate: 0.10000, valid cost : 0.38639
+Cost at iteration 400 is: 0.39888, learning rate: 0.10000, valid cost : 0.38276
+Cost at iteration 410 is: 0.38921, learning rate: 0.10000, valid cost : 0.37431
+Cost at iteration 420 is: 0.38704, learning rate: 0.10000, valid cost : 0.37261
+Cost at iteration 430 is: 0.38969, learning rate: 0.10000, valid cost : 0.37519
+Cost at iteration 440 is: 0.38393, learning rate: 0.10000, valid cost : 0.37123
+Cost at iteration 450 is: 0.38892, learning rate: 0.10000, valid cost : 0.37746
+Cost at iteration 460 is: 0.38784, learning rate: 0.10000, valid cost : 0.37501
+Cost at iteration 470 is: 0.38297, learning rate: 0.10000, valid cost : 0.37073
+Cost at iteration 480 is: 0.38679, learning rate: 0.10000, valid cost : 0.37527
+Cost at iteration 490 is: 0.37440, learning rate: 0.10000, valid cost : 0.36321
+Accuracy for training set is 86.472 %
+Accuracy for testing set is 84.860 %
+Time for the algo - Accelerated Gradient for 500 iterations was 6072.889617
+------------------------------------------------------
+Training 3 layer neural network with RMSProp at an initial learning rate of 0.1
+Cost at iteration 0 is: 9.93151, learning rate: 0.10000, valid cost : 10.03417
+Cost at iteration 10 is: 2.52999, learning rate: 0.10000, valid cost : 2.52866
+Cost at iteration 20 is: 1.34094, learning rate: 0.10000, valid cost : 1.29859
+Cost at iteration 30 is: 1.12911, learning rate: 0.10000, valid cost : 1.07572
+Cost at iteration 40 is: 2.85323, learning rate: 0.10000, valid cost : 2.95657
+Cost at iteration 50 is: 9.67526, learning rate: 0.10000, valid cost : 9.83891
+Cost at iteration 60 is: 3.30916, learning rate: 0.10000, valid cost : 3.31273
+Cost at iteration 70 is: 2.09751, learning rate: 0.10000, valid cost : 2.12480
+Cost at iteration 80 is: 1.79558, learning rate: 0.10000, valid cost : 1.75264
+Cost at iteration 90 is: 1.82297, learning rate: 0.10000, valid cost : 1.76201
+Cost at iteration 100 is: 2.87869, learning rate: 0.10000, valid cost : 2.95533
+Cost at iteration 110 is: 1.92095, learning rate: 0.10000, valid cost : 1.91571
+Cost at iteration 120 is: 1.89903, learning rate: 0.10000, valid cost : 1.84452
+Cost at iteration 130 is: 2.10242, learning rate: 0.10000, valid cost : 2.10888
+Cost at iteration 140 is: 1.92376, learning rate: 0.10000, valid cost : 1.89974
+Cost at iteration 150 is: 1.90272, learning rate: 0.10000, valid cost : 1.87401
+Cost at iteration 160 is: 1.87441, learning rate: 0.10000, valid cost : 1.84768
+Cost at iteration 170 is: 1.92862, learning rate: 0.10000, valid cost : 1.89806
+Cost at iteration 180 is: 1.74837, learning rate: 0.10000, valid cost : 1.72249
+Cost at iteration 190 is: 1.62015, learning rate: 0.10000, valid cost : 1.59051
+Cost at iteration 200 is: 1.63340, learning rate: 0.10000, valid cost : 1.62902
+Cost at iteration 210 is: 1.80026, learning rate: 0.10000, valid cost : 1.75527
+Cost at iteration 220 is: 2.28152, learning rate: 0.10000, valid cost : 2.23511
+Cost at iteration 230 is: 2.55795, learning rate: 0.10000, valid cost : 2.51299
+Cost at iteration 240 is: 1.93733, learning rate: 0.10000, valid cost : 1.94110
+Cost at iteration 250 is: 1.77948, learning rate: 0.10000, valid cost : 1.80586
+Cost at iteration 260 is: 1.84182, learning rate: 0.10000, valid cost : 1.87762
+Cost at iteration 270 is: 1.85874, learning rate: 0.10000, valid cost : 1.87486
+Cost at iteration 280 is: 2.14001, learning rate: 0.10000, valid cost : 2.10884
+Cost at iteration 290 is: 2.17684, learning rate: 0.10000, valid cost : 2.12369
+Cost at iteration 300 is: 2.12676, learning rate: 0.10000, valid cost : 2.10887
+Cost at iteration 310 is: 2.23366, learning rate: 0.10000, valid cost : 2.19055
+Cost at iteration 320 is: 2.17052, learning rate: 0.10000, valid cost : 2.15331
+Cost at iteration 330 is: 2.09364, learning rate: 0.10000, valid cost : 2.07923
+Cost at iteration 340 is: 1.86480, learning rate: 0.10000, valid cost : 1.85422
+Cost at iteration 350 is: 2.26072, learning rate: 0.10000, valid cost : 2.33799
+Cost at iteration 360 is: 2.01494, learning rate: 0.10000, valid cost : 2.00464
+Cost at iteration 370 is: 1.82041, learning rate: 0.10000, valid cost : 1.82574
+Cost at iteration 380 is: 1.78051, learning rate: 0.10000, valid cost : 1.76763
+Cost at iteration 390 is: 2.01418, learning rate: 0.10000, valid cost : 2.01428
+Cost at iteration 400 is: 1.82768, learning rate: 0.10000, valid cost : 1.82286
+Cost at iteration 410 is: 2.24014, learning rate: 0.10000, valid cost : 2.16665
+Cost at iteration 420 is: 2.02346, learning rate: 0.10000, valid cost : 2.00686
+Cost at iteration 430 is: 1.91953, learning rate: 0.10000, valid cost : 1.88882
+Cost at iteration 440 is: 1.99693, learning rate: 0.10000, valid cost : 1.97137
+Cost at iteration 450 is: 2.03957, learning rate: 0.10000, valid cost : 1.96408
+Cost at iteration 460 is: 2.06821, learning rate: 0.10000, valid cost : 2.06329
+Cost at iteration 470 is: 2.84709, learning rate: 0.10000, valid cost : 2.90939
+Cost at iteration 480 is: 1.83579, learning rate: 0.10000, valid cost : 1.85274
+Cost at iteration 490 is: 1.83282, learning rate: 0.10000, valid cost : 1.84659
+Accuracy for training set is 27.370 %
+Accuracy for testing set is 27.380 %
+Time for the algo - RMSProp for 500 iterations was 3023.976459
+------------------------------------------------------
+Training 3 layer neural network with ADAM at an initial learning rate of 0.1
+Cost at iteration 0 is: 9.93151, learning rate: 0.10000, valid cost : 10.03417
+Cost at iteration 10 is: 2.56739, learning rate: 0.10000, valid cost : 2.56470
+Cost at iteration 20 is: 2.39420, learning rate: 0.10000, valid cost : 2.39367
+Cost at iteration 30 is: 2.32911, learning rate: 0.10000, valid cost : 2.32918
+Cost at iteration 40 is: 2.30847, learning rate: 0.10000, valid cost : 2.30881
+Cost at iteration 50 is: 2.30410, learning rate: 0.10000, valid cost : 2.30457
+Cost at iteration 60 is: 2.30278, learning rate: 0.10000, valid cost : 2.30325
+Cost at iteration 70 is: 2.30243, learning rate: 0.10000, valid cost : 2.30292
+Cost at iteration 80 is: 2.30222, learning rate: 0.10000, valid cost : 2.30271
+Cost at iteration 90 is: 2.30174, learning rate: 0.10000, valid cost : 2.30263
+Cost at iteration 100 is: 2.30093, learning rate: 0.10000, valid cost : 2.30064
+Cost at iteration 110 is: 2.29199, learning rate: 0.10000, valid cost : 2.29597
+Cost at iteration 120 is: 2.26711, learning rate: 0.10000, valid cost : 2.27110
+Cost at iteration 130 is: 2.24075, learning rate: 0.10000, valid cost : 2.24239
+Cost at iteration 140 is: 2.26260, learning rate: 0.10000, valid cost : 2.26700
+Cost at iteration 150 is: 2.24344, learning rate: 0.10000, valid cost : 2.26316
+Cost at iteration 160 is: 2.24606, learning rate: 0.10000, valid cost : 2.24449
+Cost at iteration 170 is: 2.24060, learning rate: 0.10000, valid cost : 2.24199
+Cost at iteration 180 is: 2.23526, learning rate: 0.10000, valid cost : 2.23676
+Cost at iteration 190 is: 2.23175, learning rate: 0.10000, valid cost : 2.23418
+Cost at iteration 200 is: 2.22987, learning rate: 0.10000, valid cost : 2.22893
+Cost at iteration 210 is: 2.22697, learning rate: 0.10000, valid cost : 2.22413
+Cost at iteration 220 is: 2.22347, learning rate: 0.10000, valid cost : 2.22365
+Cost at iteration 230 is: 2.22014, learning rate: 0.10000, valid cost : 2.22098
+Cost at iteration 240 is: 2.21889, learning rate: 0.10000, valid cost : 2.22098
+Cost at iteration 250 is: 2.21681, learning rate: 0.10000, valid cost : 2.21562
+Cost at iteration 260 is: 2.21490, learning rate: 0.10000, valid cost : 2.21562
+Cost at iteration 270 is: 2.21362, learning rate: 0.10000, valid cost : 2.21562
+Cost at iteration 280 is: 2.21155, learning rate: 0.10000, valid cost : 2.21562
+Cost at iteration 290 is: 2.21015, learning rate: 0.10000, valid cost : 2.21565
+Cost at iteration 300 is: 2.20988, learning rate: 0.10000, valid cost : 2.21566
+Cost at iteration 310 is: 2.20651, learning rate: 0.10000, valid cost : 2.21022
+Cost at iteration 320 is: 2.20169, learning rate: 0.10000, valid cost : 2.19361
+Cost at iteration 330 is: 2.19281, learning rate: 0.10000, valid cost : 2.17096
+Cost at iteration 340 is: 2.18761, learning rate: 0.10000, valid cost : 2.17070
+Cost at iteration 350 is: 2.17772, learning rate: 0.10000, valid cost : 2.16472
+Cost at iteration 360 is: 2.16515, learning rate: 0.10000, valid cost : 2.14641
+Cost at iteration 370 is: 2.15690, learning rate: 0.10000, valid cost : 2.12786
+Cost at iteration 380 is: 2.14877, learning rate: 0.10000, valid cost : 2.12595
+Cost at iteration 390 is: 2.13263, learning rate: 0.10000, valid cost : 2.11397
+Cost at iteration 400 is: 2.11862, learning rate: 0.10000, valid cost : 2.09370
+Cost at iteration 410 is: 2.10614, learning rate: 0.10000, valid cost : 2.08241
+Cost at iteration 420 is: 2.09541, learning rate: 0.10000, valid cost : 2.06765
+Cost at iteration 430 is: 2.08976, learning rate: 0.10000, valid cost : 2.07105
+Cost at iteration 440 is: 2.08176, learning rate: 0.10000, valid cost : 2.06124
+Cost at iteration 450 is: 2.08346, learning rate: 0.10000, valid cost : 2.06630
+Cost at iteration 460 is: 2.07275, learning rate: 0.10000, valid cost : 2.05645
+Cost at iteration 470 is: 2.09640, learning rate: 0.10000, valid cost : 2.07696
+Cost at iteration 480 is: 2.10421, learning rate: 0.10000, valid cost : 2.08079
+Cost at iteration 490 is: 2.09562, learning rate: 0.10000, valid cost : 2.07810
+Accuracy for training set is 17.604 %
+Accuracy for testing set is 17.720 %
+Time for the algo - ADAM for 500 iterations was 3016.28864
+------------------------------------------------------
+[3041.997082, 3042.908225, 6072.889617, 3023.976459, 3016.28864]
+[83.28, 84.16, 84.86, 27.38, 17.72]
+[84.746, 86.244, 86.47200000000001, 27.37, 17.604]
+Training 3 layer neural network with No Momentum at an initial learning rate of 0.05
+Cost at iteration 0 is: 9.93151, learning rate: 0.05000, valid cost : 10.03417
+Cost at iteration 10 is: 2.59087, learning rate: 0.04545, valid cost : 2.63185
+Cost at iteration 20 is: 0.88319, learning rate: 0.04167, valid cost : 0.90340
+Cost at iteration 30 is: 0.80237, learning rate: 0.03846, valid cost : 0.82581
+Cost at iteration 40 is: 0.72729, learning rate: 0.03571, valid cost : 0.74797
+Cost at iteration 50 is: 0.68412, learning rate: 0.03333, valid cost : 0.70132
+Cost at iteration 60 is: 0.65295, learning rate: 0.03125, valid cost : 0.66640
+Cost at iteration 70 is: 0.62997, learning rate: 0.02941, valid cost : 0.64097
+Cost at iteration 80 is: 0.61284, learning rate: 0.02778, valid cost : 0.62217
+Cost at iteration 90 is: 0.59925, learning rate: 0.02632, valid cost : 0.60716
+Cost at iteration 100 is: 0.58783, learning rate: 0.02500, valid cost : 0.59427
+Cost at iteration 110 is: 0.57793, learning rate: 0.02381, valid cost : 0.58291
+Cost at iteration 120 is: 0.56932, learning rate: 0.02273, valid cost : 0.57312
+Cost at iteration 130 is: 0.56173, learning rate: 0.02174, valid cost : 0.56442
+Cost at iteration 140 is: 0.55502, learning rate: 0.02083, valid cost : 0.55680
+Cost at iteration 150 is: 0.54905, learning rate: 0.02000, valid cost : 0.55009
+Cost at iteration 160 is: 0.54366, learning rate: 0.01923, valid cost : 0.54407
+Cost at iteration 170 is: 0.53877, learning rate: 0.01852, valid cost : 0.53859
+Cost at iteration 180 is: 0.53430, learning rate: 0.01786, valid cost : 0.53364
+Cost at iteration 190 is: 0.53018, learning rate: 0.01724, valid cost : 0.52905
+Cost at iteration 200 is: 0.52639, learning rate: 0.01667, valid cost : 0.52486
+Cost at iteration 210 is: 0.52289, learning rate: 0.01613, valid cost : 0.52102
+Cost at iteration 220 is: 0.51963, learning rate: 0.01562, valid cost : 0.51745
+Cost at iteration 230 is: 0.51658, learning rate: 0.01515, valid cost : 0.51415
+Cost at iteration 240 is: 0.51371, learning rate: 0.01471, valid cost : 0.51109
+Cost at iteration 250 is: 0.51100, learning rate: 0.01429, valid cost : 0.50824
+Cost at iteration 260 is: 0.50844, learning rate: 0.01389, valid cost : 0.50557
+Cost at iteration 270 is: 0.50603, learning rate: 0.01351, valid cost : 0.50305
+Cost at iteration 280 is: 0.50374, learning rate: 0.01316, valid cost : 0.50068
+Cost at iteration 290 is: 0.50156, learning rate: 0.01282, valid cost : 0.49848
+Cost at iteration 300 is: 0.49949, learning rate: 0.01250, valid cost : 0.49642
+Cost at iteration 310 is: 0.49752, learning rate: 0.01220, valid cost : 0.49446
+Cost at iteration 320 is: 0.49565, learning rate: 0.01190, valid cost : 0.49263
+Cost at iteration 330 is: 0.49386, learning rate: 0.01163, valid cost : 0.49089
+Cost at iteration 340 is: 0.49214, learning rate: 0.01136, valid cost : 0.48921
+Cost at iteration 350 is: 0.49050, learning rate: 0.01111, valid cost : 0.48760
+Cost at iteration 360 is: 0.48892, learning rate: 0.01087, valid cost : 0.48604
+Cost at iteration 370 is: 0.48741, learning rate: 0.01064, valid cost : 0.48455
+Cost at iteration 380 is: 0.48595, learning rate: 0.01042, valid cost : 0.48313
+Cost at iteration 390 is: 0.48455, learning rate: 0.01020, valid cost : 0.48177
+Cost at iteration 400 is: 0.48320, learning rate: 0.01000, valid cost : 0.48044
+Cost at iteration 410 is: 0.48189, learning rate: 0.00980, valid cost : 0.47914
+Cost at iteration 420 is: 0.48064, learning rate: 0.00962, valid cost : 0.47789
+Cost at iteration 430 is: 0.47942, learning rate: 0.00943, valid cost : 0.47668
+Cost at iteration 440 is: 0.47825, learning rate: 0.00926, valid cost : 0.47549
+Cost at iteration 450 is: 0.47712, learning rate: 0.00909, valid cost : 0.47432
+Cost at iteration 460 is: 0.47602, learning rate: 0.00893, valid cost : 0.47318
+Cost at iteration 470 is: 0.47496, learning rate: 0.00877, valid cost : 0.47206
+Cost at iteration 480 is: 0.47393, learning rate: 0.00862, valid cost : 0.47099
+Cost at iteration 490 is: 0.47293, learning rate: 0.00847, valid cost : 0.46996
+Accuracy for training set is 83.464 %
+Accuracy for testing set is 82.240 %
+Time for the algo - No Momentum for 500 iterations was 3054.391203
+------------------------------------------------------
+Training 3 layer neural network with Polyack's Momentum at an initial learning rate of 0.05
+Cost at iteration 0 is: 9.93151, learning rate: 0.05000, valid cost : 10.03417
+Cost at iteration 10 is: 2.56226, learning rate: 0.05000, valid cost : 2.60814
+Cost at iteration 20 is: 0.92421, learning rate: 0.05000, valid cost : 0.94552
+Cost at iteration 30 is: 0.78594, learning rate: 0.05000, valid cost : 0.80634
+Cost at iteration 40 is: 0.72325, learning rate: 0.05000, valid cost : 0.74023
+Cost at iteration 50 is: 0.67902, learning rate: 0.05000, valid cost : 0.69151
+Cost at iteration 60 is: 0.64790, learning rate: 0.05000, valid cost : 0.65583
+Cost at iteration 70 is: 0.62147, learning rate: 0.05000, valid cost : 0.62502
+Cost at iteration 80 is: 0.60013, learning rate: 0.05000, valid cost : 0.60014
+Cost at iteration 90 is: 0.58277, learning rate: 0.05000, valid cost : 0.58049
+Cost at iteration 100 is: 0.56816, learning rate: 0.05000, valid cost : 0.56419
+Cost at iteration 110 is: 0.55646, learning rate: 0.05000, valid cost : 0.55131
+Cost at iteration 120 is: 0.58399, learning rate: 0.05000, valid cost : 0.57451
+Cost at iteration 130 is: 0.53990, learning rate: 0.05000, valid cost : 0.52905
+Cost at iteration 140 is: 0.52838, learning rate: 0.05000, valid cost : 0.51690
+Cost at iteration 150 is: 0.52755, learning rate: 0.05000, valid cost : 0.51638
+Cost at iteration 160 is: 0.52449, learning rate: 0.05000, valid cost : 0.51542
+Cost at iteration 170 is: 0.51289, learning rate: 0.05000, valid cost : 0.50240
+Cost at iteration 180 is: 0.50458, learning rate: 0.05000, valid cost : 0.49068
+Cost at iteration 190 is: 0.49165, learning rate: 0.05000, valid cost : 0.47540
+Cost at iteration 200 is: 0.49307, learning rate: 0.05000, valid cost : 0.47550
+Cost at iteration 210 is: 0.49075, learning rate: 0.05000, valid cost : 0.47401
+Cost at iteration 220 is: 0.47644, learning rate: 0.05000, valid cost : 0.45948
+Cost at iteration 230 is: 0.47302, learning rate: 0.05000, valid cost : 0.45433
+Cost at iteration 240 is: 0.47056, learning rate: 0.05000, valid cost : 0.45245
+Cost at iteration 250 is: 0.46512, learning rate: 0.05000, valid cost : 0.44778
+Cost at iteration 260 is: 0.46500, learning rate: 0.05000, valid cost : 0.44971
+Cost at iteration 270 is: 0.47305, learning rate: 0.05000, valid cost : 0.46052
+Cost at iteration 280 is: 0.46128, learning rate: 0.05000, valid cost : 0.44777
+Cost at iteration 290 is: 0.45351, learning rate: 0.05000, valid cost : 0.43881
+Cost at iteration 300 is: 0.44770, learning rate: 0.05000, valid cost : 0.43274
+Cost at iteration 310 is: 0.44729, learning rate: 0.05000, valid cost : 0.43255
+Cost at iteration 320 is: 0.44800, learning rate: 0.05000, valid cost : 0.43395
+Cost at iteration 330 is: 0.44099, learning rate: 0.05000, valid cost : 0.42724
+Cost at iteration 340 is: 0.43485, learning rate: 0.05000, valid cost : 0.42096
+Cost at iteration 350 is: 0.43846, learning rate: 0.05000, valid cost : 0.42422
+Cost at iteration 360 is: 0.43429, learning rate: 0.05000, valid cost : 0.41918
+Cost at iteration 370 is: 0.42823, learning rate: 0.05000, valid cost : 0.41272
+Cost at iteration 380 is: 0.42671, learning rate: 0.05000, valid cost : 0.41083
+Cost at iteration 390 is: 0.43160, learning rate: 0.05000, valid cost : 0.41493
+Cost at iteration 400 is: 0.42998, learning rate: 0.05000, valid cost : 0.41134
+Cost at iteration 410 is: 0.41995, learning rate: 0.05000, valid cost : 0.40024
+Cost at iteration 420 is: 0.41435, learning rate: 0.05000, valid cost : 0.39522
+Cost at iteration 430 is: 0.41185, learning rate: 0.05000, valid cost : 0.39278
+Cost at iteration 440 is: 0.41124, learning rate: 0.05000, valid cost : 0.39217
+Cost at iteration 450 is: 0.41098, learning rate: 0.05000, valid cost : 0.39216
+Cost at iteration 460 is: 0.40896, learning rate: 0.05000, valid cost : 0.39056
+Cost at iteration 470 is: 0.40611, learning rate: 0.05000, valid cost : 0.38769
+Cost at iteration 480 is: 0.40321, learning rate: 0.05000, valid cost : 0.38461
+Cost at iteration 490 is: 0.40110, learning rate: 0.05000, valid cost : 0.38243
+Accuracy for training set is 85.702 %
+Accuracy for testing set is 84.400 %
+Time for the algo - Polyack's Momentum for 500 iterations was 3062.889789
+------------------------------------------------------
+Training 3 layer neural network with Accelerated Gradient at an initial learning rate of 0.05
+Cost at iteration 0 is: 9.93151, learning rate: 0.05000, valid cost : 10.03417
+Cost at iteration 10 is: 2.45604, learning rate: 0.05000, valid cost : 2.49666
+Cost at iteration 20 is: 0.93351, learning rate: 0.05000, valid cost : 0.95680
+Cost at iteration 30 is: 0.79061, learning rate: 0.05000, valid cost : 0.81116
+Cost at iteration 40 is: 0.72738, learning rate: 0.05000, valid cost : 0.74506
+Cost at iteration 50 is: 0.68147, learning rate: 0.05000, valid cost : 0.69494
+Cost at iteration 60 is: 0.64800, learning rate: 0.05000, valid cost : 0.65723
+Cost at iteration 70 is: 0.62213, learning rate: 0.05000, valid cost : 0.62730
+Cost at iteration 80 is: 0.60231, learning rate: 0.05000, valid cost : 0.60411
+Cost at iteration 90 is: 0.58501, learning rate: 0.05000, valid cost : 0.58403
+Cost at iteration 100 is: 0.57008, learning rate: 0.05000, valid cost : 0.56718
+Cost at iteration 110 is: 0.55745, learning rate: 0.05000, valid cost : 0.55322
+Cost at iteration 120 is: 0.57605, learning rate: 0.05000, valid cost : 0.56885
+Cost at iteration 130 is: 0.55058, learning rate: 0.05000, valid cost : 0.53878
+Cost at iteration 140 is: 0.53215, learning rate: 0.05000, valid cost : 0.52067
+Cost at iteration 150 is: 0.52801, learning rate: 0.05000, valid cost : 0.51662
+Cost at iteration 160 is: 0.52014, learning rate: 0.05000, valid cost : 0.50983
+Cost at iteration 170 is: 0.50704, learning rate: 0.05000, valid cost : 0.49674
+Cost at iteration 180 is: 0.50520, learning rate: 0.05000, valid cost : 0.49283
+Cost at iteration 190 is: 0.50862, learning rate: 0.05000, valid cost : 0.49278
+Cost at iteration 200 is: 0.50118, learning rate: 0.05000, valid cost : 0.48740
+Cost at iteration 210 is: 0.48682, learning rate: 0.05000, valid cost : 0.47314
+Cost at iteration 220 is: 0.47968, learning rate: 0.05000, valid cost : 0.46581
+Cost at iteration 230 is: 0.47770, learning rate: 0.05000, valid cost : 0.46258
+Cost at iteration 240 is: 0.47502, learning rate: 0.05000, valid cost : 0.45901
+Cost at iteration 250 is: 0.47896, learning rate: 0.05000, valid cost : 0.46494
+Cost at iteration 260 is: 0.46628, learning rate: 0.05000, valid cost : 0.45400
+Cost at iteration 270 is: 0.45903, learning rate: 0.05000, valid cost : 0.44639
+Cost at iteration 280 is: 0.45778, learning rate: 0.05000, valid cost : 0.44377
+Cost at iteration 290 is: 0.45034, learning rate: 0.05000, valid cost : 0.43598
+Cost at iteration 300 is: 0.44567, learning rate: 0.05000, valid cost : 0.43138
+Cost at iteration 310 is: 0.45312, learning rate: 0.05000, valid cost : 0.43861
+Cost at iteration 320 is: 0.45622, learning rate: 0.05000, valid cost : 0.44109
+Cost at iteration 330 is: 0.43570, learning rate: 0.05000, valid cost : 0.42022
+Cost at iteration 340 is: 0.43624, learning rate: 0.05000, valid cost : 0.41926
+Cost at iteration 350 is: 0.42933, learning rate: 0.05000, valid cost : 0.41313
+Cost at iteration 360 is: 0.42557, learning rate: 0.05000, valid cost : 0.40948
+Cost at iteration 370 is: 0.42401, learning rate: 0.05000, valid cost : 0.40777
+Cost at iteration 380 is: 0.42790, learning rate: 0.05000, valid cost : 0.41205
+Cost at iteration 390 is: 0.43463, learning rate: 0.05000, valid cost : 0.42036
+Cost at iteration 400 is: 0.42792, learning rate: 0.05000, valid cost : 0.41406
+Cost at iteration 410 is: 0.41548, learning rate: 0.05000, valid cost : 0.40243
+Cost at iteration 420 is: 0.41347, learning rate: 0.05000, valid cost : 0.40092
+Cost at iteration 430 is: 0.41550, learning rate: 0.05000, valid cost : 0.40324
+Cost at iteration 440 is: 0.41954, learning rate: 0.05000, valid cost : 0.40794
+Cost at iteration 450 is: 0.41447, learning rate: 0.05000, valid cost : 0.40342
+Cost at iteration 460 is: 0.40738, learning rate: 0.05000, valid cost : 0.39623
+Cost at iteration 470 is: 0.40492, learning rate: 0.05000, valid cost : 0.39384
+Cost at iteration 480 is: 0.40896, learning rate: 0.05000, valid cost : 0.39752
+Cost at iteration 490 is: 0.40486, learning rate: 0.05000, valid cost : 0.39277
+Accuracy for training set is 85.994 %
+Accuracy for testing set is 84.700 %
+Time for the algo - Accelerated Gradient for 500 iterations was 6095.861138
+------------------------------------------------------
+Training 3 layer neural network with RMSProp at an initial learning rate of 0.05
+Cost at iteration 0 is: 9.93151, learning rate: 0.05000, valid cost : 10.03417
+Cost at iteration 10 is: 1.40944, learning rate: 0.05000, valid cost : 1.45355
+Cost at iteration 20 is: 1.31707, learning rate: 0.05000, valid cost : 1.31208
+Cost at iteration 30 is: 1.73838, learning rate: 0.05000, valid cost : 1.84272
+Cost at iteration 40 is: 1.63666, learning rate: 0.05000, valid cost : 1.65548
+Cost at iteration 50 is: 5.38052, learning rate: 0.05000, valid cost : 5.44479
+Cost at iteration 60 is: 11.90468, learning rate: 0.05000, valid cost : 11.88893
+Cost at iteration 70 is: 1.58495, learning rate: 0.05000, valid cost : 1.58896
+Cost at iteration 80 is: 12.55506, learning rate: 0.05000, valid cost : 12.52377
+Cost at iteration 90 is: 5.22479, learning rate: 0.05000, valid cost : 5.26694
+Cost at iteration 100 is: 1.67782, learning rate: 0.05000, valid cost : 1.64595
+Cost at iteration 110 is: 1.32432, learning rate: 0.05000, valid cost : 1.28407
+Cost at iteration 120 is: 1.26519, learning rate: 0.05000, valid cost : 1.21770
+Cost at iteration 130 is: 1.24251, learning rate: 0.05000, valid cost : 1.21523
+Cost at iteration 140 is: 1.19121, learning rate: 0.05000, valid cost : 1.16009
+Cost at iteration 150 is: 11.47905, learning rate: 0.05000, valid cost : 11.40309
+Cost at iteration 160 is: 1.59398, learning rate: 0.05000, valid cost : 1.63932
+Cost at iteration 170 is: 1.33020, learning rate: 0.05000, valid cost : 1.31591
+Cost at iteration 180 is: 3.69855, learning rate: 0.05000, valid cost : 3.82735
+Cost at iteration 190 is: 1.36044, learning rate: 0.05000, valid cost : 1.33209
+Cost at iteration 200 is: 0.83019, learning rate: 0.05000, valid cost : 0.80847
+Cost at iteration 210 is: 0.84886, learning rate: 0.05000, valid cost : 0.78731
+Cost at iteration 220 is: 3.56595, learning rate: 0.05000, valid cost : 3.60516
+Cost at iteration 230 is: 0.95351, learning rate: 0.05000, valid cost : 0.92668
+Cost at iteration 240 is: 0.70754, learning rate: 0.05000, valid cost : 0.71611
+Cost at iteration 250 is: 0.81732, learning rate: 0.05000, valid cost : 0.76819
+Cost at iteration 260 is: 0.93411, learning rate: 0.05000, valid cost : 0.95983
+Cost at iteration 270 is: 0.71438, learning rate: 0.05000, valid cost : 0.74092
+Cost at iteration 280 is: 12.00265, learning rate: 0.05000, valid cost : 12.08930
+Cost at iteration 290 is: 1.17954, learning rate: 0.05000, valid cost : 1.16610
+Cost at iteration 300 is: 1.20510, learning rate: 0.05000, valid cost : 1.18426
+Cost at iteration 310 is: 1.04936, learning rate: 0.05000, valid cost : 1.03684
+Cost at iteration 320 is: 1.07317, learning rate: 0.05000, valid cost : 1.10788
+Cost at iteration 330 is: 0.70192, learning rate: 0.05000, valid cost : 0.69898
+Cost at iteration 340 is: 0.74023, learning rate: 0.05000, valid cost : 0.74820
+Cost at iteration 350 is: 1.56346, learning rate: 0.05000, valid cost : 1.56455
+Cost at iteration 360 is: 1.14416, learning rate: 0.05000, valid cost : 1.13025
+Cost at iteration 370 is: 0.60855, learning rate: 0.05000, valid cost : 0.60996
+Cost at iteration 380 is: 0.61478, learning rate: 0.05000, valid cost : 0.60596
+Cost at iteration 390 is: 0.59200, learning rate: 0.05000, valid cost : 0.57531
+Cost at iteration 400 is: 1.88178, learning rate: 0.05000, valid cost : 1.89563
+Cost at iteration 410 is: 1.12569, learning rate: 0.05000, valid cost : 1.12768
+Cost at iteration 420 is: 0.59306, learning rate: 0.05000, valid cost : 0.60207
+Cost at iteration 430 is: 0.63099, learning rate: 0.05000, valid cost : 0.64002
+Cost at iteration 440 is: 0.67178, learning rate: 0.05000, valid cost : 0.65450
+Cost at iteration 450 is: 1.71117, learning rate: 0.05000, valid cost : 1.68413
+Cost at iteration 460 is: 0.63139, learning rate: 0.05000, valid cost : 0.60937
+Cost at iteration 470 is: 0.89501, learning rate: 0.05000, valid cost : 0.86301
+Cost at iteration 480 is: 0.56790, learning rate: 0.05000, valid cost : 0.54717
+Cost at iteration 490 is: 0.74771, learning rate: 0.05000, valid cost : 0.74382
+Accuracy for training set is 74.158 %
+Accuracy for testing set is 73.900 %
+Time for the algo - RMSProp for 500 iterations was 3021.795717
+------------------------------------------------------
+Training 3 layer neural network with ADAM at an initial learning rate of 0.05
+Cost at iteration 0 is: 9.93151, learning rate: 0.05000, valid cost : 10.03417
+Cost at iteration 10 is: 2.79936, learning rate: 0.05000, valid cost : 2.77597
+Cost at iteration 20 is: 1.84250, learning rate: 0.05000, valid cost : 1.81524
+Cost at iteration 30 is: 1.62259, learning rate: 0.05000, valid cost : 1.56978
+Cost at iteration 40 is: 1.36967, learning rate: 0.05000, valid cost : 1.31816
+Cost at iteration 50 is: 1.20373, learning rate: 0.05000, valid cost : 1.19185
+Cost at iteration 60 is: 1.14149, learning rate: 0.05000, valid cost : 1.13208
+Cost at iteration 70 is: 1.08370, learning rate: 0.05000, valid cost : 1.06912
+Cost at iteration 80 is: 1.46115, learning rate: 0.05000, valid cost : 1.43333
+Cost at iteration 90 is: 1.07160, learning rate: 0.05000, valid cost : 1.07382
+Cost at iteration 100 is: 1.06429, learning rate: 0.05000, valid cost : 1.07578
+Cost at iteration 110 is: 1.04392, learning rate: 0.05000, valid cost : 1.04558
+Cost at iteration 120 is: 1.02757, learning rate: 0.05000, valid cost : 1.03090
+Cost at iteration 130 is: 1.01569, learning rate: 0.05000, valid cost : 1.00630
+Cost at iteration 140 is: 1.00248, learning rate: 0.05000, valid cost : 0.99828
+Cost at iteration 150 is: 0.99209, learning rate: 0.05000, valid cost : 0.99018
+Cost at iteration 160 is: 0.99878, learning rate: 0.05000, valid cost : 1.01270
+Cost at iteration 170 is: 1.00289, learning rate: 0.05000, valid cost : 1.01683
+Cost at iteration 180 is: 0.97843, learning rate: 0.05000, valid cost : 0.95609
+Cost at iteration 190 is: 0.96424, learning rate: 0.05000, valid cost : 0.93162
+Cost at iteration 200 is: 0.95239, learning rate: 0.05000, valid cost : 0.91556
+Cost at iteration 210 is: 0.89347, learning rate: 0.05000, valid cost : 0.87087
+Cost at iteration 220 is: 0.93383, learning rate: 0.05000, valid cost : 0.88975
+Cost at iteration 230 is: 0.89488, learning rate: 0.05000, valid cost : 0.85191
+Cost at iteration 240 is: 0.82565, learning rate: 0.05000, valid cost : 0.80964
+Cost at iteration 250 is: 0.78734, learning rate: 0.05000, valid cost : 0.76574
+Cost at iteration 260 is: 0.76434, learning rate: 0.05000, valid cost : 0.74128
+Cost at iteration 270 is: 0.75524, learning rate: 0.05000, valid cost : 0.73184
+Cost at iteration 280 is: 0.74630, learning rate: 0.05000, valid cost : 0.71958
+Cost at iteration 290 is: 0.73983, learning rate: 0.05000, valid cost : 0.71436
+Cost at iteration 300 is: 0.73516, learning rate: 0.05000, valid cost : 0.70906
+Cost at iteration 310 is: 0.72904, learning rate: 0.05000, valid cost : 0.70425
+Cost at iteration 320 is: 0.74078, learning rate: 0.05000, valid cost : 0.72693
+Cost at iteration 330 is: 0.72914, learning rate: 0.05000, valid cost : 0.71784
+Cost at iteration 340 is: 0.71737, learning rate: 0.05000, valid cost : 0.70765
+Cost at iteration 350 is: 0.71657, learning rate: 0.05000, valid cost : 0.70441
+Cost at iteration 360 is: 0.71397, learning rate: 0.05000, valid cost : 0.70877
+Cost at iteration 370 is: 0.71126, learning rate: 0.05000, valid cost : 0.70037
+Cost at iteration 380 is: 0.70980, learning rate: 0.05000, valid cost : 0.70655
+Cost at iteration 390 is: 0.70690, learning rate: 0.05000, valid cost : 0.70545
+Cost at iteration 400 is: 0.70445, learning rate: 0.05000, valid cost : 0.71294
+Cost at iteration 410 is: 0.69768, learning rate: 0.05000, valid cost : 0.70785
+Cost at iteration 420 is: 0.70548, learning rate: 0.05000, valid cost : 0.70974
+Cost at iteration 430 is: 0.71944, learning rate: 0.05000, valid cost : 0.68859
+Cost at iteration 440 is: 0.70896, learning rate: 0.05000, valid cost : 0.68449
+Cost at iteration 450 is: 0.70714, learning rate: 0.05000, valid cost : 0.69098
+Cost at iteration 460 is: 0.70262, learning rate: 0.05000, valid cost : 0.68058
+Cost at iteration 470 is: 0.69941, learning rate: 0.05000, valid cost : 0.67721
+Cost at iteration 480 is: 0.69584, learning rate: 0.05000, valid cost : 0.67681
+Cost at iteration 490 is: 0.69292, learning rate: 0.05000, valid cost : 0.67365
+Accuracy for training set is 70.126 %
+Accuracy for testing set is 69.160 %
+Time for the algo - ADAM for 500 iterations was 3024.936181
+------------------------------------------------------
+[3054.391203, 3062.889789, 6095.861138, 3021.795717, 3024.936181]
+[82.24000000000001, 84.39999999999999, 84.7, 73.9, 69.16]
+[83.464, 85.702, 85.994, 74.158, 70.126]
+Training 3 layer neural network with No Momentum at an initial learning rate of 0.01
+Cost at iteration 0 is: 9.93151, learning rate: 0.01000, valid cost : 10.03417
+Cost at iteration 10 is: 1.62987, learning rate: 0.00909, valid cost : 1.67412
+Cost at iteration 20 is: 1.16186, learning rate: 0.00833, valid cost : 1.19194
+Cost at iteration 30 is: 1.00310, learning rate: 0.00769, valid cost : 1.02004
+Cost at iteration 40 is: 0.92437, learning rate: 0.00714, valid cost : 0.93178
+Cost at iteration 50 is: 0.87375, learning rate: 0.00667, valid cost : 0.87294
+Cost at iteration 60 is: 0.83672, learning rate: 0.00625, valid cost : 0.82943
+Cost at iteration 70 is: 0.80800, learning rate: 0.00588, valid cost : 0.79578
+Cost at iteration 80 is: 0.78491, learning rate: 0.00556, valid cost : 0.76914
+Cost at iteration 90 is: 0.76564, learning rate: 0.00526, valid cost : 0.74754
+Cost at iteration 100 is: 0.74911, learning rate: 0.00500, valid cost : 0.72918
+Cost at iteration 110 is: 0.73476, learning rate: 0.00476, valid cost : 0.71344
+Cost at iteration 120 is: 0.72219, learning rate: 0.00455, valid cost : 0.69996
+Cost at iteration 130 is: 0.71118, learning rate: 0.00435, valid cost : 0.68841
+Cost at iteration 140 is: 0.70150, learning rate: 0.00417, valid cost : 0.67809
+Cost at iteration 150 is: 0.69280, learning rate: 0.00400, valid cost : 0.66907
+Cost at iteration 160 is: 0.68496, learning rate: 0.00385, valid cost : 0.66104
+Cost at iteration 170 is: 0.67781, learning rate: 0.00370, valid cost : 0.65376
+Cost at iteration 180 is: 0.67124, learning rate: 0.00357, valid cost : 0.64707
+Cost at iteration 190 is: 0.66523, learning rate: 0.00345, valid cost : 0.64091
+Cost at iteration 200 is: 0.65967, learning rate: 0.00333, valid cost : 0.63526
+Cost at iteration 210 is: 0.65453, learning rate: 0.00323, valid cost : 0.63002
+Cost at iteration 220 is: 0.64976, learning rate: 0.00313, valid cost : 0.62512
+Cost at iteration 230 is: 0.64531, learning rate: 0.00303, valid cost : 0.62052
+Cost at iteration 240 is: 0.64116, learning rate: 0.00294, valid cost : 0.61621
+Cost at iteration 250 is: 0.63725, learning rate: 0.00286, valid cost : 0.61221
+Cost at iteration 260 is: 0.63358, learning rate: 0.00278, valid cost : 0.60852
+Cost at iteration 270 is: 0.63013, learning rate: 0.00270, valid cost : 0.60502
+Cost at iteration 280 is: 0.62686, learning rate: 0.00263, valid cost : 0.60167
+Cost at iteration 290 is: 0.62375, learning rate: 0.00256, valid cost : 0.59852
+Cost at iteration 300 is: 0.62080, learning rate: 0.00250, valid cost : 0.59552
+Cost at iteration 310 is: 0.61799, learning rate: 0.00244, valid cost : 0.59269
+Cost at iteration 320 is: 0.61532, learning rate: 0.00238, valid cost : 0.59001
+Cost at iteration 330 is: 0.61278, learning rate: 0.00233, valid cost : 0.58746
+Cost at iteration 340 is: 0.61035, learning rate: 0.00227, valid cost : 0.58501
+Cost at iteration 350 is: 0.60803, learning rate: 0.00222, valid cost : 0.58264
+Cost at iteration 360 is: 0.60580, learning rate: 0.00217, valid cost : 0.58038
+Cost at iteration 370 is: 0.60366, learning rate: 0.00213, valid cost : 0.57822
+Cost at iteration 380 is: 0.60161, learning rate: 0.00208, valid cost : 0.57614
+Cost at iteration 390 is: 0.59964, learning rate: 0.00204, valid cost : 0.57415
+Cost at iteration 400 is: 0.59774, learning rate: 0.00200, valid cost : 0.57224
+Cost at iteration 410 is: 0.59590, learning rate: 0.00196, valid cost : 0.57040
+Cost at iteration 420 is: 0.59413, learning rate: 0.00192, valid cost : 0.56865
+Cost at iteration 430 is: 0.59243, learning rate: 0.00189, valid cost : 0.56698
+Cost at iteration 440 is: 0.59078, learning rate: 0.00185, valid cost : 0.56537
+Cost at iteration 450 is: 0.58918, learning rate: 0.00182, valid cost : 0.56381
+Cost at iteration 460 is: 0.58764, learning rate: 0.00179, valid cost : 0.56228
+Cost at iteration 470 is: 0.58614, learning rate: 0.00175, valid cost : 0.56079
+Cost at iteration 480 is: 0.58468, learning rate: 0.00172, valid cost : 0.55935
+Cost at iteration 490 is: 0.58328, learning rate: 0.00169, valid cost : 0.55796
+Accuracy for training set is 80.210 %
+Accuracy for testing set is 79.540 %
+Time for the algo - No Momentum for 500 iterations was 3077.518648
+------------------------------------------------------
+Training 3 layer neural network with Polyack's Momentum at an initial learning rate of 0.01
+Cost at iteration 0 is: 9.93151, learning rate: 0.01000, valid cost : 10.03417
+Cost at iteration 10 is: 1.69483, learning rate: 0.01000, valid cost : 1.73911
+Cost at iteration 20 is: 1.18816, learning rate: 0.01000, valid cost : 1.21483
+Cost at iteration 30 is: 1.01179, learning rate: 0.01000, valid cost : 1.02113
+Cost at iteration 40 is: 0.91310, learning rate: 0.01000, valid cost : 0.91035
+Cost at iteration 50 is: 0.84661, learning rate: 0.01000, valid cost : 0.83509
+Cost at iteration 60 is: 0.79702, learning rate: 0.01000, valid cost : 0.78061
+Cost at iteration 70 is: 0.75828, learning rate: 0.01000, valid cost : 0.73921
+Cost at iteration 80 is: 0.72848, learning rate: 0.01000, valid cost : 0.70734
+Cost at iteration 90 is: 0.70522, learning rate: 0.01000, valid cost : 0.68218
+Cost at iteration 100 is: 0.68644, learning rate: 0.01000, valid cost : 0.66264
+Cost at iteration 110 is: 0.67011, learning rate: 0.01000, valid cost : 0.64540
+Cost at iteration 120 is: 0.65491, learning rate: 0.01000, valid cost : 0.62936
+Cost at iteration 130 is: 0.64084, learning rate: 0.01000, valid cost : 0.61457
+Cost at iteration 140 is: 0.62793, learning rate: 0.01000, valid cost : 0.60121
+Cost at iteration 150 is: 0.61640, learning rate: 0.01000, valid cost : 0.58959
+Cost at iteration 160 is: 0.60612, learning rate: 0.01000, valid cost : 0.57933
+Cost at iteration 170 is: 0.59689, learning rate: 0.01000, valid cost : 0.57007
+Cost at iteration 180 is: 0.58832, learning rate: 0.01000, valid cost : 0.56154
+Cost at iteration 190 is: 0.58044, learning rate: 0.01000, valid cost : 0.55367
+Cost at iteration 200 is: 0.57319, learning rate: 0.01000, valid cost : 0.54632
+Cost at iteration 210 is: 0.56635, learning rate: 0.01000, valid cost : 0.53932
+Cost at iteration 220 is: 0.55999, learning rate: 0.01000, valid cost : 0.53280
+Cost at iteration 230 is: 0.55387, learning rate: 0.01000, valid cost : 0.52660
+Cost at iteration 240 is: 0.54821, learning rate: 0.01000, valid cost : 0.52081
+Cost at iteration 250 is: 0.54299, learning rate: 0.01000, valid cost : 0.51542
+Cost at iteration 260 is: 0.53809, learning rate: 0.01000, valid cost : 0.51037
+Cost at iteration 270 is: 0.53354, learning rate: 0.01000, valid cost : 0.50568
+Cost at iteration 280 is: 0.52924, learning rate: 0.01000, valid cost : 0.50125
+Cost at iteration 290 is: 0.52522, learning rate: 0.01000, valid cost : 0.49702
+Cost at iteration 300 is: 0.52159, learning rate: 0.01000, valid cost : 0.49310
+Cost at iteration 310 is: 0.51806, learning rate: 0.01000, valid cost : 0.48929
+Cost at iteration 320 is: 0.51453, learning rate: 0.01000, valid cost : 0.48559
+Cost at iteration 330 is: 0.51095, learning rate: 0.01000, valid cost : 0.48192
+Cost at iteration 340 is: 0.50744, learning rate: 0.01000, valid cost : 0.47832
+Cost at iteration 350 is: 0.50412, learning rate: 0.01000, valid cost : 0.47490
+Cost at iteration 360 is: 0.50089, learning rate: 0.01000, valid cost : 0.47163
+Cost at iteration 370 is: 0.49781, learning rate: 0.01000, valid cost : 0.46855
+Cost at iteration 380 is: 0.49498, learning rate: 0.01000, valid cost : 0.46569
+Cost at iteration 390 is: 0.49231, learning rate: 0.01000, valid cost : 0.46297
+Cost at iteration 400 is: 0.48964, learning rate: 0.01000, valid cost : 0.46027
+Cost at iteration 410 is: 0.48700, learning rate: 0.01000, valid cost : 0.45767
+Cost at iteration 420 is: 0.48440, learning rate: 0.01000, valid cost : 0.45512
+Cost at iteration 430 is: 0.48186, learning rate: 0.01000, valid cost : 0.45265
+Cost at iteration 440 is: 0.47941, learning rate: 0.01000, valid cost : 0.45029
+Cost at iteration 450 is: 0.47702, learning rate: 0.01000, valid cost : 0.44798
+Cost at iteration 460 is: 0.47470, learning rate: 0.01000, valid cost : 0.44576
+Cost at iteration 470 is: 0.47247, learning rate: 0.01000, valid cost : 0.44363
+Cost at iteration 480 is: 0.47029, learning rate: 0.01000, valid cost : 0.44156
+Cost at iteration 490 is: 0.46818, learning rate: 0.01000, valid cost : 0.43957
+Accuracy for training set is 83.726 %
+Accuracy for testing set is 82.740 %
+Time for the algo - Polyack's Momentum for 500 iterations was 5730.657857
+------------------------------------------------------
+Training 3 layer neural network with Accelerated Gradient at an initial learning rate of 0.01
+Cost at iteration 0 is: 9.93151, learning rate: 0.01000, valid cost : 10.03417
+Cost at iteration 10 is: 1.69469, learning rate: 0.01000, valid cost : 1.73891
+Cost at iteration 20 is: 1.18780, learning rate: 0.01000, valid cost : 1.21443
+Cost at iteration 30 is: 1.01154, learning rate: 0.01000, valid cost : 1.02079
+Cost at iteration 40 is: 0.91296, learning rate: 0.01000, valid cost : 0.91013
+Cost at iteration 50 is: 0.84652, learning rate: 0.01000, valid cost : 0.83498
+Cost at iteration 60 is: 0.79704, learning rate: 0.01000, valid cost : 0.78066
+Cost at iteration 70 is: 0.75828, learning rate: 0.01000, valid cost : 0.73922
+Cost at iteration 80 is: 0.72843, learning rate: 0.01000, valid cost : 0.70731
+Cost at iteration 90 is: 0.70509, learning rate: 0.01000, valid cost : 0.68210
+Cost at iteration 100 is: 0.68630, learning rate: 0.01000, valid cost : 0.66256
+Cost at iteration 110 is: 0.67002, learning rate: 0.01000, valid cost : 0.64541
+Cost at iteration 120 is: 0.65479, learning rate: 0.01000, valid cost : 0.62933
+Cost at iteration 130 is: 0.64068, learning rate: 0.01000, valid cost : 0.61453
+Cost at iteration 140 is: 0.62786, learning rate: 0.01000, valid cost : 0.60121
+Cost at iteration 150 is: 0.61638, learning rate: 0.01000, valid cost : 0.58965
+Cost at iteration 160 is: 0.60607, learning rate: 0.01000, valid cost : 0.57934
+Cost at iteration 170 is: 0.59685, learning rate: 0.01000, valid cost : 0.57008
+Cost at iteration 180 is: 0.58831, learning rate: 0.01000, valid cost : 0.56159
+Cost at iteration 190 is: 0.58048, learning rate: 0.01000, valid cost : 0.55375
+Cost at iteration 200 is: 0.57323, learning rate: 0.01000, valid cost : 0.54636
+Cost at iteration 210 is: 0.56636, learning rate: 0.01000, valid cost : 0.53932
+Cost at iteration 220 is: 0.56004, learning rate: 0.01000, valid cost : 0.53282
+Cost at iteration 230 is: 0.55396, learning rate: 0.01000, valid cost : 0.52662
+Cost at iteration 240 is: 0.54822, learning rate: 0.01000, valid cost : 0.52080
+Cost at iteration 250 is: 0.54293, learning rate: 0.01000, valid cost : 0.51534
+Cost at iteration 260 is: 0.53799, learning rate: 0.01000, valid cost : 0.51027
+Cost at iteration 270 is: 0.53343, learning rate: 0.01000, valid cost : 0.50562
+Cost at iteration 280 is: 0.52915, learning rate: 0.01000, valid cost : 0.50124
+Cost at iteration 290 is: 0.52511, learning rate: 0.01000, valid cost : 0.49698
+Cost at iteration 300 is: 0.52136, learning rate: 0.01000, valid cost : 0.49295
+Cost at iteration 310 is: 0.51785, learning rate: 0.01000, valid cost : 0.48912
+Cost at iteration 320 is: 0.51441, learning rate: 0.01000, valid cost : 0.48545
+Cost at iteration 330 is: 0.51090, learning rate: 0.01000, valid cost : 0.48181
+Cost at iteration 340 is: 0.50746, learning rate: 0.01000, valid cost : 0.47823
+Cost at iteration 350 is: 0.50415, learning rate: 0.01000, valid cost : 0.47482
+Cost at iteration 360 is: 0.50095, learning rate: 0.01000, valid cost : 0.47158
+Cost at iteration 370 is: 0.49793, learning rate: 0.01000, valid cost : 0.46853
+Cost at iteration 380 is: 0.49511, learning rate: 0.01000, valid cost : 0.46568
+Cost at iteration 390 is: 0.49237, learning rate: 0.01000, valid cost : 0.46291
+Cost at iteration 400 is: 0.48964, learning rate: 0.01000, valid cost : 0.46019
+Cost at iteration 410 is: 0.48696, learning rate: 0.01000, valid cost : 0.45758
+Cost at iteration 420 is: 0.48434, learning rate: 0.01000, valid cost : 0.45503
+Cost at iteration 430 is: 0.48185, learning rate: 0.01000, valid cost : 0.45258
+Cost at iteration 440 is: 0.47939, learning rate: 0.01000, valid cost : 0.45021
+Cost at iteration 450 is: 0.47704, learning rate: 0.01000, valid cost : 0.44791
+Cost at iteration 460 is: 0.47475, learning rate: 0.01000, valid cost : 0.44570
+Cost at iteration 470 is: 0.47252, learning rate: 0.01000, valid cost : 0.44357
+Cost at iteration 480 is: 0.47036, learning rate: 0.01000, valid cost : 0.44151
+Cost at iteration 490 is: 0.46823, learning rate: 0.01000, valid cost : 0.43950
+Accuracy for training set is 83.714 %
+Accuracy for testing set is 82.680 %
+Time for the algo - Accelerated Gradient for 500 iterations was 12380.990224
+------------------------------------------------------
+Training 3 layer neural network with RMSProp at an initial learning rate of 0.01
+Cost at iteration 0 is: 9.93151, learning rate: 0.01000, valid cost : 10.03417
+Cost at iteration 10 is: 3.97814, learning rate: 0.01000, valid cost : 3.94158
+Cost at iteration 20 is: 1.17943, learning rate: 0.01000, valid cost : 1.17678
+Cost at iteration 30 is: 0.77143, learning rate: 0.01000, valid cost : 0.76011
+Cost at iteration 40 is: 1.83155, learning rate: 0.01000, valid cost : 1.78996
+Cost at iteration 50 is: 0.97964, learning rate: 0.01000, valid cost : 0.96586
+Cost at iteration 60 is: 0.87459, learning rate: 0.01000, valid cost : 0.85893
+Cost at iteration 70 is: 0.71283, learning rate: 0.01000, valid cost : 0.71355
+Cost at iteration 80 is: 6.19365, learning rate: 0.01000, valid cost : 6.10336
+Cost at iteration 90 is: 0.69393, learning rate: 0.01000, valid cost : 0.67021
+Cost at iteration 100 is: 0.66506, learning rate: 0.01000, valid cost : 0.64079
+Cost at iteration 110 is: 0.59125, learning rate: 0.01000, valid cost : 0.56225
+Cost at iteration 120 is: 0.73583, learning rate: 0.01000, valid cost : 0.71238
+Cost at iteration 130 is: 1.44064, learning rate: 0.01000, valid cost : 1.41265
+Cost at iteration 140 is: 0.82731, learning rate: 0.01000, valid cost : 0.82173
+Cost at iteration 150 is: 0.54450, learning rate: 0.01000, valid cost : 0.51785
+Cost at iteration 160 is: 0.64617, learning rate: 0.01000, valid cost : 0.65079
+Cost at iteration 170 is: 0.58601, learning rate: 0.01000, valid cost : 0.58055
+Cost at iteration 180 is: 0.62997, learning rate: 0.01000, valid cost : 0.61100
+Cost at iteration 190 is: 0.53501, learning rate: 0.01000, valid cost : 0.52063
+Cost at iteration 200 is: 0.45129, learning rate: 0.01000, valid cost : 0.43424
+Cost at iteration 210 is: 0.78123, learning rate: 0.01000, valid cost : 0.74435
+Cost at iteration 220 is: 0.54990, learning rate: 0.01000, valid cost : 0.51792
+Cost at iteration 230 is: 0.55524, learning rate: 0.01000, valid cost : 0.56358
+Cost at iteration 240 is: 0.57481, learning rate: 0.01000, valid cost : 0.53596
+Cost at iteration 250 is: 0.42363, learning rate: 0.01000, valid cost : 0.39382
+Cost at iteration 260 is: 0.50815, learning rate: 0.01000, valid cost : 0.49221
+Cost at iteration 270 is: 0.49319, learning rate: 0.01000, valid cost : 0.46179
+Cost at iteration 280 is: 0.48480, learning rate: 0.01000, valid cost : 0.47164
+Cost at iteration 290 is: 0.43141, learning rate: 0.01000, valid cost : 0.39306
+Cost at iteration 300 is: 0.94524, learning rate: 0.01000, valid cost : 0.91663
+Cost at iteration 310 is: 0.51746, learning rate: 0.01000, valid cost : 0.47210
+Cost at iteration 320 is: 0.37037, learning rate: 0.01000, valid cost : 0.33292
+Cost at iteration 330 is: 0.46163, learning rate: 0.01000, valid cost : 0.43206
+Cost at iteration 340 is: 0.43757, learning rate: 0.01000, valid cost : 0.41734
+Cost at iteration 350 is: 0.40406, learning rate: 0.01000, valid cost : 0.38393
+Cost at iteration 360 is: 0.38576, learning rate: 0.01000, valid cost : 0.36382
+Cost at iteration 370 is: 0.39722, learning rate: 0.01000, valid cost : 0.36188
+Cost at iteration 380 is: 0.38621, learning rate: 0.01000, valid cost : 0.35577
+Cost at iteration 390 is: 0.48702, learning rate: 0.01000, valid cost : 0.46330
+Cost at iteration 400 is: 0.35340, learning rate: 0.01000, valid cost : 0.32451
+Cost at iteration 410 is: 0.51331, learning rate: 0.01000, valid cost : 0.49987
+Cost at iteration 420 is: 0.38430, learning rate: 0.01000, valid cost : 0.36601
+Cost at iteration 430 is: 0.34172, learning rate: 0.01000, valid cost : 0.32571
+Cost at iteration 440 is: 0.35912, learning rate: 0.01000, valid cost : 0.34101
+Cost at iteration 450 is: 0.50276, learning rate: 0.01000, valid cost : 0.50217
+Cost at iteration 460 is: 0.30950, learning rate: 0.01000, valid cost : 0.28623
+Cost at iteration 470 is: 0.32181, learning rate: 0.01000, valid cost : 0.30095
+Cost at iteration 480 is: 0.47001, learning rate: 0.01000, valid cost : 0.43926
+Cost at iteration 490 is: 0.33270, learning rate: 0.01000, valid cost : 0.30442
+Accuracy for training set is 87.722 %
+Accuracy for testing set is 85.720 %
+Time for the algo - RMSProp for 500 iterations was 6211.499137
+------------------------------------------------------
+Training 3 layer neural network with ADAM at an initial learning rate of 0.01
+Cost at iteration 0 is: 9.93151, learning rate: 0.01000, valid cost : 10.03417
+Cost at iteration 10 is: 9.51891, learning rate: 0.01000, valid cost : 9.61583
+Cost at iteration 20 is: 1.75744, learning rate: 0.01000, valid cost : 1.79477
+Cost at iteration 30 is: 0.80103, learning rate: 0.01000, valid cost : 0.80978
+Cost at iteration 40 is: 0.68559, learning rate: 0.01000, valid cost : 0.69483
+Cost at iteration 50 is: 0.61161, learning rate: 0.01000, valid cost : 0.60939
+Cost at iteration 60 is: 0.57525, learning rate: 0.01000, valid cost : 0.56438
+Cost at iteration 70 is: 0.55015, learning rate: 0.01000, valid cost : 0.53814
+Cost at iteration 80 is: 0.52897, learning rate: 0.01000, valid cost : 0.51887
+Cost at iteration 90 is: 0.51267, learning rate: 0.01000, valid cost : 0.49812
+Cost at iteration 100 is: 0.49802, learning rate: 0.01000, valid cost : 0.48200
+Cost at iteration 110 is: 0.48356, learning rate: 0.01000, valid cost : 0.46501
+Cost at iteration 120 is: 0.46939, learning rate: 0.01000, valid cost : 0.45037
+Cost at iteration 130 is: 0.45635, learning rate: 0.01000, valid cost : 0.44077
+Cost at iteration 140 is: 0.44448, learning rate: 0.01000, valid cost : 0.42969
+Cost at iteration 150 is: 0.43454, learning rate: 0.01000, valid cost : 0.42116
+Cost at iteration 160 is: 0.42588, learning rate: 0.01000, valid cost : 0.41258
+Cost at iteration 170 is: 0.41833, learning rate: 0.01000, valid cost : 0.40395
+Cost at iteration 180 is: 0.41148, learning rate: 0.01000, valid cost : 0.39747
+Cost at iteration 190 is: 0.40516, learning rate: 0.01000, valid cost : 0.39117
+Cost at iteration 200 is: 0.39922, learning rate: 0.01000, valid cost : 0.38541
+Cost at iteration 210 is: 0.39385, learning rate: 0.01000, valid cost : 0.38042
+Cost at iteration 220 is: 0.38893, learning rate: 0.01000, valid cost : 0.37609
+Cost at iteration 230 is: 0.38415, learning rate: 0.01000, valid cost : 0.37159
+Cost at iteration 240 is: 0.37961, learning rate: 0.01000, valid cost : 0.36766
+Cost at iteration 250 is: 0.37531, learning rate: 0.01000, valid cost : 0.36408
+Cost at iteration 260 is: 0.37117, learning rate: 0.01000, valid cost : 0.36043
+Cost at iteration 270 is: 0.36734, learning rate: 0.01000, valid cost : 0.35717
+Cost at iteration 280 is: 0.36352, learning rate: 0.01000, valid cost : 0.35343
+Cost at iteration 290 is: 0.35989, learning rate: 0.01000, valid cost : 0.34995
+Cost at iteration 300 is: 0.35627, learning rate: 0.01000, valid cost : 0.34658
+Cost at iteration 310 is: 0.35295, learning rate: 0.01000, valid cost : 0.34317
+Cost at iteration 320 is: 0.35003, learning rate: 0.01000, valid cost : 0.34039
+Cost at iteration 330 is: 0.34672, learning rate: 0.01000, valid cost : 0.33685
+Cost at iteration 340 is: 0.34374, learning rate: 0.01000, valid cost : 0.33402
+Cost at iteration 350 is: 0.34105, learning rate: 0.01000, valid cost : 0.33140
+Cost at iteration 360 is: 0.33840, learning rate: 0.01000, valid cost : 0.32858
+Cost at iteration 370 is: 0.33590, learning rate: 0.01000, valid cost : 0.32614
+Cost at iteration 380 is: 0.33351, learning rate: 0.01000, valid cost : 0.32407
+Cost at iteration 390 is: 0.33085, learning rate: 0.01000, valid cost : 0.32157
+Cost at iteration 400 is: 0.32860, learning rate: 0.01000, valid cost : 0.31916
+Cost at iteration 410 is: 0.32656, learning rate: 0.01000, valid cost : 0.31665
+Cost at iteration 420 is: 0.32416, learning rate: 0.01000, valid cost : 0.31386
+Cost at iteration 430 is: 0.32194, learning rate: 0.01000, valid cost : 0.31113
+Cost at iteration 440 is: 0.31993, learning rate: 0.01000, valid cost : 0.30877
+Cost at iteration 450 is: 0.31788, learning rate: 0.01000, valid cost : 0.30625
+Cost at iteration 460 is: 0.31615, learning rate: 0.01000, valid cost : 0.30451
+Cost at iteration 470 is: 0.31397, learning rate: 0.01000, valid cost : 0.30213
+Cost at iteration 480 is: 0.31236, learning rate: 0.01000, valid cost : 0.29985
+Cost at iteration 490 is: 0.31015, learning rate: 0.01000, valid cost : 0.29711
+Accuracy for training set is 88.956 %
+Accuracy for testing set is 86.080 %
+Time for the algo - ADAM for 500 iterations was 6203.54102
+------------------------------------------------------
+[3077.518648, 5730.657857, 12380.990224, 6211.499137, 6203.54102]
+[79.54, 82.74000000000001, 82.67999999999999, 85.72, 86.08]
+[80.21000000000001, 83.726, 83.714, 87.722, 88.956]
+Training 3 layer neural network with No Momentum at an initial learning rate of 0.001
+Cost at iteration 0 is: 9.93151, learning rate: 0.00100, valid cost : 10.03417
+Cost at iteration 10 is: 3.59274, learning rate: 0.00091, valid cost : 3.64477
+Cost at iteration 20 is: 2.96622, learning rate: 0.00083, valid cost : 3.02080
+Cost at iteration 30 is: 2.61340, learning rate: 0.00077, valid cost : 2.67300
+Cost at iteration 40 is: 2.36082, learning rate: 0.00071, valid cost : 2.42432
+Cost at iteration 50 is: 2.17001, learning rate: 0.00067, valid cost : 2.23681
+Cost at iteration 60 is: 2.02164, learning rate: 0.00063, valid cost : 2.09173
+Cost at iteration 70 is: 1.90357, learning rate: 0.00059, valid cost : 1.97631
+Cost at iteration 80 is: 1.80786, learning rate: 0.00056, valid cost : 1.88266
+Cost at iteration 90 is: 1.72935, learning rate: 0.00053, valid cost : 1.80600
+Cost at iteration 100 is: 1.66442, learning rate: 0.00050, valid cost : 1.74251
+Cost at iteration 110 is: 1.61022, learning rate: 0.00048, valid cost : 1.68924
+Cost at iteration 120 is: 1.56437, learning rate: 0.00045, valid cost : 1.64406
+Cost at iteration 130 is: 1.52520, learning rate: 0.00043, valid cost : 1.60526
+Cost at iteration 140 is: 1.49127, learning rate: 0.00042, valid cost : 1.57142
+Cost at iteration 150 is: 1.46156, learning rate: 0.00040, valid cost : 1.54159
+Cost at iteration 160 is: 1.43524, learning rate: 0.00038, valid cost : 1.51493
+Cost at iteration 170 is: 1.41171, learning rate: 0.00037, valid cost : 1.49089
+Cost at iteration 180 is: 1.39049, learning rate: 0.00036, valid cost : 1.46909
+Cost at iteration 190 is: 1.37117, learning rate: 0.00034, valid cost : 1.44923
+Cost at iteration 200 is: 1.35350, learning rate: 0.00033, valid cost : 1.43110
+Cost at iteration 210 is: 1.33726, learning rate: 0.00032, valid cost : 1.41430
+Cost at iteration 220 is: 1.32228, learning rate: 0.00031, valid cost : 1.39875
+Cost at iteration 230 is: 1.30840, learning rate: 0.00030, valid cost : 1.38429
+Cost at iteration 240 is: 1.29547, learning rate: 0.00029, valid cost : 1.37079
+Cost at iteration 250 is: 1.28342, learning rate: 0.00029, valid cost : 1.35817
+Cost at iteration 260 is: 1.27214, learning rate: 0.00028, valid cost : 1.34634
+Cost at iteration 270 is: 1.26155, learning rate: 0.00027, valid cost : 1.33525
+Cost at iteration 280 is: 1.25159, learning rate: 0.00026, valid cost : 1.32483
+Cost at iteration 290 is: 1.24220, learning rate: 0.00026, valid cost : 1.31498
+Cost at iteration 300 is: 1.23334, learning rate: 0.00025, valid cost : 1.30564
+Cost at iteration 310 is: 1.22494, learning rate: 0.00024, valid cost : 1.29675
+Cost at iteration 320 is: 1.21698, learning rate: 0.00024, valid cost : 1.28826
+Cost at iteration 330 is: 1.20941, learning rate: 0.00023, valid cost : 1.28019
+Cost at iteration 340 is: 1.20220, learning rate: 0.00023, valid cost : 1.27249
+Cost at iteration 350 is: 1.19534, learning rate: 0.00022, valid cost : 1.26512
+Cost at iteration 360 is: 1.18879, learning rate: 0.00022, valid cost : 1.25806
+Cost at iteration 370 is: 1.18252, learning rate: 0.00021, valid cost : 1.25132
+Cost at iteration 380 is: 1.17653, learning rate: 0.00021, valid cost : 1.24486
+Cost at iteration 390 is: 1.17079, learning rate: 0.00020, valid cost : 1.23868
+Cost at iteration 400 is: 1.16528, learning rate: 0.00020, valid cost : 1.23273
+Cost at iteration 410 is: 1.15998, learning rate: 0.00020, valid cost : 1.22700
+Cost at iteration 420 is: 1.15489, learning rate: 0.00019, valid cost : 1.22148
+Cost at iteration 430 is: 1.14998, learning rate: 0.00019, valid cost : 1.21617
+Cost at iteration 440 is: 1.14526, learning rate: 0.00019, valid cost : 1.21105
+Cost at iteration 450 is: 1.14070, learning rate: 0.00018, valid cost : 1.20612
+Cost at iteration 460 is: 1.13630, learning rate: 0.00018, valid cost : 1.20137
+Cost at iteration 470 is: 1.13204, learning rate: 0.00018, valid cost : 1.19679
+Cost at iteration 480 is: 1.12793, learning rate: 0.00017, valid cost : 1.19235
+Cost at iteration 490 is: 1.12395, learning rate: 0.00017, valid cost : 1.18804
+Accuracy for training set is 63.242 %
+Accuracy for testing set is 63.700 %
+Time for the algo - No Momentum for 500 iterations was 6249.294612
+------------------------------------------------------
+Training 3 layer neural network with Polyack's Momentum at an initial learning rate of 0.001
+Cost at iteration 0 is: 9.93151, learning rate: 0.00100, valid cost : 10.03417
+Cost at iteration 10 is: 3.55549, learning rate: 0.00100, valid cost : 3.60717
+Cost at iteration 20 is: 2.89445, learning rate: 0.00100, valid cost : 2.94948
+Cost at iteration 30 is: 2.49613, learning rate: 0.00100, valid cost : 2.55722
+Cost at iteration 40 is: 2.20326, learning rate: 0.00100, valid cost : 2.26925
+Cost at iteration 50 is: 1.98098, learning rate: 0.00100, valid cost : 2.05191
+Cost at iteration 60 is: 1.80907, learning rate: 0.00100, valid cost : 1.88374
+Cost at iteration 70 is: 1.67549, learning rate: 0.00100, valid cost : 1.75337
+Cost at iteration 80 is: 1.57178, learning rate: 0.00100, valid cost : 1.65142
+Cost at iteration 90 is: 1.49013, learning rate: 0.00100, valid cost : 1.57021
+Cost at iteration 100 is: 1.42395, learning rate: 0.00100, valid cost : 1.50312
+Cost at iteration 110 is: 1.36851, learning rate: 0.00100, valid cost : 1.44622
+Cost at iteration 120 is: 1.32098, learning rate: 0.00100, valid cost : 1.39701
+Cost at iteration 130 is: 1.27960, learning rate: 0.00100, valid cost : 1.35371
+Cost at iteration 140 is: 1.24315, learning rate: 0.00100, valid cost : 1.31540
+Cost at iteration 150 is: 1.21071, learning rate: 0.00100, valid cost : 1.28090
+Cost at iteration 160 is: 1.18165, learning rate: 0.00100, valid cost : 1.24968
+Cost at iteration 170 is: 1.15539, learning rate: 0.00100, valid cost : 1.22126
+Cost at iteration 180 is: 1.13148, learning rate: 0.00100, valid cost : 1.19534
+Cost at iteration 190 is: 1.10955, learning rate: 0.00100, valid cost : 1.17150
+Cost at iteration 200 is: 1.08940, learning rate: 0.00100, valid cost : 1.14943
+Cost at iteration 210 is: 1.07076, learning rate: 0.00100, valid cost : 1.12895
+Cost at iteration 220 is: 1.05347, learning rate: 0.00100, valid cost : 1.10979
+Cost at iteration 230 is: 1.03739, learning rate: 0.00100, valid cost : 1.09185
+Cost at iteration 240 is: 1.02240, learning rate: 0.00100, valid cost : 1.07501
+Cost at iteration 250 is: 1.00835, learning rate: 0.00100, valid cost : 1.05912
+Cost at iteration 260 is: 0.99516, learning rate: 0.00100, valid cost : 1.04412
+Cost at iteration 270 is: 0.98279, learning rate: 0.00100, valid cost : 1.03000
+Cost at iteration 280 is: 0.97114, learning rate: 0.00100, valid cost : 1.01670
+Cost at iteration 290 is: 0.96012, learning rate: 0.00100, valid cost : 1.00413
+Cost at iteration 300 is: 0.94967, learning rate: 0.00100, valid cost : 0.99223
+Cost at iteration 310 is: 0.93976, learning rate: 0.00100, valid cost : 0.98092
+Cost at iteration 320 is: 0.93035, learning rate: 0.00100, valid cost : 0.97014
+Cost at iteration 330 is: 0.92139, learning rate: 0.00100, valid cost : 0.95989
+Cost at iteration 340 is: 0.91285, learning rate: 0.00100, valid cost : 0.95011
+Cost at iteration 350 is: 0.90470, learning rate: 0.00100, valid cost : 0.94073
+Cost at iteration 360 is: 0.89688, learning rate: 0.00100, valid cost : 0.93174
+Cost at iteration 370 is: 0.88939, learning rate: 0.00100, valid cost : 0.92312
+Cost at iteration 380 is: 0.88221, learning rate: 0.00100, valid cost : 0.91484
+Cost at iteration 390 is: 0.87529, learning rate: 0.00100, valid cost : 0.90685
+Cost at iteration 400 is: 0.86863, learning rate: 0.00100, valid cost : 0.89916
+Cost at iteration 410 is: 0.86222, learning rate: 0.00100, valid cost : 0.89176
+Cost at iteration 420 is: 0.85605, learning rate: 0.00100, valid cost : 0.88464
+Cost at iteration 430 is: 0.85010, learning rate: 0.00100, valid cost : 0.87774
+Cost at iteration 440 is: 0.84436, learning rate: 0.00100, valid cost : 0.87114
+Cost at iteration 450 is: 0.83882, learning rate: 0.00100, valid cost : 0.86476
+Cost at iteration 460 is: 0.83345, learning rate: 0.00100, valid cost : 0.85854
+Cost at iteration 470 is: 0.82826, learning rate: 0.00100, valid cost : 0.85250
+Cost at iteration 480 is: 0.82323, learning rate: 0.00100, valid cost : 0.84663
+Cost at iteration 490 is: 0.81836, learning rate: 0.00100, valid cost : 0.84092
+Accuracy for training set is 72.548 %
+Accuracy for testing set is 72.400 %
+Time for the algo - Polyack's Momentum for 500 iterations was 6234.163662
+------------------------------------------------------
+Training 3 layer neural network with Accelerated Gradient at an initial learning rate of 0.001
+Cost at iteration 0 is: 9.93151, learning rate: 0.00100, valid cost : 10.03417
+Cost at iteration 10 is: 3.55446, learning rate: 0.00100, valid cost : 3.60614
+Cost at iteration 20 is: 2.89352, learning rate: 0.00100, valid cost : 2.94855
+Cost at iteration 30 is: 2.49513, learning rate: 0.00100, valid cost : 2.55624
+Cost at iteration 40 is: 2.20226, learning rate: 0.00100, valid cost : 2.26827
+Cost at iteration 50 is: 1.98002, learning rate: 0.00100, valid cost : 2.05097
+Cost at iteration 60 is: 1.80818, learning rate: 0.00100, valid cost : 1.88287
+Cost at iteration 70 is: 1.67468, learning rate: 0.00100, valid cost : 1.75258
+Cost at iteration 80 is: 1.57106, learning rate: 0.00100, valid cost : 1.65072
+Cost at iteration 90 is: 1.48948, learning rate: 0.00100, valid cost : 1.56956
+Cost at iteration 100 is: 1.42336, learning rate: 0.00100, valid cost : 1.50252
+Cost at iteration 110 is: 1.36796, learning rate: 0.00100, valid cost : 1.44565
+Cost at iteration 120 is: 1.32046, learning rate: 0.00100, valid cost : 1.39646
+Cost at iteration 130 is: 1.27911, learning rate: 0.00100, valid cost : 1.35319
+Cost at iteration 140 is: 1.24267, learning rate: 0.00100, valid cost : 1.31490
+Cost at iteration 150 is: 1.21026, learning rate: 0.00100, valid cost : 1.28041
+Cost at iteration 160 is: 1.18121, learning rate: 0.00100, valid cost : 1.24921
+Cost at iteration 170 is: 1.15497, learning rate: 0.00100, valid cost : 1.22081
+Cost at iteration 180 is: 1.13107, learning rate: 0.00100, valid cost : 1.19490
+Cost at iteration 190 is: 1.10915, learning rate: 0.00100, valid cost : 1.17107
+Cost at iteration 200 is: 1.08901, learning rate: 0.00100, valid cost : 1.14902
+Cost at iteration 210 is: 1.07038, learning rate: 0.00100, valid cost : 1.12854
+Cost at iteration 220 is: 1.05311, learning rate: 0.00100, valid cost : 1.10939
+Cost at iteration 230 is: 1.03703, learning rate: 0.00100, valid cost : 1.09146
+Cost at iteration 240 is: 1.02205, learning rate: 0.00100, valid cost : 1.07463
+Cost at iteration 250 is: 1.00801, learning rate: 0.00100, valid cost : 1.05874
+Cost at iteration 260 is: 0.99483, learning rate: 0.00100, valid cost : 1.04375
+Cost at iteration 270 is: 0.98247, learning rate: 0.00100, valid cost : 1.02963
+Cost at iteration 280 is: 0.97082, learning rate: 0.00100, valid cost : 1.01634
+Cost at iteration 290 is: 0.95981, learning rate: 0.00100, valid cost : 1.00378
+Cost at iteration 300 is: 0.94937, learning rate: 0.00100, valid cost : 0.99189
+Cost at iteration 310 is: 0.93946, learning rate: 0.00100, valid cost : 0.98058
+Cost at iteration 320 is: 0.93006, learning rate: 0.00100, valid cost : 0.96981
+Cost at iteration 330 is: 0.92110, learning rate: 0.00100, valid cost : 0.95956
+Cost at iteration 340 is: 0.91257, learning rate: 0.00100, valid cost : 0.94978
+Cost at iteration 350 is: 0.90442, learning rate: 0.00100, valid cost : 0.94041
+Cost at iteration 360 is: 0.89661, learning rate: 0.00100, valid cost : 0.93143
+Cost at iteration 370 is: 0.88912, learning rate: 0.00100, valid cost : 0.92281
+Cost at iteration 380 is: 0.88194, learning rate: 0.00100, valid cost : 0.91453
+Cost at iteration 390 is: 0.87502, learning rate: 0.00100, valid cost : 0.90655
+Cost at iteration 400 is: 0.86836, learning rate: 0.00100, valid cost : 0.89886
+Cost at iteration 410 is: 0.86196, learning rate: 0.00100, valid cost : 0.89146
+Cost at iteration 420 is: 0.85580, learning rate: 0.00100, valid cost : 0.88434
+Cost at iteration 430 is: 0.84985, learning rate: 0.00100, valid cost : 0.87745
+Cost at iteration 440 is: 0.84411, learning rate: 0.00100, valid cost : 0.87086
+Cost at iteration 450 is: 0.83857, learning rate: 0.00100, valid cost : 0.86448
+Cost at iteration 460 is: 0.83321, learning rate: 0.00100, valid cost : 0.85826
+Cost at iteration 470 is: 0.82802, learning rate: 0.00100, valid cost : 0.85222
+Cost at iteration 480 is: 0.82299, learning rate: 0.00100, valid cost : 0.84635
+Cost at iteration 490 is: 0.81812, learning rate: 0.00100, valid cost : 0.84065
+Accuracy for training set is 72.558 %
+Accuracy for testing set is 72.420 %
+Time for the algo - Accelerated Gradient for 500 iterations was 7414.038211
+------------------------------------------------------
+Training 3 layer neural network with RMSProp at an initial learning rate of 0.001
+Cost at iteration 0 is: 9.93151, learning rate: 0.00100, valid cost : 10.03417
+Cost at iteration 10 is: 2.38930, learning rate: 0.00100, valid cost : 2.42871
+Cost at iteration 20 is: 0.90115, learning rate: 0.00100, valid cost : 0.90798
+Cost at iteration 30 is: 1.14378, learning rate: 0.00100, valid cost : 1.16634
+Cost at iteration 40 is: 1.32153, learning rate: 0.00100, valid cost : 1.29365
+Cost at iteration 50 is: 0.97050, learning rate: 0.00100, valid cost : 0.95396
+Cost at iteration 60 is: 0.91100, learning rate: 0.00100, valid cost : 0.85370
+Cost at iteration 70 is: 0.62004, learning rate: 0.00100, valid cost : 0.60862
+Cost at iteration 80 is: 0.58337, learning rate: 0.00100, valid cost : 0.56732
+Cost at iteration 90 is: 0.58293, learning rate: 0.00100, valid cost : 0.56240
+Cost at iteration 100 is: 0.60881, learning rate: 0.00100, valid cost : 0.58437
+Cost at iteration 110 is: 0.53130, learning rate: 0.00100, valid cost : 0.49969
+Cost at iteration 120 is: 0.56822, learning rate: 0.00100, valid cost : 0.54198
+Cost at iteration 130 is: 0.57853, learning rate: 0.00100, valid cost : 0.56376
+Cost at iteration 140 is: 0.48317, learning rate: 0.00100, valid cost : 0.44305
+Cost at iteration 150 is: 0.44164, learning rate: 0.00100, valid cost : 0.41478
+Cost at iteration 160 is: 0.44497, learning rate: 0.00100, valid cost : 0.43001
+Cost at iteration 170 is: 0.44116, learning rate: 0.00100, valid cost : 0.41156
+Cost at iteration 180 is: 0.36091, learning rate: 0.00100, valid cost : 0.34669
+Cost at iteration 190 is: 0.47778, learning rate: 0.00100, valid cost : 0.45005
+Cost at iteration 200 is: 0.36628, learning rate: 0.00100, valid cost : 0.34420
+Cost at iteration 210 is: 0.38824, learning rate: 0.00100, valid cost : 0.37020
+Cost at iteration 220 is: 0.39145, learning rate: 0.00100, valid cost : 0.37317
+Cost at iteration 230 is: 0.39454, learning rate: 0.00100, valid cost : 0.37581
+Cost at iteration 240 is: 0.34881, learning rate: 0.00100, valid cost : 0.31913
+Cost at iteration 250 is: 0.36823, learning rate: 0.00100, valid cost : 0.35069
+Cost at iteration 260 is: 0.29746, learning rate: 0.00100, valid cost : 0.27370
+Cost at iteration 270 is: 0.37940, learning rate: 0.00100, valid cost : 0.37257
+Cost at iteration 280 is: 0.30851, learning rate: 0.00100, valid cost : 0.30055
+Cost at iteration 290 is: 0.41951, learning rate: 0.00100, valid cost : 0.40609
+Cost at iteration 300 is: 0.34187, learning rate: 0.00100, valid cost : 0.34456
+Cost at iteration 310 is: 0.31324, learning rate: 0.00100, valid cost : 0.30128
+Cost at iteration 320 is: 0.31041, learning rate: 0.00100, valid cost : 0.30940
+Cost at iteration 330 is: 0.30510, learning rate: 0.00100, valid cost : 0.29443
+Cost at iteration 340 is: 0.34996, learning rate: 0.00100, valid cost : 0.34598
+Cost at iteration 350 is: 0.24231, learning rate: 0.00100, valid cost : 0.22795
+Cost at iteration 360 is: 0.26675, learning rate: 0.00100, valid cost : 0.25546
+Cost at iteration 370 is: 0.28393, learning rate: 0.00100, valid cost : 0.26156
+Cost at iteration 380 is: 0.24528, learning rate: 0.00100, valid cost : 0.24069
+Cost at iteration 390 is: 0.33256, learning rate: 0.00100, valid cost : 0.29736
+Cost at iteration 400 is: 0.25874, learning rate: 0.00100, valid cost : 0.25044
+Cost at iteration 410 is: 0.33233, learning rate: 0.00100, valid cost : 0.31949
+Cost at iteration 420 is: 0.24511, learning rate: 0.00100, valid cost : 0.23842
+Cost at iteration 430 is: 0.30948, learning rate: 0.00100, valid cost : 0.29533
+Cost at iteration 440 is: 0.29015, learning rate: 0.00100, valid cost : 0.27979
+Cost at iteration 450 is: 0.25425, learning rate: 0.00100, valid cost : 0.22777
+Cost at iteration 460 is: 0.23791, learning rate: 0.00100, valid cost : 0.22948
+Cost at iteration 470 is: 0.25846, learning rate: 0.00100, valid cost : 0.22659
+Cost at iteration 480 is: 0.24832, learning rate: 0.00100, valid cost : 0.24519
+Cost at iteration 490 is: 0.25643, learning rate: 0.00100, valid cost : 0.23901
+Accuracy for training set is 89.302 %
+Accuracy for testing set is 85.520 %
+Time for the algo - RMSProp for 500 iterations was 3073.976167
+------------------------------------------------------
+Training 3 layer neural network with ADAM at an initial learning rate of 0.001
+Cost at iteration 0 is: 9.93151, learning rate: 0.00100, valid cost : 10.03417
+Cost at iteration 10 is: 0.95654, learning rate: 0.00100, valid cost : 0.95298
+Cost at iteration 20 is: 0.69540, learning rate: 0.00100, valid cost : 0.70389
+Cost at iteration 30 is: 0.55941, learning rate: 0.00100, valid cost : 0.55907
+Cost at iteration 40 is: 0.50123, learning rate: 0.00100, valid cost : 0.48953
+Cost at iteration 50 is: 0.46713, learning rate: 0.00100, valid cost : 0.45281
+Cost at iteration 60 is: 0.44428, learning rate: 0.00100, valid cost : 0.43069
+Cost at iteration 70 is: 0.42698, learning rate: 0.00100, valid cost : 0.41313
+Cost at iteration 80 is: 0.41303, learning rate: 0.00100, valid cost : 0.39833
+Cost at iteration 90 is: 0.40117, learning rate: 0.00100, valid cost : 0.38455
+Cost at iteration 100 is: 0.39061, learning rate: 0.00100, valid cost : 0.37425
+Cost at iteration 110 is: 0.38070, learning rate: 0.00100, valid cost : 0.36447
+Cost at iteration 120 is: 0.37150, learning rate: 0.00100, valid cost : 0.35584
+Cost at iteration 130 is: 0.36308, learning rate: 0.00100, valid cost : 0.34904
+Cost at iteration 140 is: 0.35516, learning rate: 0.00100, valid cost : 0.34248
+Cost at iteration 150 is: 0.34780, learning rate: 0.00100, valid cost : 0.33588
+Cost at iteration 160 is: 0.34094, learning rate: 0.00100, valid cost : 0.32984
+Cost at iteration 170 is: 0.33453, learning rate: 0.00100, valid cost : 0.32393
+Cost at iteration 180 is: 0.32839, learning rate: 0.00100, valid cost : 0.31818
+Cost at iteration 190 is: 0.32263, learning rate: 0.00100, valid cost : 0.31377
+Cost at iteration 200 is: 0.31717, learning rate: 0.00100, valid cost : 0.30862
+Cost at iteration 210 is: 0.31201, learning rate: 0.00100, valid cost : 0.30321
+Cost at iteration 220 is: 0.30704, learning rate: 0.00100, valid cost : 0.30009
+Cost at iteration 230 is: 0.30211, learning rate: 0.00100, valid cost : 0.29628
+Cost at iteration 240 is: 0.29725, learning rate: 0.00100, valid cost : 0.29283
+Cost at iteration 250 is: 0.29257, learning rate: 0.00100, valid cost : 0.28874
+Cost at iteration 260 is: 0.28811, learning rate: 0.00100, valid cost : 0.28458
+Cost at iteration 270 is: 0.28380, learning rate: 0.00100, valid cost : 0.28087
+Cost at iteration 280 is: 0.27976, learning rate: 0.00100, valid cost : 0.27745
+Cost at iteration 290 is: 0.27584, learning rate: 0.00100, valid cost : 0.27401
+Cost at iteration 300 is: 0.27209, learning rate: 0.00100, valid cost : 0.27048
+Cost at iteration 310 is: 0.26849, learning rate: 0.00100, valid cost : 0.26683
+Cost at iteration 320 is: 0.26503, learning rate: 0.00100, valid cost : 0.26363
+Cost at iteration 330 is: 0.26171, learning rate: 0.00100, valid cost : 0.25997
+Cost at iteration 340 is: 0.25844, learning rate: 0.00100, valid cost : 0.25709
+Cost at iteration 350 is: 0.25533, learning rate: 0.00100, valid cost : 0.25392
+Cost at iteration 360 is: 0.25235, learning rate: 0.00100, valid cost : 0.25120
+Cost at iteration 370 is: 0.24947, learning rate: 0.00100, valid cost : 0.24800
+Cost at iteration 380 is: 0.24663, learning rate: 0.00100, valid cost : 0.24533
+Cost at iteration 390 is: 0.24402, learning rate: 0.00100, valid cost : 0.24247
+Cost at iteration 400 is: 0.24124, learning rate: 0.00100, valid cost : 0.24059
+Cost at iteration 410 is: 0.23861, learning rate: 0.00100, valid cost : 0.23778
+Cost at iteration 420 is: 0.23610, learning rate: 0.00100, valid cost : 0.23528
+Cost at iteration 430 is: 0.23362, learning rate: 0.00100, valid cost : 0.23304
+Cost at iteration 440 is: 0.23126, learning rate: 0.00100, valid cost : 0.23130
+Cost at iteration 450 is: 0.22890, learning rate: 0.00100, valid cost : 0.22824
+Cost at iteration 460 is: 0.22652, learning rate: 0.00100, valid cost : 0.22635
+Cost at iteration 470 is: 0.22432, learning rate: 0.00100, valid cost : 0.22432
+Cost at iteration 480 is: 0.22213, learning rate: 0.00100, valid cost : 0.22150
+Cost at iteration 490 is: 0.21992, learning rate: 0.00100, valid cost : 0.21944
+Accuracy for training set is 92.368 %
+Accuracy for testing set is 87.440 %
+Time for the algo - ADAM for 500 iterations was 3044.255023
+------------------------------------------------------
+[6249.294612, 6234.163662, 7414.038211, 3073.976167, 3044.255023]
+[63.7, 72.39999999999999, 72.42, 85.52, 87.44]
+[63.242, 72.548, 72.558, 89.302, 92.368]
+Running 1000 Iterations
+Training 3 layer neural network with No Momentum at an initial learning rate of 0.1
+Cost at iteration 0 is: 9.93151, learning rate: 0.10000, valid cost : 10.03417
+Cost at iteration 10 is: 1.48689, learning rate: 0.09091, valid cost : 1.49512
+Cost at iteration 20 is: 0.88553, learning rate: 0.08333, valid cost : 0.86373
+Cost at iteration 30 is: 0.77014, learning rate: 0.07692, valid cost : 0.75653
+Cost at iteration 40 is: 0.71430, learning rate: 0.07143, valid cost : 0.69947
+Cost at iteration 50 is: 0.67318, learning rate: 0.06667, valid cost : 0.65662
+Cost at iteration 60 is: 0.64381, learning rate: 0.06250, valid cost : 0.62446
+Cost at iteration 70 is: 0.62098, learning rate: 0.05882, valid cost : 0.59879
+Cost at iteration 80 is: 0.59976, learning rate: 0.05556, valid cost : 0.57712
+Cost at iteration 90 is: 0.58350, learning rate: 0.05263, valid cost : 0.56088
+Cost at iteration 100 is: 0.56838, learning rate: 0.05000, valid cost : 0.54619
+Cost at iteration 110 is: 0.55558, learning rate: 0.04762, valid cost : 0.53356
+Cost at iteration 120 is: 0.54554, learning rate: 0.04545, valid cost : 0.52327
+Cost at iteration 130 is: 0.53615, learning rate: 0.04348, valid cost : 0.51352
+Cost at iteration 140 is: 0.52739, learning rate: 0.04167, valid cost : 0.50477
+Cost at iteration 150 is: 0.52039, learning rate: 0.04000, valid cost : 0.49766
+Cost at iteration 160 is: 0.51468, learning rate: 0.03846, valid cost : 0.49166
+Cost at iteration 170 is: 0.50959, learning rate: 0.03704, valid cost : 0.48643
+Cost at iteration 180 is: 0.50439, learning rate: 0.03571, valid cost : 0.48124
+Cost at iteration 190 is: 0.49964, learning rate: 0.03448, valid cost : 0.47656
+Cost at iteration 200 is: 0.49536, learning rate: 0.03333, valid cost : 0.47239
+Cost at iteration 210 is: 0.49163, learning rate: 0.03226, valid cost : 0.46888
+Cost at iteration 220 is: 0.48826, learning rate: 0.03125, valid cost : 0.46577
+Cost at iteration 230 is: 0.48513, learning rate: 0.03030, valid cost : 0.46285
+Cost at iteration 240 is: 0.48217, learning rate: 0.02941, valid cost : 0.46008
+Cost at iteration 250 is: 0.47937, learning rate: 0.02857, valid cost : 0.45763
+Cost at iteration 260 is: 0.47674, learning rate: 0.02778, valid cost : 0.45527
+Cost at iteration 270 is: 0.47428, learning rate: 0.02703, valid cost : 0.45301
+Cost at iteration 280 is: 0.47193, learning rate: 0.02632, valid cost : 0.45084
+Cost at iteration 290 is: 0.46971, learning rate: 0.02564, valid cost : 0.44878
+Cost at iteration 300 is: 0.46760, learning rate: 0.02500, valid cost : 0.44684
+Cost at iteration 310 is: 0.46560, learning rate: 0.02439, valid cost : 0.44499
+Cost at iteration 320 is: 0.46368, learning rate: 0.02381, valid cost : 0.44323
+Cost at iteration 330 is: 0.46186, learning rate: 0.02326, valid cost : 0.44157
+Cost at iteration 340 is: 0.46012, learning rate: 0.02273, valid cost : 0.43998
+Cost at iteration 350 is: 0.45844, learning rate: 0.02222, valid cost : 0.43850
+Cost at iteration 360 is: 0.45684, learning rate: 0.02174, valid cost : 0.43714
+Cost at iteration 370 is: 0.45530, learning rate: 0.02128, valid cost : 0.43582
+Cost at iteration 380 is: 0.45381, learning rate: 0.02083, valid cost : 0.43456
+Cost at iteration 390 is: 0.45239, learning rate: 0.02041, valid cost : 0.43336
+Cost at iteration 400 is: 0.45102, learning rate: 0.02000, valid cost : 0.43220
+Cost at iteration 410 is: 0.44970, learning rate: 0.01961, valid cost : 0.43106
+Cost at iteration 420 is: 0.44843, learning rate: 0.01923, valid cost : 0.42999
+Cost at iteration 430 is: 0.44721, learning rate: 0.01887, valid cost : 0.42898
+Cost at iteration 440 is: 0.44602, learning rate: 0.01852, valid cost : 0.42802
+Cost at iteration 450 is: 0.44487, learning rate: 0.01818, valid cost : 0.42712
+Cost at iteration 460 is: 0.44376, learning rate: 0.01786, valid cost : 0.42623
+Cost at iteration 470 is: 0.44268, learning rate: 0.01754, valid cost : 0.42531
+Cost at iteration 480 is: 0.44163, learning rate: 0.01724, valid cost : 0.42442
+Cost at iteration 490 is: 0.44062, learning rate: 0.01695, valid cost : 0.42355
+Cost at iteration 500 is: 0.43964, learning rate: 0.01667, valid cost : 0.42270
+Cost at iteration 510 is: 0.43868, learning rate: 0.01639, valid cost : 0.42186
+Cost at iteration 520 is: 0.43775, learning rate: 0.01613, valid cost : 0.42104
+Cost at iteration 530 is: 0.43684, learning rate: 0.01587, valid cost : 0.42024
+Cost at iteration 540 is: 0.43596, learning rate: 0.01562, valid cost : 0.41947
+Cost at iteration 550 is: 0.43511, learning rate: 0.01538, valid cost : 0.41872
+Cost at iteration 560 is: 0.43427, learning rate: 0.01515, valid cost : 0.41799
+Cost at iteration 570 is: 0.43346, learning rate: 0.01493, valid cost : 0.41729
+Cost at iteration 580 is: 0.43266, learning rate: 0.01471, valid cost : 0.41663
+Cost at iteration 590 is: 0.43189, learning rate: 0.01449, valid cost : 0.41597
+Cost at iteration 600 is: 0.43114, learning rate: 0.01429, valid cost : 0.41531
+Cost at iteration 610 is: 0.43041, learning rate: 0.01408, valid cost : 0.41466
+Cost at iteration 620 is: 0.42969, learning rate: 0.01389, valid cost : 0.41401
+Cost at iteration 630 is: 0.42899, learning rate: 0.01370, valid cost : 0.41338
+Cost at iteration 640 is: 0.42830, learning rate: 0.01351, valid cost : 0.41278
+Cost at iteration 650 is: 0.42763, learning rate: 0.01333, valid cost : 0.41218
+Cost at iteration 660 is: 0.42698, learning rate: 0.01316, valid cost : 0.41159
+Cost at iteration 670 is: 0.42634, learning rate: 0.01299, valid cost : 0.41102
+Cost at iteration 680 is: 0.42571, learning rate: 0.01282, valid cost : 0.41049
+Cost at iteration 690 is: 0.42510, learning rate: 0.01266, valid cost : 0.40996
+Cost at iteration 700 is: 0.42450, learning rate: 0.01250, valid cost : 0.40943
+Cost at iteration 710 is: 0.42391, learning rate: 0.01235, valid cost : 0.40891
+Cost at iteration 720 is: 0.42333, learning rate: 0.01220, valid cost : 0.40840
+Cost at iteration 730 is: 0.42277, learning rate: 0.01205, valid cost : 0.40788
+Cost at iteration 740 is: 0.42221, learning rate: 0.01190, valid cost : 0.40736
+Cost at iteration 750 is: 0.42166, learning rate: 0.01176, valid cost : 0.40684
+Cost at iteration 760 is: 0.42113, learning rate: 0.01163, valid cost : 0.40634
+Cost at iteration 770 is: 0.42060, learning rate: 0.01149, valid cost : 0.40584
+Cost at iteration 780 is: 0.42009, learning rate: 0.01136, valid cost : 0.40536
+Cost at iteration 790 is: 0.41959, learning rate: 0.01124, valid cost : 0.40490
+Cost at iteration 800 is: 0.41909, learning rate: 0.01111, valid cost : 0.40444
+Cost at iteration 810 is: 0.41861, learning rate: 0.01099, valid cost : 0.40399
+Cost at iteration 820 is: 0.41813, learning rate: 0.01087, valid cost : 0.40354
+Cost at iteration 830 is: 0.41766, learning rate: 0.01075, valid cost : 0.40307
+Cost at iteration 840 is: 0.41720, learning rate: 0.01064, valid cost : 0.40264
+Cost at iteration 850 is: 0.41675, learning rate: 0.01053, valid cost : 0.40222
+Cost at iteration 860 is: 0.41631, learning rate: 0.01042, valid cost : 0.40181
+Cost at iteration 870 is: 0.41587, learning rate: 0.01031, valid cost : 0.40140
+Cost at iteration 880 is: 0.41544, learning rate: 0.01020, valid cost : 0.40099
+Cost at iteration 890 is: 0.41501, learning rate: 0.01010, valid cost : 0.40059
+Cost at iteration 900 is: 0.41459, learning rate: 0.01000, valid cost : 0.40018
+Cost at iteration 910 is: 0.41418, learning rate: 0.00990, valid cost : 0.39978
+Cost at iteration 920 is: 0.41377, learning rate: 0.00980, valid cost : 0.39937
+Cost at iteration 930 is: 0.41337, learning rate: 0.00971, valid cost : 0.39897
+Cost at iteration 940 is: 0.41298, learning rate: 0.00962, valid cost : 0.39858
+Cost at iteration 950 is: 0.41259, learning rate: 0.00952, valid cost : 0.39820
+Cost at iteration 960 is: 0.41221, learning rate: 0.00943, valid cost : 0.39783
+Cost at iteration 970 is: 0.41183, learning rate: 0.00935, valid cost : 0.39749
+Cost at iteration 980 is: 0.41146, learning rate: 0.00926, valid cost : 0.39714
+Cost at iteration 990 is: 0.41109, learning rate: 0.00917, valid cost : 0.39678
+Accuracy for training set is 85.736 %
+Accuracy for testing set is 84.080 %
+Time for the algo - No Momentum for 1000 iterations was 6115.744287
+------------------------------------------------------
+Training 3 layer neural network with Polyack's Momentum at an initial learning rate of 0.1
+Cost at iteration 0 is: 9.93151, learning rate: 0.10000, valid cost : 10.03417
+Cost at iteration 10 is: 1.57219, learning rate: 0.10000, valid cost : 1.56185
+Cost at iteration 20 is: 0.92750, learning rate: 0.10000, valid cost : 0.90891
+Cost at iteration 30 is: 0.78394, learning rate: 0.10000, valid cost : 0.76322
+Cost at iteration 40 is: 0.72537, learning rate: 0.10000, valid cost : 0.71039
+Cost at iteration 50 is: 0.69457, learning rate: 0.10000, valid cost : 0.67386
+Cost at iteration 60 is: 0.66402, learning rate: 0.10000, valid cost : 0.65556
+Cost at iteration 70 is: 0.63075, learning rate: 0.10000, valid cost : 0.62017
+Cost at iteration 80 is: 0.61093, learning rate: 0.10000, valid cost : 0.59988
+Cost at iteration 90 is: 0.59344, learning rate: 0.10000, valid cost : 0.58087
+Cost at iteration 100 is: 0.56403, learning rate: 0.10000, valid cost : 0.55517
+Cost at iteration 110 is: 0.56136, learning rate: 0.10000, valid cost : 0.55052
+Cost at iteration 120 is: 0.54154, learning rate: 0.10000, valid cost : 0.52908
+Cost at iteration 130 is: 0.51955, learning rate: 0.10000, valid cost : 0.50523
+Cost at iteration 140 is: 0.54172, learning rate: 0.10000, valid cost : 0.52784
+Cost at iteration 150 is: 0.51922, learning rate: 0.10000, valid cost : 0.50488
+Cost at iteration 160 is: 0.50454, learning rate: 0.10000, valid cost : 0.49103
+Cost at iteration 170 is: 0.49123, learning rate: 0.10000, valid cost : 0.48054
+Cost at iteration 180 is: 0.47962, learning rate: 0.10000, valid cost : 0.47098
+Cost at iteration 190 is: 0.47470, learning rate: 0.10000, valid cost : 0.45859
+Cost at iteration 200 is: 0.46948, learning rate: 0.10000, valid cost : 0.45824
+Cost at iteration 210 is: 0.46450, learning rate: 0.10000, valid cost : 0.44883
+Cost at iteration 220 is: 0.45374, learning rate: 0.10000, valid cost : 0.43935
+Cost at iteration 230 is: 0.47777, learning rate: 0.10000, valid cost : 0.46391
+Cost at iteration 240 is: 0.44494, learning rate: 0.10000, valid cost : 0.43046
+Cost at iteration 250 is: 0.44580, learning rate: 0.10000, valid cost : 0.43124
+Cost at iteration 260 is: 0.45130, learning rate: 0.10000, valid cost : 0.43847
+Cost at iteration 270 is: 0.43874, learning rate: 0.10000, valid cost : 0.42942
+Cost at iteration 280 is: 0.43475, learning rate: 0.10000, valid cost : 0.42504
+Cost at iteration 290 is: 0.42537, learning rate: 0.10000, valid cost : 0.40947
+Cost at iteration 300 is: 0.43896, learning rate: 0.10000, valid cost : 0.42381
+Cost at iteration 310 is: 0.42066, learning rate: 0.10000, valid cost : 0.40737
+Cost at iteration 320 is: 0.41798, learning rate: 0.10000, valid cost : 0.40631
+Cost at iteration 330 is: 0.41964, learning rate: 0.10000, valid cost : 0.41019
+Cost at iteration 340 is: 0.42061, learning rate: 0.10000, valid cost : 0.41260
+Cost at iteration 350 is: 0.40808, learning rate: 0.10000, valid cost : 0.39534
+Cost at iteration 360 is: 0.40621, learning rate: 0.10000, valid cost : 0.39182
+Cost at iteration 370 is: 0.40493, learning rate: 0.10000, valid cost : 0.38827
+Cost at iteration 380 is: 0.39812, learning rate: 0.10000, valid cost : 0.38240
+Cost at iteration 390 is: 0.39463, learning rate: 0.10000, valid cost : 0.37997
+Cost at iteration 400 is: 0.41195, learning rate: 0.10000, valid cost : 0.39895
+Cost at iteration 410 is: 0.38733, learning rate: 0.10000, valid cost : 0.37431
+Cost at iteration 420 is: 0.40107, learning rate: 0.10000, valid cost : 0.38968
+Cost at iteration 430 is: 0.38794, learning rate: 0.10000, valid cost : 0.37793
+Cost at iteration 440 is: 0.38695, learning rate: 0.10000, valid cost : 0.37706
+Cost at iteration 450 is: 0.38725, learning rate: 0.10000, valid cost : 0.37699
+Cost at iteration 460 is: 0.38337, learning rate: 0.10000, valid cost : 0.37174
+Cost at iteration 470 is: 0.38173, learning rate: 0.10000, valid cost : 0.36749
+Cost at iteration 480 is: 0.38853, learning rate: 0.10000, valid cost : 0.37578
+Cost at iteration 490 is: 0.37111, learning rate: 0.10000, valid cost : 0.35937
+Cost at iteration 500 is: 0.37731, learning rate: 0.10000, valid cost : 0.36524
+Cost at iteration 510 is: 0.37029, learning rate: 0.10000, valid cost : 0.35606
+Cost at iteration 520 is: 0.36876, learning rate: 0.10000, valid cost : 0.35311
+Cost at iteration 530 is: 0.36791, learning rate: 0.10000, valid cost : 0.35165
+Cost at iteration 540 is: 0.37330, learning rate: 0.10000, valid cost : 0.35580
+Cost at iteration 550 is: 0.37847, learning rate: 0.10000, valid cost : 0.36437
+Cost at iteration 560 is: 0.36193, learning rate: 0.10000, valid cost : 0.34870
+Cost at iteration 570 is: 0.36208, learning rate: 0.10000, valid cost : 0.34844
+Cost at iteration 580 is: 0.36292, learning rate: 0.10000, valid cost : 0.34971
+Cost at iteration 590 is: 0.36443, learning rate: 0.10000, valid cost : 0.35092
+Cost at iteration 600 is: 0.35344, learning rate: 0.10000, valid cost : 0.34031
+Cost at iteration 610 is: 0.35506, learning rate: 0.10000, valid cost : 0.34039
+Cost at iteration 620 is: 0.35716, learning rate: 0.10000, valid cost : 0.34130
+Cost at iteration 630 is: 0.36277, learning rate: 0.10000, valid cost : 0.34871
+Cost at iteration 640 is: 0.35434, learning rate: 0.10000, valid cost : 0.34163
+Cost at iteration 650 is: 0.34871, learning rate: 0.10000, valid cost : 0.33618
+Cost at iteration 660 is: 0.35169, learning rate: 0.10000, valid cost : 0.33968
+Cost at iteration 670 is: 0.35371, learning rate: 0.10000, valid cost : 0.34358
+Cost at iteration 680 is: 0.35877, learning rate: 0.10000, valid cost : 0.35083
+Cost at iteration 690 is: 0.34734, learning rate: 0.10000, valid cost : 0.33937
+Cost at iteration 700 is: 0.34618, learning rate: 0.10000, valid cost : 0.33731
+Cost at iteration 710 is: 0.34495, learning rate: 0.10000, valid cost : 0.33517
+Cost at iteration 720 is: 0.34116, learning rate: 0.10000, valid cost : 0.33028
+Cost at iteration 730 is: 0.34253, learning rate: 0.10000, valid cost : 0.32934
+Cost at iteration 740 is: 0.34499, learning rate: 0.10000, valid cost : 0.33017
+Cost at iteration 750 is: 0.33823, learning rate: 0.10000, valid cost : 0.32460
+Cost at iteration 760 is: 0.33728, learning rate: 0.10000, valid cost : 0.32377
+Cost at iteration 770 is: 0.33736, learning rate: 0.10000, valid cost : 0.32405
+Cost at iteration 780 is: 0.33401, learning rate: 0.10000, valid cost : 0.32174
+Cost at iteration 790 is: 0.33227, learning rate: 0.10000, valid cost : 0.32036
+Cost at iteration 800 is: 0.33401, learning rate: 0.10000, valid cost : 0.32211
+Cost at iteration 810 is: 0.34645, learning rate: 0.10000, valid cost : 0.33614
+Cost at iteration 820 is: 0.33092, learning rate: 0.10000, valid cost : 0.32008
+Cost at iteration 830 is: 0.33066, learning rate: 0.10000, valid cost : 0.32027
+Cost at iteration 840 is: 0.33435, learning rate: 0.10000, valid cost : 0.32414
+Cost at iteration 850 is: 0.33390, learning rate: 0.10000, valid cost : 0.32366
+Cost at iteration 860 is: 0.33275, learning rate: 0.10000, valid cost : 0.32108
+Cost at iteration 870 is: 0.32423, learning rate: 0.10000, valid cost : 0.31236
+Cost at iteration 880 is: 0.32394, learning rate: 0.10000, valid cost : 0.31087
+Cost at iteration 890 is: 0.32543, learning rate: 0.10000, valid cost : 0.31223
+Cost at iteration 900 is: 0.32988, learning rate: 0.10000, valid cost : 0.31750
+Cost at iteration 910 is: 0.32844, learning rate: 0.10000, valid cost : 0.31686
+Cost at iteration 920 is: 0.31844, learning rate: 0.10000, valid cost : 0.30743
+Cost at iteration 930 is: 0.31987, learning rate: 0.10000, valid cost : 0.30904
+Cost at iteration 940 is: 0.32357, learning rate: 0.10000, valid cost : 0.31270
+Cost at iteration 950 is: 0.32372, learning rate: 0.10000, valid cost : 0.31221
+Cost at iteration 960 is: 0.31832, learning rate: 0.10000, valid cost : 0.30706
+Cost at iteration 970 is: 0.31566, learning rate: 0.10000, valid cost : 0.30345
+Cost at iteration 980 is: 0.31926, learning rate: 0.10000, valid cost : 0.30583
+Cost at iteration 990 is: 0.31906, learning rate: 0.10000, valid cost : 0.30630
+Accuracy for training set is 88.480 %
+Accuracy for testing set is 86.560 %
+Time for the algo - Polyack's Momentum for 1000 iterations was 6149.091496
+------------------------------------------------------
+Training 3 layer neural network with Accelerated Gradient at an initial learning rate of 0.1
+Cost at iteration 0 is: 9.93151, learning rate: 0.10000, valid cost : 10.03417
+Cost at iteration 10 is: 1.60615, learning rate: 0.10000, valid cost : 1.59171
+Cost at iteration 20 is: 0.90640, learning rate: 0.10000, valid cost : 0.88492
+Cost at iteration 30 is: 0.81255, learning rate: 0.10000, valid cost : 0.79584
+Cost at iteration 40 is: 0.73034, learning rate: 0.10000, valid cost : 0.71979
+Cost at iteration 50 is: 0.68863, learning rate: 0.10000, valid cost : 0.67708
+Cost at iteration 60 is: 0.65099, learning rate: 0.10000, valid cost : 0.64092
+Cost at iteration 70 is: 0.62772, learning rate: 0.10000, valid cost : 0.61440
+Cost at iteration 80 is: 0.60294, learning rate: 0.10000, valid cost : 0.59029
+Cost at iteration 90 is: 0.65145, learning rate: 0.10000, valid cost : 0.63597
+Cost at iteration 100 is: 0.57204, learning rate: 0.10000, valid cost : 0.56086
+Cost at iteration 110 is: 0.54678, learning rate: 0.10000, valid cost : 0.53413
+Cost at iteration 120 is: 0.60412, learning rate: 0.10000, valid cost : 0.58603
+Cost at iteration 130 is: 0.53996, learning rate: 0.10000, valid cost : 0.52829
+Cost at iteration 140 is: 0.51964, learning rate: 0.10000, valid cost : 0.50594
+Cost at iteration 150 is: 0.51021, learning rate: 0.10000, valid cost : 0.49577
+Cost at iteration 160 is: 0.51453, learning rate: 0.10000, valid cost : 0.50247
+Cost at iteration 170 is: 0.49568, learning rate: 0.10000, valid cost : 0.48155
+Cost at iteration 180 is: 0.48585, learning rate: 0.10000, valid cost : 0.47291
+Cost at iteration 190 is: 0.48468, learning rate: 0.10000, valid cost : 0.46946
+Cost at iteration 200 is: 0.47794, learning rate: 0.10000, valid cost : 0.46510
+Cost at iteration 210 is: 0.47944, learning rate: 0.10000, valid cost : 0.46589
+Cost at iteration 220 is: 0.47186, learning rate: 0.10000, valid cost : 0.46068
+Cost at iteration 230 is: 0.46170, learning rate: 0.10000, valid cost : 0.44990
+Cost at iteration 240 is: 0.45090, learning rate: 0.10000, valid cost : 0.44092
+Cost at iteration 250 is: 0.45137, learning rate: 0.10000, valid cost : 0.43749
+Cost at iteration 260 is: 0.43743, learning rate: 0.10000, valid cost : 0.42436
+Cost at iteration 270 is: 0.44655, learning rate: 0.10000, valid cost : 0.43419
+Cost at iteration 280 is: 0.43825, learning rate: 0.10000, valid cost : 0.42753
+Cost at iteration 290 is: 0.44388, learning rate: 0.10000, valid cost : 0.43382
+Cost at iteration 300 is: 0.42728, learning rate: 0.10000, valid cost : 0.41511
+Cost at iteration 310 is: 0.42546, learning rate: 0.10000, valid cost : 0.40992
+Cost at iteration 320 is: 0.41832, learning rate: 0.10000, valid cost : 0.40185
+Cost at iteration 330 is: 0.41225, learning rate: 0.10000, valid cost : 0.39911
+Cost at iteration 340 is: 0.42121, learning rate: 0.10000, valid cost : 0.40890
+Cost at iteration 350 is: 0.42103, learning rate: 0.10000, valid cost : 0.40793
+Cost at iteration 360 is: 0.40952, learning rate: 0.10000, valid cost : 0.39848
+Cost at iteration 370 is: 0.40387, learning rate: 0.10000, valid cost : 0.39411
+Cost at iteration 380 is: 0.40422, learning rate: 0.10000, valid cost : 0.39473
+Cost at iteration 390 is: 0.40053, learning rate: 0.10000, valid cost : 0.38639
+Cost at iteration 400 is: 0.39888, learning rate: 0.10000, valid cost : 0.38276
+Cost at iteration 410 is: 0.38921, learning rate: 0.10000, valid cost : 0.37431
+Cost at iteration 420 is: 0.38704, learning rate: 0.10000, valid cost : 0.37261
+Cost at iteration 430 is: 0.38969, learning rate: 0.10000, valid cost : 0.37519
+Cost at iteration 440 is: 0.38393, learning rate: 0.10000, valid cost : 0.37123
+Cost at iteration 450 is: 0.38892, learning rate: 0.10000, valid cost : 0.37746
+Cost at iteration 460 is: 0.38784, learning rate: 0.10000, valid cost : 0.37501
+Cost at iteration 470 is: 0.38297, learning rate: 0.10000, valid cost : 0.37073
+Cost at iteration 480 is: 0.38679, learning rate: 0.10000, valid cost : 0.37527

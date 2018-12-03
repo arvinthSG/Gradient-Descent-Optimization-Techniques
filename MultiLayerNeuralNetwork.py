@@ -329,7 +329,7 @@ class MultiLayerNeuralNetwork:
             self.gradients["dW"] = dw_values
             self.gradients["db"] = db_values
 
-    def simple_gradient_descent(self, epoch):
+    def batch_gradient_descent(self, epoch):
         alpha = self.learning_rate * (1 / (1 + self.decay_rate * epoch))
         L = self.numLayers
         dw_values = self.gradients["dW"]
@@ -339,12 +339,14 @@ class MultiLayerNeuralNetwork:
             self.b_values[l] = self.b_values[l] - alpha * db_values[l]
         return alpha
 
-    def polyackmomentum(self, alpha=1e-3):
+    def polyackmomentum(self, beta=1e-3):
         L = self.numLayers
         dw_values = self.gradients["dW"]
         for l in reversed(range(L)):
-            self.v_values[l] = (self.v_values[l] * alpha) + (self.learning_rate * dw_values[l])
-            self.W_values[l] = self.W_values[l] - self.v_values[l]
+            # V (t + 1) = Beta * v(t)  + ( 1- beta ) dw
+            # W (t + 1 ) = w(t)  - alpha *  V (t + 1
+            self.v_values[l] = (beta * self.v_values[l]) + (1 - beta) * (dw_values[l])
+            self.W_values[l] = self.W_values[l] - (self.learning_rate * self.v_values[l])
         return self.learning_rate
 
     def rmsprop(self, beta=0.9, epsilon=1e-8):
@@ -352,8 +354,7 @@ class MultiLayerNeuralNetwork:
         dw_values = self.gradients["dW"]
         for l in reversed(range(L)):
             self.v_values[l] = (beta * self.v_values[l]) + (1 - beta) * dw_values[l] ** 2
-            self.W_values[l] = self.W_values[l] - (self.learning_rate / np.sqrt(self.v_values[l] + epsilon)) * \
-                               dw_values[l]
+            self.W_values[l] = self.W_values[l] - (self.learning_rate / np.sqrt(self.v_values[l] + epsilon)) * dw_values[l]
         return self.learning_rate
 
     def adam(self, beta1=0.9, beta2=0.999, epsilon=1e-7):
@@ -380,7 +381,7 @@ class MultiLayerNeuralNetwork:
     def update_parameters(self, epoch):
         gradient_method = self.gradient_method
         if gradient_method == NO_MOMENTUM:
-            return self.simple_gradient_descent(epoch)
+            return self.batch_gradient_descent(epoch)
         elif gradient_method == RMSPROP:
             return self.rmsprop()
         elif gradient_method == MOMENTUM:
@@ -509,7 +510,8 @@ def main():
                 teAcc = np.count_nonzero(test_Pred == test_label) / test_label.shape[1] * 100
                 print(f"Accuracy for training set is {trAcc:0.03f} %")
                 print(f"Accuracy for testing set is {teAcc:0.03f} %")
-                print(f"Time for the algo - {gradient_method} for {num_iterations} iterations was {(end_time - start_time).total_seconds()}")
+                print(
+                    f"Time for the algo - {gradient_method} for {num_iterations} iterations was {(end_time - start_time).total_seconds()}")
                 print("------------------------------------------------------")
                 time_per_algo.append((end_time - start_time).total_seconds())
                 testing_accuracy_per_algo.append(teAcc)
@@ -517,26 +519,28 @@ def main():
                 all_vcosts.append(mm.validation_costs)
                 all_costs.append(mm.costs)
 
-            plot_costs_graph(all_costs, gradient_methods, f"outputs/allcosts-{num_iterations}-{learning_rate}.png", learning_rate, False)
-            plot_costs_graph(all_vcosts, gradient_methods, f"outputs/allValidcosts-{num_iterations}-{learning_rate}.png", learning_rate, True)
+            plot_costs_graph(all_costs, gradient_methods, f"outputs/brand/allcosts-{num_iterations}-{learning_rate}.png",
+                             learning_rate, False)
+            plot_costs_graph(all_vcosts, gradient_methods,
+                             f"outputs/brand/allValidcosts-{num_iterations}-{learning_rate}.png", learning_rate, True)
             print(time_per_algo)
             print(testing_accuracy_per_algo)
             print(training_accuracy_per_algo)
 
             plot_bar_graph(time_per_algo, gradient_methods,
-                        f"outputs/time-{num_iterations}-{learning_rate}.png",
-                        f"Plot of Time taken when using various algorithms for learning rate {learning_rate}",
-                        "Time")
+                           f"outputs/brand/time-{num_iterations}-{learning_rate}.png",
+                           f"Plot of Time taken when using various algorithms for learning rate {learning_rate}",
+                           "Time")
 
             plot_bar_graph(testing_accuracy_per_algo, gradient_methods,
-                        f"outputs/testing-accuracy-{num_iterations}-{learning_rate}.png",
-                        f"Plot of Testing Accuracy at LR: {learning_rate}",
-                        "Testing Accuracy")
+                           f"outputs/brand/testing-accuracy-{num_iterations}-{learning_rate}.png",
+                           f"Plot of Testing Accuracy at LR: {learning_rate}",
+                           "Testing Accuracy")
 
             plot_bar_graph(training_accuracy_per_algo, gradient_methods,
-                        f"outputs/training-accuracy-{num_iterations}-{learning_rate}.png",
-                        f"Plot of Training Accuracy at LR: {learning_rate}",
-                        "Training Accuracy")
+                           f"outputs/brand/training-accuracy-{num_iterations}-{learning_rate}.png",
+                           f"Plot of Training Accuracy at LR: {learning_rate}",
+                           "Training Accuracy")
 
 
 if __name__ == "__main__":
