@@ -10,7 +10,7 @@ The analysis includes the following algorithms</br>
 <li>ADAM</li>
 </ol>
 </br>
-<b>Method</b>
+<b>Method</b></br>
 The dataset used for the analysis is the Fashion-MNIST dataset. The architecture of the network is [784, 500, 100, 10]. The final layer has the softmax activation function, and the other layers use Relu. Batch gradient descent is used. MiniBatch and Stochastic Gradient Descent are not part of this analysis.</br>
 
 <b>Conclusions</b></br>
